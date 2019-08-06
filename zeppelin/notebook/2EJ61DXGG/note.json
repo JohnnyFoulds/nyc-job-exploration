@@ -3,7 +3,7 @@
     {
       "text": "val nums \u003d Array(1,2,3,5,6)\nval rdd \u003d sc.parallelize(nums)\n\nimport spark.implicits._\nval df \u003d rdd.toDF(\"num\")\n\ndf.show()",
       "user": "anonymous",
-      "dateUpdated": "2019-08-06 16:56:03.644",
+      "dateUpdated": "2019-08-06 17:03:47.878",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -26,7 +26,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "+---+\n|num|\n+---+\n|  1|\n|  2|\n|  3|\n|  5|\n|  6|\n+---+\n\nnums: Array[Int] \u003d Array(1, 2, 3, 5, 6)\nrdd: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[4] at parallelize at \u003cconsole\u003e:33\nimport spark.implicits._\ndf: org.apache.spark.sql.DataFrame \u003d [num: int]\n"
+            "data": "+---+\n|num|\n+---+\n|  1|\n|  2|\n|  3|\n|  5|\n|  6|\n+---+\n\nnums: Array[Int] \u003d Array(1, 2, 3, 5, 6)\nrdd: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[8] at parallelize at \u003cconsole\u003e:36\nimport spark.implicits._\ndf: org.apache.spark.sql.DataFrame \u003d [num: int]\n"
           }
         ]
       },
@@ -37,7 +37,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d1"
+            "http://172.17.0.2:4040/jobs/job?id\u003d2"
           ],
           "interpreterSettingId": "spark"
         }
@@ -46,8 +46,8 @@
       "jobName": "paragraph_1565110416909_2110788864",
       "id": "20190806-165336_209347527",
       "dateCreated": "2019-08-06 16:53:36.910",
-      "dateStarted": "2019-08-06 16:56:03.777",
-      "dateFinished": "2019-08-06 16:56:10.278",
+      "dateStarted": "2019-08-06 17:03:47.985",
+      "dateFinished": "2019-08-06 17:03:54.455",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -59,9 +59,9 @@
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1565110428404_-1388174464",
-      "id": "20190806-165348_1016684398",
-      "dateCreated": "2019-08-06 16:53:48.404",
+      "jobName": "paragraph_1565110994501_727186595",
+      "id": "20190806-170314_2020791767",
+      "dateCreated": "2019-08-06 17:03:14.512",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
