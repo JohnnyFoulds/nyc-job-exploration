@@ -1,0 +1,80 @@
+{
+  "paragraphs": [
+    {
+      "text": "val nums \u003d Array(1,2,3,5,6)\nval rdd \u003d sc.parallelize(nums)\n\nimport spark.implicits._\nval df \u003d rdd.toDF(\"num\")\n\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-06 16:56:03.644",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+\n|num|\n+---+\n|  1|\n|  2|\n|  3|\n|  5|\n|  6|\n+---+\n\nnums: Array[Int] \u003d Array(1, 2, 3, 5, 6)\nrdd: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[4] at parallelize at \u003cconsole\u003e:33\nimport spark.implicits._\ndf: org.apache.spark.sql.DataFrame \u003d [num: int]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d1"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1565110416909_2110788864",
+      "id": "20190806-165336_209347527",
+      "dateCreated": "2019-08-06 16:53:36.910",
+      "dateStarted": "2019-08-06 16:56:03.777",
+      "dateFinished": "2019-08-06 16:56:10.278",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565110428404_-1388174464",
+      "id": "20190806-165348_1016684398",
+      "dateCreated": "2019-08-06 16:53:48.404",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "/hello/Hello World",
+  "id": "2EJ61DXGG",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

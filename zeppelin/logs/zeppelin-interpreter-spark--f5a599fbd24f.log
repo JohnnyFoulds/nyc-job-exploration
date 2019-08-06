@@ -1,0 +1,139 @@
+ INFO [2019-08-06 16:53:50,668] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/interpreter/spark/spark-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-06 16:53:51,108] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.17.0.2:37466
+ INFO [2019-08-06 16:53:51,164] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 37466
+ INFO [2019-08-06 16:53:51,180] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 37466
+ INFO [2019-08-06 16:53:52,295] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.17.0.2, callbackPort: 36990, callbackInfo: CallbackInfo(host:172.17.0.2, port:37466)
+ INFO [2019-08-06 16:53:53,342] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2019-08-06 16:53:53,385] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2019-08-06 16:53:53,538] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2019-08-06 16:53:53,640] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2019-08-06 16:53:53,677] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2019-08-06 16:53:53,698] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ WARN [2019-08-06 16:53:54,038] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-06 16:53:54,196] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-06 16:53:54,198] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-06 16:53:54,199] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-06 16:53:54,209] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-06 16:53:54,221] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-06 16:53:54,257] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20190806-165336_209347527 started by scheduler interpreter_1163195767
+ INFO [2019-08-06 16:53:54,584] ({pool-2-thread-5} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ INFO [2019-08-06 16:54:19,824] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Running Spark version 2.2.1
+ WARN [2019-08-06 16:54:20,810] ({pool-2-thread-5} NativeCodeLoader.java[<clinit>]:62) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ INFO [2019-08-06 16:54:21,712] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Submitted application: Zeppelin
+ INFO [2019-08-06 16:54:21,774] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Changing view acls to: root
+ INFO [2019-08-06 16:54:21,776] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Changing modify acls to: root
+ INFO [2019-08-06 16:54:21,777] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Changing view acls groups to: 
+ INFO [2019-08-06 16:54:21,778] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Changing modify acls groups to: 
+ INFO [2019-08-06 16:54:21,779] ({pool-2-thread-5} Logging.scala[logInfo]:54) - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+ INFO [2019-08-06 16:54:22,918] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Successfully started service 'sparkDriver' on port 42465.
+ INFO [2019-08-06 16:54:23,034] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registering MapOutputTracker
+ INFO [2019-08-06 16:54:23,169] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registering BlockManagerMaster
+ INFO [2019-08-06 16:54:23,187] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+ INFO [2019-08-06 16:54:23,189] ({pool-2-thread-5} Logging.scala[logInfo]:54) - BlockManagerMasterEndpoint up
+ INFO [2019-08-06 16:54:23,252] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Created local directory at /tmp/blockmgr-5a781936-9dcc-488d-8689-1caef899bd5c
+ INFO [2019-08-06 16:54:23,357] ({pool-2-thread-5} Logging.scala[logInfo]:54) - MemoryStore started with capacity 413.9 MB
+ INFO [2019-08-06 16:54:23,689] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registering OutputCommitCoordinator
+ INFO [2019-08-06 16:54:24,181] ({pool-2-thread-5} Log.java[initialized]:192) - Logging initialized @34824ms
+ INFO [2019-08-06 16:54:24,506] ({pool-2-thread-5} Server.java[doStart]:345) - jetty-9.3.z-SNAPSHOT
+ INFO [2019-08-06 16:54:24,606] ({pool-2-thread-5} Server.java[doStart]:403) - Started @35249ms
+ INFO [2019-08-06 16:54:24,729] ({pool-2-thread-5} AbstractConnector.java[doStart]:270) - Started ServerConnector@37f5049d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+ INFO [2019-08-06 16:54:24,731] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Successfully started service 'SparkUI' on port 4040.
+ INFO [2019-08-06 16:54:24,878] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@13147351{/jobs,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,887] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2af398cc{/jobs/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,889] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@54b2f274{/jobs/job,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,891] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@7db1295f{/jobs/job/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,903] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@54de0ed9{/stages,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,907] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@6294042c{/stages/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,911] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@62c12e4a{/stages/stage,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,919] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@28fcd3b5{/stages/stage/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,934] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@54d0f474{/stages/pool,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,947] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@790fcf8f{/stages/pool/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,950] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2ccec710{/storage,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,957] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@1ab6c3d7{/storage/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,967] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@48826459{/storage/rdd,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,970] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@696beaa3{/storage/rdd/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,973] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5660f18c{/environment,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,988] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5cb679d5{/environment/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,990] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5fa4cf7b{/executors,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:24,994] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2fd42d70{/executors/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,004] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@15b562da{/executors/threadDump,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,009] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@47f8b788{/executors/threadDump/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,027] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@83e95e8{/static,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,029] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@378bcc93{/,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,039] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@347454cf{/api,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,048] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@1d41d00c{/jobs/job/kill,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,051] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2c945496{/stages/stage/kill,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:25,071] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Bound SparkUI to 0.0.0.0, and started at http://172.17.0.2:4040
+ INFO [2019-08-06 16:54:25,187] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Added JAR /zeppelin/interpreter/spark/spark-interpreter-0.8.1.jar at spark://172.17.0.2:42465/jars/spark-interpreter-0.8.1.jar with timestamp 1565110465186
+ INFO [2019-08-06 16:54:25,580] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Starting executor ID driver on host localhost
+ INFO [2019-08-06 16:54:25,617] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Using REPL class URI: spark://172.17.0.2:42465/classes
+ INFO [2019-08-06 16:54:25,750] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40335.
+ INFO [2019-08-06 16:54:25,753] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Server created on 172.17.0.2:40335
+ INFO [2019-08-06 16:54:25,755] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+ INFO [2019-08-06 16:54:25,763] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registering BlockManager BlockManagerId(driver, 172.17.0.2, 40335, None)
+ INFO [2019-08-06 16:54:25,773] ({dispatcher-event-loop-0} Logging.scala[logInfo]:54) - Registering block manager 172.17.0.2:40335 with 413.9 MB RAM, BlockManagerId(driver, 172.17.0.2, 40335, None)
+ INFO [2019-08-06 16:54:25,790] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registered BlockManager BlockManagerId(driver, 172.17.0.2, 40335, None)
+ INFO [2019-08-06 16:54:25,794] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Initialized BlockManager: BlockManagerId(driver, 172.17.0.2, 40335, None)
+ INFO [2019-08-06 16:54:26,431] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@89978eb{/metrics/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:45,827] ({pool-2-thread-5} SparkShims.java[loadShims]:62) - Initializing shims for Spark 2.x
+ INFO [2019-08-06 16:54:54,575] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/zeppelin/spark-warehouse').
+ INFO [2019-08-06 16:54:54,578] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Warehouse path is 'file:/zeppelin/spark-warehouse'.
+ INFO [2019-08-06 16:54:54,604] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@42b06993{/SQL,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:54,608] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@198c8e42{/SQL/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:54,617] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@55f176c9{/SQL/execution,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:54,623] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@4703710{/SQL/execution/json,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:54,687] ({pool-2-thread-5} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@7c4b4cd5{/static/sql,null,AVAILABLE,@Spark}
+ INFO [2019-08-06 16:54:58,607] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Registered StateStoreCoordinator endpoint
+ INFO [2019-08-06 16:55:00,657] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Code generated in 567.116132 ms
+ INFO [2019-08-06 16:55:00,840] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Code generated in 86.560918 ms
+ INFO [2019-08-06 16:55:01,332] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Starting job: show at <console>:33
+ INFO [2019-08-06 16:55:01,409] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Got job 0 (show at <console>:33) with 1 output partitions
+ INFO [2019-08-06 16:55:01,411] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Final stage: ResultStage 0 (show at <console>:33)
+ INFO [2019-08-06 16:55:01,413] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Parents of final stage: List()
+ INFO [2019-08-06 16:55:01,417] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Missing parents: List()
+ INFO [2019-08-06 16:55:01,443] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ResultStage 0 (MapPartitionsRDD[3] at show at <console>:33), which has no missing parents
+ INFO [2019-08-06 16:55:02,081] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_0 stored as values in memory (estimated size 5.5 KB, free 413.9 MB)
+ INFO [2019-08-06 16:55:02,208] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.9 KB, free 413.9 MB)
+ INFO [2019-08-06 16:55:02,219] ({dispatcher-event-loop-1} Logging.scala[logInfo]:54) - Added broadcast_0_piece0 in memory on 172.17.0.2:40335 (size: 2.9 KB, free: 413.9 MB)
+ INFO [2019-08-06 16:55:02,230] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+ INFO [2019-08-06 16:55:02,306] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at show at <console>:33) (first 15 tasks are for partitions Vector(0))
+ INFO [2019-08-06 16:55:02,307] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 0.0 with 1 tasks
+ INFO [2019-08-06 16:55:02,442] ({dispatcher-event-loop-0} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 4772 bytes)
+ INFO [2019-08-06 16:55:02,496] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Running task 0.0 in stage 0.0 (TID 0)
+ INFO [2019-08-06 16:55:02,509] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Fetching spark://172.17.0.2:42465/jars/spark-interpreter-0.8.1.jar with timestamp 1565110465186
+ INFO [2019-08-06 16:55:02,825] ({Executor task launch worker for task 0} TransportClientFactory.java[createClient]:254) - Successfully created connection to /172.17.0.2:42465 after 159 ms (0 ms spent in bootstraps)
+ INFO [2019-08-06 16:55:02,911] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Fetching spark://172.17.0.2:42465/jars/spark-interpreter-0.8.1.jar to /tmp/spark-4b106129-1933-4ca0-a870-ec0960529597/userFiles-5ae8b823-ed94-4f6b-a661-cf81a32db789/fetchFileTemp4314929133273436598.tmp
+ INFO [2019-08-06 16:55:04,859] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Adding file:/tmp/spark-4b106129-1933-4ca0-a870-ec0960529597/userFiles-5ae8b823-ed94-4f6b-a661-cf81a32db789/spark-interpreter-0.8.1.jar to class loader
+ INFO [2019-08-06 16:55:05,198] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 0.0 (TID 0). 1147 bytes result sent to driver
+ INFO [2019-08-06 16:55:05,251] ({task-result-getter-0} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 0.0 (TID 0) in 2873 ms on localhost (executor driver) (1/1)
+ INFO [2019-08-06 16:55:05,265] ({task-result-getter-0} Logging.scala[logInfo]:54) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ INFO [2019-08-06 16:55:05,295] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ResultStage 0 (show at <console>:33) finished in 2.930 s
+ INFO [2019-08-06 16:55:05,376] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Job 0 finished: show at <console>:33, took 4.041678 s
+ INFO [2019-08-06 16:55:08,452] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20190806-165336_209347527 finished by scheduler interpreter_1163195767
+ INFO [2019-08-06 16:56:03,797] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20190806-165336_209347527 started by scheduler interpreter_1163195767
+ INFO [2019-08-06 16:56:06,388] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Starting job: show at <console>:40
+ INFO [2019-08-06 16:56:06,395] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Got job 1 (show at <console>:40) with 1 output partitions
+ INFO [2019-08-06 16:56:06,396] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Final stage: ResultStage 1 (show at <console>:40)
+ INFO [2019-08-06 16:56:06,396] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Parents of final stage: List()
+ INFO [2019-08-06 16:56:06,397] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Missing parents: List()
+ INFO [2019-08-06 16:56:06,397] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ResultStage 1 (MapPartitionsRDD[7] at show at <console>:40), which has no missing parents
+ INFO [2019-08-06 16:56:06,418] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_1 stored as values in memory (estimated size 5.5 KB, free 413.9 MB)
+ INFO [2019-08-06 16:56:06,424] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.9 KB, free 413.9 MB)
+ INFO [2019-08-06 16:56:06,438] ({dispatcher-event-loop-0} Logging.scala[logInfo]:54) - Added broadcast_1_piece0 in memory on 172.17.0.2:40335 (size: 2.9 KB, free: 413.9 MB)
+ INFO [2019-08-06 16:56:06,444] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+ INFO [2019-08-06 16:56:06,447] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at show at <console>:40) (first 15 tasks are for partitions Vector(0))
+ INFO [2019-08-06 16:56:06,449] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 1.0 with 1 tasks
+ INFO [2019-08-06 16:56:06,457] ({dispatcher-event-loop-1} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 4772 bytes)
+ INFO [2019-08-06 16:56:06,465] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Running task 0.0 in stage 1.0 (TID 1)
+ INFO [2019-08-06 16:56:06,503] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 1.0 (TID 1). 1147 bytes result sent to driver
+ INFO [2019-08-06 16:56:06,528] ({task-result-getter-1} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 1.0 (TID 1) in 72 ms on localhost (executor driver) (1/1)
+ INFO [2019-08-06 16:56:06,529] ({task-result-getter-1} Logging.scala[logInfo]:54) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ INFO [2019-08-06 16:56:06,530] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ResultStage 1 (show at <console>:40) finished in 0.072 s
+ INFO [2019-08-06 16:56:06,531] ({pool-2-thread-5} Logging.scala[logInfo]:54) - Job 1 finished: show at <console>:40, took 0.141115 s
+ INFO [2019-08-06 16:56:08,760] ({Spark Context Cleaner} Logging.scala[logInfo]:54) - Cleaned accumulator 50
+ INFO [2019-08-06 16:56:08,766] ({Spark Context Cleaner} Logging.scala[logInfo]:54) - Cleaned accumulator 1
+ INFO [2019-08-06 16:56:08,768] ({Spark Context Cleaner} Logging.scala[logInfo]:54) - Cleaned accumulator 51
+ INFO [2019-08-06 16:56:08,864] ({dispatcher-event-loop-0} Logging.scala[logInfo]:54) - Removed broadcast_0_piece0 on 172.17.0.2:40335 in memory (size: 2.9 KB, free: 413.9 MB)
+ INFO [2019-08-06 16:56:08,882] ({Spark Context Cleaner} Logging.scala[logInfo]:54) - Cleaned accumulator 0
+ INFO [2019-08-06 16:56:08,887] ({dispatcher-event-loop-1} Logging.scala[logInfo]:54) - Removed broadcast_1_piece0 on 172.17.0.2:40335 in memory (size: 2.9 KB, free: 413.9 MB)
+ INFO [2019-08-06 16:56:10,279] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20190806-165336_209347527 finished by scheduler interpreter_1163195767
