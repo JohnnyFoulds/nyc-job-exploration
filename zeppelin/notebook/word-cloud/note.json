@@ -3,7 +3,7 @@
     {
       "text": "val text \u003d \"\"\"\nData Engineer-000000221954\n\n\n\n\nA Data Engineer is required in Big Data team to provides expert guidance and delivers through self and others to:\n\n\n\nLoad the necessary data from local and group sources onto the shared platform that are necessary for analysis and for commercial actions; \n\nBuilding applications that make use of large volumes of data and generate outputs that allow commercial actions that generate incremental value\n\nSupport local markets and group functions in obtaining benefiting business value from the operational data\n\n\n\nDesigning and producing highly performing and stable applications to perform complex processing of massive volumes of data in a multi-tenancy Hadoop environment\n\nBuilding end-to-end applications that make use of large volumes of source data from the operational systems and output insights back to business systems\n\nBuilding real-time data processing applications which are integrated with business systems to enable value from analytic models to drive rapid decision making\n\nWorking with the architecture team to define the strategy for evolving the Big Data capability\n\nDefining the technology components to be used on the Big Data Platform and investigating new technologies to identify where they can bring benefits\n\n   \n\nCore competencies, knowledge and experience]:\n\n\n\nExpert level experience in designing, building and managing applications to process large amounts of data in a Hadoop ecosystem;\n\nExtensive experience with performance tuning applications on Hadoop and configuring Hadoop systems to maximise performance;\n\nExperience building systems to perform real-time data processing using Spark Streaming or Storm;\n\nExperience with managing the development life-cycle for agile software development projects;\n\n\n\nExperience working in a multi tenancy Hadoop environment;\n\n\n\n \n\n\n\n\nMust have technical / professional qualifications: \n\n\n\n\n3 year IT or IS degree or diploma \n\n5 – 8 years BI or related experience\n\n\n\n\nOr\n\n\n\n\nExpert level experience with using Spark, Yarn, Hive and Oozie;\n\nStrong Python and Scala programming ability\n\nSome experience with other distributed technologies such as Cassandra, ElasticSeatch and Flink would also be desirable\n\nEMPLOYMENT EQUITY \n\nThe Company’s approved Employment Equity Plan and Targets will be considered as part of the recruitment process. As an Equal Opportunities employer, we actively encourage and welcome people with various disabilities to apply\n\n  \n\n \n\nBand : G\n\nContact Email - Internal : Bahle.Manana@vodacom.co.za\n\nLocation : South Africa-Gauteng-Johannesburg : \n \n\n  1685\n\nEmployment Type : Permanent\n\nUnposting Date : Ongoing\n\nOrganization : Customer Centric Technology Solutions\n\"\"\"",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 11:05:33.914",
+      "dateUpdated": "2019-08-07 11:11:38.433",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -35,15 +35,15 @@
       "jobName": "paragraph_1565162150855_-2085873455",
       "id": "20190807-071550_842595640",
       "dateCreated": "2019-08-07 07:15:50.855",
-      "dateStarted": "2019-08-07 11:05:34.280",
-      "dateFinished": "2019-08-07 11:05:35.403",
+      "dateStarted": "2019-08-07 11:11:38.635",
+      "dateFinished": "2019-08-07 11:11:39.647",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val textRdd \u003d sc.parallelize(text.split(\"\\n\")).flatMap(t\u003d\u003et.split(\" \")).map(t\u003d\u003e(t, 1)).reduceByKey(_ + _)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 11:05:35.452",
+      "dateUpdated": "2019-08-07 11:11:49.064",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -66,7 +66,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "textRdd: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[95] at reduceByKey at \u003cconsole\u003e:33\n"
+            "data": "textRdd: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[102] at reduceByKey at \u003cconsole\u003e:33\n"
           }
         ]
       },
@@ -74,8 +74,8 @@
       "jobName": "paragraph_1565162425515_1579484513",
       "id": "20190807-072025_1278646556",
       "dateCreated": "2019-08-07 07:20:25.518",
-      "dateStarted": "2019-08-07 11:05:36.360",
-      "dateFinished": "2019-08-07 11:05:40.088",
+      "dateStarted": "2019-08-07 11:11:49.479",
+      "dateFinished": "2019-08-07 11:11:54.050",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -167,19 +167,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "_1\t_2\nEmployment\t2\nTechnology\t1\nExtensive\t1\nThe\t1\nG\t1\nothers\t1\nallow\t1\noutputs\t1\ndesirable\t1\nhave\t1\ndiploma\t1\nEQUITY\t1\nsuch\t1\nSolutions\t1\ncomponents\t1\nthrough\t1\nwe\t1\nOrganization\t1\napplications\t6\nHive\t1\nonto\t1\nsoftware\t1\nused\t1\ninvestigating\t1\nWorking\t1\nmake\t2\nyears\t1\nrequired\t1\nData\t5\nprocess.\t1\nmanaging\t2\nrapid\t1\nthe\t11\ntechnology\t1\nare\t2\nBI\t1\npart\t1\nprocess\t1\nenable\t1\nreal-time\t2\nperformance;\t1\nIS\t1\nCassandra,\t1\nbe\t3\nUnposting\t1\nas\t2\nCustomer\t1\nprofessional\t1\nPermanent\t1\nmarkets\t1\nprogramming\t1\n:\t7\nenvironment\t1\nAfrica-Gauteng-Johannesburg\t1\nStreaming\t1\nExperience\t3\nMust\t1\ndisabilities\t1\nEmail\t1\nshared\t1\nis\t1\nvolumes\t3\ncompetencies,\t1\nlevel\t2\nnecessary\t2\nevolving\t1\non\t2\nCentric\t1\nwould\t1\nStrong\t1\nsources\t1\nability\t1\ndevelopment\t2\nEqual\t1\nusing\t2\nEngineer-000000221954\t1\nthey\t1\nnew\t1\ntenancy\t1\nPlan\t1\nyear\t1\nCompany’s\t1\nExpert\t2\nteam\t2\nuse\t2\nto:\t1\nSome\t1\nqualifications:\t1\ndegree\t1\n8\t1\nSouth\t1\noperational\t2\nbring\t1\ntechnical\t1\nor\t4\nBig\t3\nBand\t1\nperform\t2\nTargets\t1\nAs\t1\nprocessing\t3\nrecruitment\t1\nend-to-end\t1\nof\t8\ntuning\t1\ngenerate\t2\nobtaining\t1\nbenefits\t1\nanalytic\t1\nactively\t1\nOr\t1\nfunctions\t1\nworking\t1\nmaking\t1\nproducing\t1\n–\t1\ntechnologies\t2\nmulti\t1\nknowledge\t1\nHadoop\t5\nIT\t1\n1685\t1\nSpark\t1\nback\t1\nPython\t1\nContact\t1\nexperience]:\t1\nself\t1\nbenefiting\t1\nLoad\t1\nA\t1\ncomplex\t1\nmaximise\t1\nwhich\t1\nalso\t1\nLocation\t1\nfor\t4\nwelcome\t1\nmulti-tenancy\t1\nElasticSeatch\t1\ndrive\t1\nStorm;\t1\nanalysis\t1\nperformance\t1\nSpark,\t1\necosystem;\t1\nprojects;\t1\nOpportunities\t1\noutput\t1\nprovides\t1\npeople\t1\ncan\t1\n5\t1\nYarn,\t1\nsource\t1\ncommercial\t2\nstrategy\t1\ncapability\t1\nDate\t1\nScala\t1\nvalue\t3\nan\t1\ndelivers\t1\nsystems\t5\nemployer,\t1\nagile\t1\nFlink\t1\nexperience\t5\nrelated\t1\ndesigning,\t1\napply\t1\ndecision\t1\nperforming\t1\nDesigning\t1\nSupport\t1\nEquity\t1\nstable\t1\nwith\t7\ndata\t8\nBahle.Manana@vodacom.co.za\t1\nin\t6\nEMPLOYMENT\t1\n3\t1\narchitecture\t1\nType\t1\nintegrated\t1\nconfiguring\t1\n-\t1\nencourage\t1\nincremental\t1\nidentify\t1\nEngineer\t1\ndefine\t1\ndistributed\t1\nbuilding\t2\nCore\t1\nfrom\t4\nother\t1\nhighly\t1\nPlatform\t1\napproved\t1\n/\t1\nvarious\t1\nBuilding\t3\nOngoing\t1\nconsidered\t1\nbusiness\t3\nguidance\t1\nOozie;\t1\na\t3\nthat\t5\nenvironment;\t1\nlocal\t2\nwill\t1\nlarge\t3\nto\t12\nplatform\t1\nInternal\t1\nactions\t1\n\t63\nmassive\t1\ninsights\t1\ngroup\t2\nexpert\t1\nwhere\t1\nactions;\t1\namounts\t1\nlife-cycle\t1\nand\t18\nDefining\t1\nmodels\t1\n"
-          },
-          {
-            "type": "TEXT",
-            "data": ""
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1565162903212_483819045",
       "id": "20190807-072823_1961288798",
@@ -187,6 +174,7 @@
       "dateStarted": "2019-08-07 11:05:40.688",
       "dateFinished": "2019-08-07 11:05:45.956",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -267,15 +255,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "word\tcount\nEmployment\t40\nTechnology\t20\nExtensive\t20\nThe\t20\nG\t20\nothers\t20\nallow\t20\noutputs\t20\ndesirable\t20\nhave\t20\ndiploma\t20\nEQUITY\t20\nsuch\t20\nSolutions\t20\ncomponents\t20\nthrough\t20\nwe\t20\nOrganization\t20\napplications\t120\nHive\t20\nonto\t20\nsoftware\t20\nused\t20\ninvestigating\t20\nWorking\t20\nmake\t40\nyears\t20\nrequired\t20\nData\t100\nprocess.\t20\nmanaging\t40\nrapid\t20\nthe\t220\ntechnology\t20\nare\t40\nBI\t20\npart\t20\nprocess\t20\nenable\t20\nreal-time\t40\nperformance;\t20\nIS\t20\nCassandra,\t20\nbe\t60\nUnposting\t20\nas\t40\nCustomer\t20\nprofessional\t20\nPermanent\t20\nmarkets\t20\nprogramming\t20\n:\t140\nenvironment\t20\nAfrica-Gauteng-Johannesburg\t20\nStreaming\t20\nExperience\t60\nMust\t20\ndisabilities\t20\nEmail\t20\nshared\t20\nis\t20\nvolumes\t60\ncompetencies,\t20\nlevel\t40\nnecessary\t40\nevolving\t20\non\t40\nCentric\t20\nwould\t20\nStrong\t20\nsources\t20\nability\t20\ndevelopment\t40\nEqual\t20\nusing\t40\nEngineer-000000221954\t20\nthey\t20\nnew\t20\ntenancy\t20\nPlan\t20\nyear\t20\nCompany’s\t20\nExpert\t40\nteam\t40\nuse\t40\nto:\t20\nSome\t20\nqualifications:\t20\ndegree\t20\n8\t20\nSouth\t20\noperational\t40\nbring\t20\ntechnical\t20\nor\t80\nBig\t60\nBand\t20\nperform\t40\nTargets\t20\nAs\t20\nprocessing\t60\nrecruitment\t20\nend-to-end\t20\nof\t160\ntuning\t20\ngenerate\t40\nobtaining\t20\nbenefits\t20\nanalytic\t20\nactively\t20\nOr\t20\nfunctions\t20\nworking\t20\nmaking\t20\nproducing\t20\n–\t20\ntechnologies\t40\nmulti\t20\nknowledge\t20\nHadoop\t100\nIT\t20\n1685\t20\nSpark\t20\nback\t20\nPython\t20\nContact\t20\nexperience]:\t20\nself\t20\nbenefiting\t20\nLoad\t20\nA\t20\ncomplex\t20\nmaximise\t20\nwhich\t20\nalso\t20\nLocation\t20\nfor\t80\nwelcome\t20\nmulti-tenancy\t20\nElasticSeatch\t20\ndrive\t20\nStorm;\t20\nanalysis\t20\nperformance\t20\nSpark,\t20\necosystem;\t20\nprojects;\t20\nOpportunities\t20\noutput\t20\nprovides\t20\npeople\t20\ncan\t20\n5\t20\nYarn,\t20\nsource\t20\ncommercial\t40\nstrategy\t20\ncapability\t20\nDate\t20\nScala\t20\nvalue\t60\nan\t20\ndelivers\t20\nsystems\t100\nemployer,\t20\nagile\t20\nFlink\t20\nexperience\t100\nrelated\t20\ndesigning,\t20\napply\t20\ndecision\t20\nperforming\t20\nDesigning\t20\nSupport\t20\nEquity\t20\nstable\t20\nwith\t140\ndata\t160\nBahle.Manana@vodacom.co.za\t20\nin\t120\nEMPLOYMENT\t20\n3\t20\narchitecture\t20\nType\t20\nintegrated\t20\nconfiguring\t20\n-\t20\nencourage\t20\nincremental\t20\nidentify\t20\nEngineer\t20\ndefine\t20\ndistributed\t20\nbuilding\t40\nCore\t20\nfrom\t80\nother\t20\nhighly\t20\nPlatform\t20\napproved\t20\n/\t20\nvarious\t20\nBuilding\t60\nOngoing\t20\nconsidered\t20\nbusiness\t60\nguidance\t20\nOozie;\t20\na\t60\nthat\t100\nenvironment;\t20\nlocal\t40\nwill\t20\nlarge\t60\nto\t240\nplatform\t20\nInternal\t20\nactions\t20\n\t1260\nmassive\t20\ninsights\t20\ngroup\t40\nexpert\t20\nwhere\t20\nactions;\t20\namounts\t20\nlife-cycle\t20\nand\t360\nDefining\t20\nmodels\t20\n"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1565162226668_78363178",
       "id": "20190807-071706_1432036384",
@@ -283,12 +262,13 @@
       "dateStarted": "2019-08-07 11:05:47.145",
       "dateFinished": "2019-08-07 11:05:51.685",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "println(\"%html\")\nprintln(\"\u003cscript\u003e\")\nprintln(\"    var wordCollection \u003d [\")\n\ntextRdd.collect.foreach(t\u003d\u003e\n    println(\"{text: \\\"\" + t._1 + \"\\\", size: \" + t._2 * 5 + \"},\")\n)\n\nprintln(\"    ]\")\nprintln(\"\u003c/script\u003e\")\n\n\n//println(t._1 + \"\\t\" + t._2 * 20)\n\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 11:09:15.072",
+      "dateUpdated": "2019-08-07 11:12:10.973",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -319,15 +299,15 @@
       "jobName": "paragraph_1565174872578_1718155493",
       "id": "20190807-104752_1272862315",
       "dateCreated": "2019-08-07 10:47:52.578",
-      "dateStarted": "2019-08-07 11:09:15.188",
-      "dateFinished": "2019-08-07 11:09:18.368",
+      "dateStarted": "2019-08-07 11:12:11.396",
+      "dateFinished": "2019-08-07 11:12:15.123",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "print(s\"\"\"%html\n\t\u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js\"\u003e\u003c/script\u003e\n\t\t\n\t\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n\t\u003cscript\u003e\n\t\t//Create a new instance of the word cloud visualisation.\n\t\tvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\t\tmyWordCloud.update(wordCollection);\n\t\u003c/script\u003e\n\"\"\")\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 11:09:48.128",
+      "dateUpdated": "2019-08-07 11:12:23.437",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -358,8 +338,8 @@
       "jobName": "paragraph_1565173920831_-725478954",
       "id": "20190807-103200_362846192",
       "dateCreated": "2019-08-07 10:32:00.831",
-      "dateStarted": "2019-08-07 11:09:48.437",
-      "dateFinished": "2019-08-07 11:09:49.743",
+      "dateStarted": "2019-08-07 11:12:23.543",
+      "dateFinished": "2019-08-07 11:12:25.158",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

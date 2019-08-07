@@ -2,3 +2,34 @@
 This project uses Apache Spark to explore the popular New York City Current Job Postings [Kaggle dataset](https://www.kaggle.com/new-york-city/new-york-city-current-job-postings).
 
 [Apache Zeppelin](https://zeppelin.apache.org/) notebooks are used to work interactively with the data, please refer to the [Wiki](https://github.com/JohnnyFoulds/nyc-job-exploration/wiki) for details of how a development environment was configured for use in this project.
+
+# Zeppelin Word Cloud
+It is quite useful to draw a word cloud of text data such as of the job descriptions. The [word-cloud](https://github.com/JohnnyFoulds/nyc-job-exploration/tree/master/zeppelin/notebook/word-cloud) notebook illustrated how this can be done with a limited amount of code with D3.js and two additional external JavaScipt files.
+
+```
+println("%html")
+println("<script>")
+println("    var wordCollection = [")
+
+textRdd.collect.foreach(t=>
+    println("{text: \"" + t._1 + "\", size: " + t._2 * 5 + "},")
+)
+
+println("    ]")
+println("</script>")
+```
+
+```
+print(s"""%html
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js"></script>
+	<script src="https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js"></script>
+		
+	<div id="wordCloud"></div>
+	<script>
+		//Create a new instance of the word cloud visualisation.
+		var myWordCloud = wordCloud('#wordCloud');
+		myWordCloud.update(wordCollection);
+	</script>
+""")
+```
