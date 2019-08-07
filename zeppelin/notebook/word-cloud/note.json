@@ -3,7 +3,7 @@
     {
       "text": "val text \u003d \"\"\"\nData Engineer-000000221954\n\n\n\n\nA Data Engineer is required in Big Data team to provides expert guidance and delivers through self and others to:\n\n\n\nLoad the necessary data from local and group sources onto the shared platform that are necessary for analysis and for commercial actions; \n\nBuilding applications that make use of large volumes of data and generate outputs that allow commercial actions that generate incremental value\n\nSupport local markets and group functions in obtaining benefiting business value from the operational data\n\n\n\nDesigning and producing highly performing and stable applications to perform complex processing of massive volumes of data in a multi-tenancy Hadoop environment\n\nBuilding end-to-end applications that make use of large volumes of source data from the operational systems and output insights back to business systems\n\nBuilding real-time data processing applications which are integrated with business systems to enable value from analytic models to drive rapid decision making\n\nWorking with the architecture team to define the strategy for evolving the Big Data capability\n\nDefining the technology components to be used on the Big Data Platform and investigating new technologies to identify where they can bring benefits\n\n   \n\nCore competencies, knowledge and experience]:\n\n\n\nExpert level experience in designing, building and managing applications to process large amounts of data in a Hadoop ecosystem;\n\nExtensive experience with performance tuning applications on Hadoop and configuring Hadoop systems to maximise performance;\n\nExperience building systems to perform real-time data processing using Spark Streaming or Storm;\n\nExperience with managing the development life-cycle for agile software development projects;\n\n\n\nExperience working in a multi tenancy Hadoop environment;\n\n\n\n \n\n\n\n\nMust have technical / professional qualifications: \n\n\n\n\n3 year IT or IS degree or diploma \n\n5 – 8 years BI or related experience\n\n\n\n\nOr\n\n\n\n\nExpert level experience with using Spark, Yarn, Hive and Oozie;\n\nStrong Python and Scala programming ability\n\nSome experience with other distributed technologies such as Cassandra, ElasticSeatch and Flink would also be desirable\n\nEMPLOYMENT EQUITY \n\nThe Company’s approved Employment Equity Plan and Targets will be considered as part of the recruitment process. As an Equal Opportunities employer, we actively encourage and welcome people with various disabilities to apply\n\n  \n\n \n\nBand : G\n\nContact Email - Internal : Bahle.Manana@vodacom.co.za\n\nLocation : South Africa-Gauteng-Johannesburg : \n \n\n  1685\n\nEmployment Type : Permanent\n\nUnposting Date : Ongoing\n\nOrganization : Customer Centric Technology Solutions\n\"\"\"",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:30:44.273",
+      "dateUpdated": "2019-08-07 11:05:33.914",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -22,20 +22,28 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "text: String \u003d\n\"\nData Engineer-000000221954\n\n\n\n\nA Data Engineer is required in Big Data team to provides expert guidance and delivers through self and others to:\n\n\n\nLoad the necessary data from local and group sources onto the shared platform that are necessary for analysis and for commercial actions;\n\nBuilding applications that make use of large volumes of data and generate outputs that allow commercial actions that generate incremental value\n\nSupport local markets and group functions in obtaining benefiting business value from the operational data\n\n\n\nDesigning and producing highly performing and stable applications to perform complex processing of massive volumes of data in a multi-tenancy Hadoop environment\n\nBuilding end-to-end applications that make use of large volumes of source da..."
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1565162150855_-2085873455",
       "id": "20190807-071550_842595640",
       "dateCreated": "2019-08-07 07:15:50.855",
-      "dateStarted": "2019-08-07 10:30:44.846",
-      "dateFinished": "2019-08-07 10:30:46.458",
+      "dateStarted": "2019-08-07 11:05:34.280",
+      "dateFinished": "2019-08-07 11:05:35.403",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val textRdd \u003d sc.parallelize(text.split(\"\\n\")).flatMap(t\u003d\u003et.split(\" \")).map(t\u003d\u003e(t, 1)).reduceByKey(_ + _)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:30:46.515",
+      "dateUpdated": "2019-08-07 11:05:35.452",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -53,20 +61,28 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "textRdd: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[95] at reduceByKey at \u003cconsole\u003e:33\n"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1565162425515_1579484513",
       "id": "20190807-072025_1278646556",
       "dateCreated": "2019-08-07 07:20:25.518",
-      "dateStarted": "2019-08-07 10:30:47.785",
-      "dateFinished": "2019-08-07 10:30:52.600",
+      "dateStarted": "2019-08-07 11:05:36.360",
+      "dateFinished": "2019-08-07 11:05:40.088",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "z.show(textRdd.toDF)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:30:52.610",
+      "dateUpdated": "2019-08-07 11:05:40.177",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -151,20 +167,32 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "_1\t_2\nEmployment\t2\nTechnology\t1\nExtensive\t1\nThe\t1\nG\t1\nothers\t1\nallow\t1\noutputs\t1\ndesirable\t1\nhave\t1\ndiploma\t1\nEQUITY\t1\nsuch\t1\nSolutions\t1\ncomponents\t1\nthrough\t1\nwe\t1\nOrganization\t1\napplications\t6\nHive\t1\nonto\t1\nsoftware\t1\nused\t1\ninvestigating\t1\nWorking\t1\nmake\t2\nyears\t1\nrequired\t1\nData\t5\nprocess.\t1\nmanaging\t2\nrapid\t1\nthe\t11\ntechnology\t1\nare\t2\nBI\t1\npart\t1\nprocess\t1\nenable\t1\nreal-time\t2\nperformance;\t1\nIS\t1\nCassandra,\t1\nbe\t3\nUnposting\t1\nas\t2\nCustomer\t1\nprofessional\t1\nPermanent\t1\nmarkets\t1\nprogramming\t1\n:\t7\nenvironment\t1\nAfrica-Gauteng-Johannesburg\t1\nStreaming\t1\nExperience\t3\nMust\t1\ndisabilities\t1\nEmail\t1\nshared\t1\nis\t1\nvolumes\t3\ncompetencies,\t1\nlevel\t2\nnecessary\t2\nevolving\t1\non\t2\nCentric\t1\nwould\t1\nStrong\t1\nsources\t1\nability\t1\ndevelopment\t2\nEqual\t1\nusing\t2\nEngineer-000000221954\t1\nthey\t1\nnew\t1\ntenancy\t1\nPlan\t1\nyear\t1\nCompany’s\t1\nExpert\t2\nteam\t2\nuse\t2\nto:\t1\nSome\t1\nqualifications:\t1\ndegree\t1\n8\t1\nSouth\t1\noperational\t2\nbring\t1\ntechnical\t1\nor\t4\nBig\t3\nBand\t1\nperform\t2\nTargets\t1\nAs\t1\nprocessing\t3\nrecruitment\t1\nend-to-end\t1\nof\t8\ntuning\t1\ngenerate\t2\nobtaining\t1\nbenefits\t1\nanalytic\t1\nactively\t1\nOr\t1\nfunctions\t1\nworking\t1\nmaking\t1\nproducing\t1\n–\t1\ntechnologies\t2\nmulti\t1\nknowledge\t1\nHadoop\t5\nIT\t1\n1685\t1\nSpark\t1\nback\t1\nPython\t1\nContact\t1\nexperience]:\t1\nself\t1\nbenefiting\t1\nLoad\t1\nA\t1\ncomplex\t1\nmaximise\t1\nwhich\t1\nalso\t1\nLocation\t1\nfor\t4\nwelcome\t1\nmulti-tenancy\t1\nElasticSeatch\t1\ndrive\t1\nStorm;\t1\nanalysis\t1\nperformance\t1\nSpark,\t1\necosystem;\t1\nprojects;\t1\nOpportunities\t1\noutput\t1\nprovides\t1\npeople\t1\ncan\t1\n5\t1\nYarn,\t1\nsource\t1\ncommercial\t2\nstrategy\t1\ncapability\t1\nDate\t1\nScala\t1\nvalue\t3\nan\t1\ndelivers\t1\nsystems\t5\nemployer,\t1\nagile\t1\nFlink\t1\nexperience\t5\nrelated\t1\ndesigning,\t1\napply\t1\ndecision\t1\nperforming\t1\nDesigning\t1\nSupport\t1\nEquity\t1\nstable\t1\nwith\t7\ndata\t8\nBahle.Manana@vodacom.co.za\t1\nin\t6\nEMPLOYMENT\t1\n3\t1\narchitecture\t1\nType\t1\nintegrated\t1\nconfiguring\t1\n-\t1\nencourage\t1\nincremental\t1\nidentify\t1\nEngineer\t1\ndefine\t1\ndistributed\t1\nbuilding\t2\nCore\t1\nfrom\t4\nother\t1\nhighly\t1\nPlatform\t1\napproved\t1\n/\t1\nvarious\t1\nBuilding\t3\nOngoing\t1\nconsidered\t1\nbusiness\t3\nguidance\t1\nOozie;\t1\na\t3\nthat\t5\nenvironment;\t1\nlocal\t2\nwill\t1\nlarge\t3\nto\t12\nplatform\t1\nInternal\t1\nactions\t1\n\t63\nmassive\t1\ninsights\t1\ngroup\t2\nexpert\t1\nwhere\t1\nactions;\t1\namounts\t1\nlife-cycle\t1\nand\t18\nDefining\t1\nmodels\t1\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1565162903212_483819045",
       "id": "20190807-072823_1961288798",
       "dateCreated": "2019-08-07 07:28:23.218",
-      "dateStarted": "2019-08-07 10:30:53.558",
-      "dateFinished": "2019-08-07 10:31:00.881",
+      "dateStarted": "2019-08-07 11:05:40.688",
+      "dateFinished": "2019-08-07 11:05:45.956",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "println(\"%table word\\tcount\")\ntextRdd.collect.foreach(t\u003d\u003e\n    println(t._1 + \"\\t\" + t._2 * 20)\n)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:31:00.915",
+      "dateUpdated": "2019-08-07 11:05:46.050",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -239,59 +267,28 @@
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "jobName": "paragraph_1565162226668_78363178",
-      "id": "20190807-071706_1432036384",
-      "dateCreated": "2019-08-07 07:17:06.668",
-      "dateStarted": "2019-08-07 10:31:02.151",
-      "dateFinished": "2019-08-07 10:31:07.183",
-      "status": "FINISHED",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "val data \u003d \"\"\"\n[\n\t{text: \"Hadoop\", size: 100},\n\t{text: \"Spark\", size: 50},\n\t{text: \"Cassandra\", size: 40},\n\t{text: \"Hive\", size: 60},\n]\n\"\"\"",
-      "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:45:50.718",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "editorMode": "ace/mode/scala"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
       "results": {
         "code": "SUCCESS",
         "msg": [
           {
-            "type": "TEXT",
-            "data": "data: String \u003d\n\"\n[\n\t{text: \"Hadoop\", size: 100},\n\t{text: \"Spark\", size: 50},\n\t{text: \"Cassandra\", size: 40},\n\t{text: \"Hive\", size: 60},\n]\n\"\n"
+            "type": "TABLE",
+            "data": "word\tcount\nEmployment\t40\nTechnology\t20\nExtensive\t20\nThe\t20\nG\t20\nothers\t20\nallow\t20\noutputs\t20\ndesirable\t20\nhave\t20\ndiploma\t20\nEQUITY\t20\nsuch\t20\nSolutions\t20\ncomponents\t20\nthrough\t20\nwe\t20\nOrganization\t20\napplications\t120\nHive\t20\nonto\t20\nsoftware\t20\nused\t20\ninvestigating\t20\nWorking\t20\nmake\t40\nyears\t20\nrequired\t20\nData\t100\nprocess.\t20\nmanaging\t40\nrapid\t20\nthe\t220\ntechnology\t20\nare\t40\nBI\t20\npart\t20\nprocess\t20\nenable\t20\nreal-time\t40\nperformance;\t20\nIS\t20\nCassandra,\t20\nbe\t60\nUnposting\t20\nas\t40\nCustomer\t20\nprofessional\t20\nPermanent\t20\nmarkets\t20\nprogramming\t20\n:\t140\nenvironment\t20\nAfrica-Gauteng-Johannesburg\t20\nStreaming\t20\nExperience\t60\nMust\t20\ndisabilities\t20\nEmail\t20\nshared\t20\nis\t20\nvolumes\t60\ncompetencies,\t20\nlevel\t40\nnecessary\t40\nevolving\t20\non\t40\nCentric\t20\nwould\t20\nStrong\t20\nsources\t20\nability\t20\ndevelopment\t40\nEqual\t20\nusing\t40\nEngineer-000000221954\t20\nthey\t20\nnew\t20\ntenancy\t20\nPlan\t20\nyear\t20\nCompany’s\t20\nExpert\t40\nteam\t40\nuse\t40\nto:\t20\nSome\t20\nqualifications:\t20\ndegree\t20\n8\t20\nSouth\t20\noperational\t40\nbring\t20\ntechnical\t20\nor\t80\nBig\t60\nBand\t20\nperform\t40\nTargets\t20\nAs\t20\nprocessing\t60\nrecruitment\t20\nend-to-end\t20\nof\t160\ntuning\t20\ngenerate\t40\nobtaining\t20\nbenefits\t20\nanalytic\t20\nactively\t20\nOr\t20\nfunctions\t20\nworking\t20\nmaking\t20\nproducing\t20\n–\t20\ntechnologies\t40\nmulti\t20\nknowledge\t20\nHadoop\t100\nIT\t20\n1685\t20\nSpark\t20\nback\t20\nPython\t20\nContact\t20\nexperience]:\t20\nself\t20\nbenefiting\t20\nLoad\t20\nA\t20\ncomplex\t20\nmaximise\t20\nwhich\t20\nalso\t20\nLocation\t20\nfor\t80\nwelcome\t20\nmulti-tenancy\t20\nElasticSeatch\t20\ndrive\t20\nStorm;\t20\nanalysis\t20\nperformance\t20\nSpark,\t20\necosystem;\t20\nprojects;\t20\nOpportunities\t20\noutput\t20\nprovides\t20\npeople\t20\ncan\t20\n5\t20\nYarn,\t20\nsource\t20\ncommercial\t40\nstrategy\t20\ncapability\t20\nDate\t20\nScala\t20\nvalue\t60\nan\t20\ndelivers\t20\nsystems\t100\nemployer,\t20\nagile\t20\nFlink\t20\nexperience\t100\nrelated\t20\ndesigning,\t20\napply\t20\ndecision\t20\nperforming\t20\nDesigning\t20\nSupport\t20\nEquity\t20\nstable\t20\nwith\t140\ndata\t160\nBahle.Manana@vodacom.co.za\t20\nin\t120\nEMPLOYMENT\t20\n3\t20\narchitecture\t20\nType\t20\nintegrated\t20\nconfiguring\t20\n-\t20\nencourage\t20\nincremental\t20\nidentify\t20\nEngineer\t20\ndefine\t20\ndistributed\t20\nbuilding\t40\nCore\t20\nfrom\t80\nother\t20\nhighly\t20\nPlatform\t20\napproved\t20\n/\t20\nvarious\t20\nBuilding\t60\nOngoing\t20\nconsidered\t20\nbusiness\t60\nguidance\t20\nOozie;\t20\na\t60\nthat\t100\nenvironment;\t20\nlocal\t40\nwill\t20\nlarge\t60\nto\t240\nplatform\t20\nInternal\t20\nactions\t20\n\t1260\nmassive\t20\ninsights\t20\ngroup\t40\nexpert\t20\nwhere\t20\nactions;\t20\namounts\t20\nlife-cycle\t20\nand\t360\nDefining\t20\nmodels\t20\n"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1565174499884_271575037",
-      "id": "20190807-104139_869925118",
-      "dateCreated": "2019-08-07 10:41:39.884",
-      "dateStarted": "2019-08-07 10:45:50.840",
-      "dateFinished": "2019-08-07 10:45:52.193",
+      "jobName": "paragraph_1565162226668_78363178",
+      "id": "20190807-071706_1432036384",
+      "dateCreated": "2019-08-07 07:17:06.668",
+      "dateStarted": "2019-08-07 11:05:47.145",
+      "dateFinished": "2019-08-07 11:05:51.685",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "print(s\"\"\"%html\n\t\u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js\"\u003e\u003c/script\u003e\n\t\t\n\t\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n\t\u003cscript\u003e\n\t\tvar wordCollection \u003d [\n\t\t\t{text: \"Hadoop\", size: 100},\n\t\t\t{text: \"Spark\", size: 50},\n\t\t\t{text: \"Cassandra\", size: 40}\n\t\t]\n\t\t\n\t\t//Create a new instance of the word cloud visualisation.\n\t\tvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\t\tmyWordCloud.update(${data});\n\t\u003c/script\u003e\n\"\"\")\n",
+      "text": "println(\"%html\")\nprintln(\"\u003cscript\u003e\")\nprintln(\"    var wordCollection \u003d [\")\n\ntextRdd.collect.foreach(t\u003d\u003e\n    println(\"{text: \\\"\" + t._1 + \"\\\", size: \" + t._2 * 5 + \"},\")\n)\n\nprintln(\"    ]\")\nprintln(\"\u003c/script\u003e\")\n\n\n//println(t._1 + \"\\t\" + t._2 * 20)\n\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:46:05.917",
+      "dateUpdated": "2019-08-07 11:09:15.072",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -314,7 +311,46 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\t\u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js\"\u003e\u003c/script\u003e\n\t\t\n\t\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n\t\u003cscript\u003e\n\t\tvar wordCollection \u003d [\n\t\t\t{text: \"Hadoop\", size: 100},\n\t\t\t{text: \"Spark\", size: 50},\n\t\t\t{text: \"Cassandra\", size: 40}\n\t\t]\n\t\t\n\t\t//Create a new instance of the word cloud visualisation.\n\t\tvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\t\tmyWordCloud.update(\n[\n\t{text: \"Hadoop\", size: 100},\n\t{text: \"Spark\", size: 50},\n\t{text: \"Cassandra\", size: 40},\n\t{text: \"Hive\", size: 60},\n]\n);\n\t\u003c/script\u003e\n"
+            "data": "\u003cscript\u003e\n    var wordCollection \u003d [\n{text: \"Employment\", size: 10},\n{text: \"Technology\", size: 5},\n{text: \"Extensive\", size: 5},\n{text: \"The\", size: 5},\n{text: \"G\", size: 5},\n{text: \"others\", size: 5},\n{text: \"allow\", size: 5},\n{text: \"outputs\", size: 5},\n{text: \"desirable\", size: 5},\n{text: \"have\", size: 5},\n{text: \"diploma\", size: 5},\n{text: \"EQUITY\", size: 5},\n{text: \"such\", size: 5},\n{text: \"Solutions\", size: 5},\n{text: \"components\", size: 5},\n{text: \"through\", size: 5},\n{text: \"we\", size: 5},\n{text: \"Organization\", size: 5},\n{text: \"applications\", size: 30},\n{text: \"Hive\", size: 5},\n{text: \"onto\", size: 5},\n{text: \"software\", size: 5},\n{text: \"used\", size: 5},\n{text: \"investigating\", size: 5},\n{text: \"Working\", size: 5},\n{text: \"make\", size: 10},\n{text: \"years\", size: 5},\n{text: \"required\", size: 5},\n{text: \"Data\", size: 25},\n{text: \"process.\", size: 5},\n{text: \"managing\", size: 10},\n{text: \"rapid\", size: 5},\n{text: \"the\", size: 55},\n{text: \"technology\", size: 5},\n{text: \"are\", size: 10},\n{text: \"BI\", size: 5},\n{text: \"part\", size: 5},\n{text: \"process\", size: 5},\n{text: \"enable\", size: 5},\n{text: \"real-time\", size: 10},\n{text: \"performance;\", size: 5},\n{text: \"IS\", size: 5},\n{text: \"Cassandra,\", size: 5},\n{text: \"be\", size: 15},\n{text: \"Unposting\", size: 5},\n{text: \"as\", size: 10},\n{text: \"Customer\", size: 5},\n{text: \"professional\", size: 5},\n{text: \"Permanent\", size: 5},\n{text: \"markets\", size: 5},\n{text: \"programming\", size: 5},\n{text: \":\", size: 35},\n{text: \"environment\", size: 5},\n{text: \"Africa-Gauteng-Johannesburg\", size: 5},\n{text: \"Streaming\", size: 5},\n{text: \"Experience\", size: 15},\n{text: \"Must\", size: 5},\n{text: \"disabilities\", size: 5},\n{text: \"Email\", size: 5},\n{text: \"shared\", size: 5},\n{text: \"is\", size: 5},\n{text: \"volumes\", size: 15},\n{text: \"competencies,\", size: 5},\n{text: \"level\", size: 10},\n{text: \"necessary\", size: 10},\n{text: \"evolving\", size: 5},\n{text: \"on\", size: 10},\n{text: \"Centric\", size: 5},\n{text: \"would\", size: 5},\n{text: \"Strong\", size: 5},\n{text: \"sources\", size: 5},\n{text: \"ability\", size: 5},\n{text: \"development\", size: 10},\n{text: \"Equal\", size: 5},\n{text: \"using\", size: 10},\n{text: \"Engineer-000000221954\", size: 5},\n{text: \"they\", size: 5},\n{text: \"new\", size: 5},\n{text: \"tenancy\", size: 5},\n{text: \"Plan\", size: 5},\n{text: \"year\", size: 5},\n{text: \"Company’s\", size: 5},\n{text: \"Expert\", size: 10},\n{text: \"team\", size: 10},\n{text: \"use\", size: 10},\n{text: \"to:\", size: 5},\n{text: \"Some\", size: 5},\n{text: \"qualifications:\", size: 5},\n{text: \"degree\", size: 5},\n{text: \"8\", size: 5},\n{text: \"South\", size: 5},\n{text: \"operational\", size: 10},\n{text: \"bring\", size: 5},\n{text: \"technical\", size: 5},\n{text: \"or\", size: 20},\n{text: \"Big\", size: 15},\n{text: \"Band\", size: 5},\n{text: \"perform\", size: 10},\n{text: \"Targets\", size: 5},\n{text: \"As\", size: 5},\n{text: \"processing\", size: 15},\n{text: \"recruitment\", size: 5},\n{text: \"end-to-end\", size: 5},\n{text: \"of\", size: 40},\n{text: \"tuning\", size: 5},\n{text: \"generate\", size: 10},\n{text: \"obtaining\", size: 5},\n{text: \"benefits\", size: 5},\n{text: \"analytic\", size: 5},\n{text: \"actively\", size: 5},\n{text: \"Or\", size: 5},\n{text: \"functions\", size: 5},\n{text: \"working\", size: 5},\n{text: \"making\", size: 5},\n{text: \"producing\", size: 5},\n{text: \"–\", size: 5},\n{text: \"technologies\", size: 10},\n{text: \"multi\", size: 5},\n{text: \"knowledge\", size: 5},\n{text: \"Hadoop\", size: 25},\n{text: \"IT\", size: 5},\n{text: \"1685\", size: 5},\n{text: \"Spark\", size: 5},\n{text: \"back\", size: 5},\n{text: \"Python\", size: 5},\n{text: \"Contact\", size: 5},\n{text: \"experience]:\", size: 5},\n{text: \"self\", size: 5},\n{text: \"benefiting\", size: 5},\n{text: \"Load\", size: 5},\n{text: \"A\", size: 5},\n{text: \"complex\", size: 5},\n{text: \"maximise\", size: 5},\n{text: \"which\", size: 5},\n{text: \"also\", size: 5},\n{text: \"Location\", size: 5},\n{text: \"for\", size: 20},\n{text: \"welcome\", size: 5},\n{text: \"multi-tenancy\", size: 5},\n{text: \"ElasticSeatch\", size: 5},\n{text: \"drive\", size: 5},\n{text: \"Storm;\", size: 5},\n{text: \"analysis\", size: 5},\n{text: \"performance\", size: 5},\n{text: \"Spark,\", size: 5},\n{text: \"ecosystem;\", size: 5},\n{text: \"projects;\", size: 5},\n{text: \"Opportunities\", size: 5},\n{text: \"output\", size: 5},\n{text: \"provides\", size: 5},\n{text: \"people\", size: 5},\n{text: \"can\", size: 5},\n{text: \"5\", size: 5},\n{text: \"Yarn,\", size: 5},\n{text: \"source\", size: 5},\n{text: \"commercial\", size: 10},\n{text: \"strategy\", size: 5},\n{text: \"capability\", size: 5},\n{text: \"Date\", size: 5},\n{text: \"Scala\", size: 5},\n{text: \"value\", size: 15},\n{text: \"an\", size: 5},\n{text: \"delivers\", size: 5},\n{text: \"systems\", size: 25},\n{text: \"employer,\", size: 5},\n{text: \"agile\", size: 5},\n{text: \"Flink\", size: 5},\n{text: \"experience\", size: 25},\n{text: \"related\", size: 5},\n{text: \"designing,\", size: 5},\n{text: \"apply\", size: 5},\n{text: \"decision\", size: 5},\n{text: \"performing\", size: 5},\n{text: \"Designing\", size: 5},\n{text: \"Support\", size: 5},\n{text: \"Equity\", size: 5},\n{text: \"stable\", size: 5},\n{text: \"with\", size: 35},\n{text: \"data\", size: 40},\n{text: \"Bahle.Manana@vodacom.co.za\", size: 5},\n{text: \"in\", size: 30},\n{text: \"EMPLOYMENT\", size: 5},\n{text: \"3\", size: 5},\n{text: \"architecture\", size: 5},\n{text: \"Type\", size: 5},\n{text: \"integrated\", size: 5},\n{text: \"configuring\", size: 5},\n{text: \"-\", size: 5},\n{text: \"encourage\", size: 5},\n{text: \"incremental\", size: 5},\n{text: \"identify\", size: 5},\n{text: \"Engineer\", size: 5},\n{text: \"define\", size: 5},\n{text: \"distributed\", size: 5},\n{text: \"building\", size: 10},\n{text: \"Core\", size: 5},\n{text: \"from\", size: 20},\n{text: \"other\", size: 5},\n{text: \"highly\", size: 5},\n{text: \"Platform\", size: 5},\n{text: \"approved\", size: 5},\n{text: \"/\", size: 5},\n{text: \"various\", size: 5},\n{text: \"Building\", size: 15},\n{text: \"Ongoing\", size: 5},\n{text: \"considered\", size: 5},\n{text: \"business\", size: 15},\n{text: \"guidance\", size: 5},\n{text: \"Oozie;\", size: 5},\n{text: \"a\", size: 15},\n{text: \"that\", size: 25},\n{text: \"environment;\", size: 5},\n{text: \"local\", size: 10},\n{text: \"will\", size: 5},\n{text: \"large\", size: 15},\n{text: \"to\", size: 60},\n{text: \"platform\", size: 5},\n{text: \"Internal\", size: 5},\n{text: \"actions\", size: 5},\n{text: \"\", size: 315},\n{text: \"massive\", size: 5},\n{text: \"insights\", size: 5},\n{text: \"group\", size: 10},\n{text: \"expert\", size: 5},\n{text: \"where\", size: 5},\n{text: \"actions;\", size: 5},\n{text: \"amounts\", size: 5},\n{text: \"life-cycle\", size: 5},\n{text: \"and\", size: 90},\n{text: \"Defining\", size: 5},\n{text: \"models\", size: 5},\n    ]\n\u003c/script\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565174872578_1718155493",
+      "id": "20190807-104752_1272862315",
+      "dateCreated": "2019-08-07 10:47:52.578",
+      "dateStarted": "2019-08-07 11:09:15.188",
+      "dateFinished": "2019-08-07 11:09:18.368",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "print(s\"\"\"%html\n\t\u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js\"\u003e\u003c/script\u003e\n\t\t\n\t\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n\t\u003cscript\u003e\n\t\t//Create a new instance of the word cloud visualisation.\n\t\tvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\t\tmyWordCloud.update(wordCollection);\n\t\u003c/script\u003e\n\"\"\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-07 11:09:48.128",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\t\u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n\t\u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/word.cloud.js\"\u003e\u003c/script\u003e\n\t\t\n\t\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n\t\u003cscript\u003e\n\t\t//Create a new instance of the word cloud visualisation.\n\t\tvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\t\tmyWordCloud.update(wordCollection);\n\t\u003c/script\u003e\n"
           }
         ]
       },
@@ -322,15 +358,15 @@
       "jobName": "paragraph_1565173920831_-725478954",
       "id": "20190807-103200_362846192",
       "dateCreated": "2019-08-07 10:32:00.831",
-      "dateStarted": "2019-08-07 10:46:06.087",
-      "dateFinished": "2019-08-07 10:46:08.321",
+      "dateStarted": "2019-08-07 11:09:48.437",
+      "dateFinished": "2019-08-07 11:09:49.743",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "print(s\"\"\"%html\n\u003cdiv id\u003d\"wordCloud\"\u003e\u003c/div\u003e\n  \u003cscript src\u003d\"http://d3js.org/d3.v3.min.js\"\u003e\u003c/script\u003e\n  \u003cscript src\u003d\"https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/700bbf40/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js\"\u003e\u003c/script\u003e\n  \u003cscript\u003e\n\n//Take from http://bl.ocks.org/joews/raw/9697914/\n//Simple animated example of d3-cloud - https://github.com/jasondavies/d3-cloud\n//Based on https://github.com/jasondavies/d3-cloud/blob/master/examples/simple.html\n\n// Encapsulate the word cloud functionality\nfunction wordCloud(selector) {\n\n    var fill \u003d d3.scale.category20();\n\n    //Construct the word cloud\u0027s SVG element\n    var svg \u003d d3.select(selector).append(\"svg\")\n        .attr(\"width\", 500)\n        .attr(\"height\", 500)\n        .append(\"g\")\n        .attr(\"transform\", \"translate(250,250)\");\n\n\n    //Draw the word cloud\n    function draw(words) {\n        var cloud \u003d svg.selectAll(\"g text\")\n                        .data(words, function(d) { return d.text; })\n\n        //Entering words\n        cloud.enter()\n            .append(\"text\")\n            .style(\"font-family\", \"Impact\")\n            .style(\"fill\", function(d, i) { return fill(i); })\n            .attr(\"text-anchor\", \"middle\")\n            .attr(\u0027font-size\u0027, 1)\n            .text(function(d) { return d.text; });\n\n        //Entering and existing words\n        cloud\n            .transition()\n                .duration(600)\n                .style(\"font-size\", function(d) { return d.size + \"px\"; })\n                .attr(\"transform\", function(d) {\n                    return \"translate(\" + [d.x, d.y] + \")rotate(\" + d.rotate + \")\";\n                })\n                .style(\"fill-opacity\", 1);\n\n        //Exiting words\n        cloud.exit()\n            .transition()\n                .duration(200)\n                .style(\u0027fill-opacity\u0027, 1e-6)\n                .attr(\u0027font-size\u0027, 1)\n                .remove();\n    }\n\n\n    //Use the module pattern to encapsulate the visualisation code. We\u0027ll\n    // expose only the parts that need to be public.\n    return {\n\n        //Recompute the word cloud for a new set of words. This method will\n        // asycnhronously call draw when the layout has been computed.\n        //The outside world will need to call this function, so make it part\n        // of the wordCloud return value.\n        update: function(words) {\n            d3.layout.cloud().size([500, 500])\n                .words(words)\n                .padding(5)\n                .rotate(function() { return ~~(Math.random() * 2) * 90; })\n                .font(\"Impact\")\n                .fontSize(function(d) { return d.size; })\n                .on(\"end\", draw)\n                .start();\n        }\n    }\n\n}\n\n//Some sample data - http://en.wikiquote.org/wiki/Opening_lines\nvar words \u003d [\n    \"You don\u0027t know about me without you have read a book called The Adventures of Tom Sawyer but that ain\u0027t no matter.\",\n    \"The boy with fair hair lowered himself down the last few feet of rock and began to pick his way toward the lagoon.\",\n    \"When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton.\",\n    \"It was inevitable: the scent of bitter almonds always reminded him of the fate of unrequited love.\"\n]\n\n//Prepare one of the sample sentences by removing punctuation,\n// creating an array of words and computing a random size attribute.\nfunction getWords(i) {\n    return words[i]\n            .replace(/[!\\\\.,:;\\\\?]/g, \u0027\u0027)\n            .split(\u0027 \u0027)\n            .map(function(d) {\n                return {text: d, size: 10 + Math.random() * 60};\n            })\n}\n\n//This method tells the word cloud to redraw with a new set of words.\n//In reality the new words would probably come from a server request,\n// user input or some other source.\nfunction showNewWords(vis, i) {\n    i \u003d i || 0;\n\n    vis.update(getWords(i ++ % words.length))\n    setTimeout(function() { showNewWords(vis, i + 1)}, 2000)\n}\n\n//Create a new instance of the word cloud visualisation.\nvar myWordCloud \u003d wordCloud(\u0027#wordCloud\u0027);\n\n//Start cycling through the demo data\nshowNewWords(myWordCloud);\n\n\n\u003c/script\u003e\n\"\"\")",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:33:00.818",
+      "dateUpdated": "2019-08-07 11:05:56.884",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -362,7 +398,7 @@
     {
       "text": "val data \u003d \"\"\"{\r\n \"name\": \"flare\",\r\n \"children\": [\r\n  {\r\n   \"name\": \"analytics\",\r\n   \"children\": [\r\n    {\r\n     \"name\": \"cluster\",\r\n     \"children\": [\r\n      {\"name\": \"AgglomerativeCluster\", \"size\": 3938},\r\n      {\"name\": \"CommunityStructure\", \"size\": 3812},\r\n      {\"name\": \"HierarchicalCluster\", \"size\": 6714},\r\n      {\"name\": \"MergeEdge\", \"size\": 743}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"graph\",\r\n     \"children\": [\r\n      {\"name\": \"BetweennessCentrality\", \"size\": 3534},\r\n      {\"name\": \"LinkDistance\", \"size\": 5731},\r\n      {\"name\": \"MaxFlowMinCut\", \"size\": 7840},\r\n      {\"name\": \"ShortestPaths\", \"size\": 5914},\r\n      {\"name\": \"SpanningTree\", \"size\": 3416}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"optimization\",\r\n     \"children\": [\r\n      {\"name\": \"AspectRatioBanker\", \"size\": 7074}\r\n     ]\r\n    }\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"animate\",\r\n   \"children\": [\r\n    {\"name\": \"Easing\", \"size\": 17010},\r\n    {\"name\": \"FunctionSequence\", \"size\": 5842},\r\n    {\r\n     \"name\": \"interpolate\",\r\n     \"children\": [\r\n      {\"name\": \"ArrayInterpolator\", \"size\": 1983},\r\n      {\"name\": \"ColorInterpolator\", \"size\": 2047},\r\n      {\"name\": \"DateInterpolator\", \"size\": 1375},\r\n      {\"name\": \"Interpolator\", \"size\": 8746},\r\n      {\"name\": \"MatrixInterpolator\", \"size\": 2202},\r\n      {\"name\": \"NumberInterpolator\", \"size\": 1382},\r\n      {\"name\": \"ObjectInterpolator\", \"size\": 1629},\r\n      {\"name\": \"PointInterpolator\", \"size\": 1675},\r\n      {\"name\": \"RectangleInterpolator\", \"size\": 2042}\r\n     ]\r\n    },\r\n    {\"name\": \"ISchedulable\", \"size\": 1041},\r\n    {\"name\": \"Parallel\", \"size\": 5176},\r\n    {\"name\": \"Pause\", \"size\": 449},\r\n    {\"name\": \"Scheduler\", \"size\": 5593},\r\n    {\"name\": \"Sequence\", \"size\": 5534},\r\n    {\"name\": \"Transition\", \"size\": 9201},\r\n    {\"name\": \"Transitioner\", \"size\": 19975},\r\n    {\"name\": \"TransitionEvent\", \"size\": 1116},\r\n    {\"name\": \"Tween\", \"size\": 6006}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"data\",\r\n   \"children\": [\r\n    {\r\n     \"name\": \"converters\",\r\n     \"children\": [\r\n      {\"name\": \"Converters\", \"size\": 721},\r\n      {\"name\": \"DelimitedTextConverter\", \"size\": 4294},\r\n      {\"name\": \"GraphMLConverter\", \"size\": 9800},\r\n      {\"name\": \"IDataConverter\", \"size\": 1314},\r\n      {\"name\": \"JSONConverter\", \"size\": 2220}\r\n     ]\r\n    },\r\n    {\"name\": \"DataField\", \"size\": 1759},\r\n    {\"name\": \"DataSchema\", \"size\": 2165},\r\n    {\"name\": \"DataSet\", \"size\": 586},\r\n    {\"name\": \"DataSource\", \"size\": 3331},\r\n    {\"name\": \"DataTable\", \"size\": 772},\r\n    {\"name\": \"DataUtil\", \"size\": 3322}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"display\",\r\n   \"children\": [\r\n    {\"name\": \"DirtySprite\", \"size\": 8833},\r\n    {\"name\": \"LineSprite\", \"size\": 1732},\r\n    {\"name\": \"RectSprite\", \"size\": 3623},\r\n    {\"name\": \"TextSprite\", \"size\": 10066}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"flex\",\r\n   \"children\": [\r\n    {\"name\": \"FlareVis\", \"size\": 4116}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"physics\",\r\n   \"children\": [\r\n    {\"name\": \"DragForce\", \"size\": 1082},\r\n    {\"name\": \"GravityForce\", \"size\": 1336},\r\n    {\"name\": \"IForce\", \"size\": 319},\r\n    {\"name\": \"NBodyForce\", \"size\": 10498},\r\n    {\"name\": \"Particle\", \"size\": 2822},\r\n    {\"name\": \"Simulation\", \"size\": 9983},\r\n    {\"name\": \"Spring\", \"size\": 2213},\r\n    {\"name\": \"SpringForce\", \"size\": 1681}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"query\",\r\n   \"children\": [\r\n    {\"name\": \"AggregateExpression\", \"size\": 1616},\r\n    {\"name\": \"And\", \"size\": 1027},\r\n    {\"name\": \"Arithmetic\", \"size\": 3891},\r\n    {\"name\": \"Average\", \"size\": 891},\r\n    {\"name\": \"BinaryExpression\", \"size\": 2893},\r\n    {\"name\": \"Comparison\", \"size\": 5103},\r\n    {\"name\": \"CompositeExpression\", \"size\": 3677},\r\n    {\"name\": \"Count\", \"size\": 781},\r\n    {\"name\": \"DateUtil\", \"size\": 4141},\r\n    {\"name\": \"Distinct\", \"size\": 933},\r\n    {\"name\": \"Expression\", \"size\": 5130},\r\n    {\"name\": \"ExpressionIterator\", \"size\": 3617},\r\n    {\"name\": \"Fn\", \"size\": 3240},\r\n    {\"name\": \"If\", \"size\": 2732},\r\n    {\"name\": \"IsA\", \"size\": 2039},\r\n    {\"name\": \"Literal\", \"size\": 1214},\r\n    {\"name\": \"Match\", \"size\": 3748},\r\n    {\"name\": \"Maximum\", \"size\": 843},\r\n    {\r\n     \"name\": \"methods\",\r\n     \"children\": [\r\n      {\"name\": \"add\", \"size\": 593},\r\n      {\"name\": \"and\", \"size\": 330},\r\n      {\"name\": \"average\", \"size\": 287},\r\n      {\"name\": \"count\", \"size\": 277},\r\n      {\"name\": \"distinct\", \"size\": 292},\r\n      {\"name\": \"div\", \"size\": 595},\r\n      {\"name\": \"eq\", \"size\": 594},\r\n      {\"name\": \"fn\", \"size\": 460},\r\n      {\"name\": \"gt\", \"size\": 603},\r\n      {\"name\": \"gte\", \"size\": 625},\r\n      {\"name\": \"iff\", \"size\": 748},\r\n      {\"name\": \"isa\", \"size\": 461},\r\n      {\"name\": \"lt\", \"size\": 597},\r\n      {\"name\": \"lte\", \"size\": 619},\r\n      {\"name\": \"max\", \"size\": 283},\r\n      {\"name\": \"min\", \"size\": 283},\r\n      {\"name\": \"mod\", \"size\": 591},\r\n      {\"name\": \"mul\", \"size\": 603},\r\n      {\"name\": \"neq\", \"size\": 599},\r\n      {\"name\": \"not\", \"size\": 386},\r\n      {\"name\": \"or\", \"size\": 323},\r\n      {\"name\": \"orderby\", \"size\": 307},\r\n      {\"name\": \"range\", \"size\": 772},\r\n      {\"name\": \"select\", \"size\": 296},\r\n      {\"name\": \"stddev\", \"size\": 363},\r\n      {\"name\": \"sub\", \"size\": 600},\r\n      {\"name\": \"sum\", \"size\": 280},\r\n      {\"name\": \"update\", \"size\": 307},\r\n      {\"name\": \"variance\", \"size\": 335},\r\n      {\"name\": \"where\", \"size\": 299},\r\n      {\"name\": \"xor\", \"size\": 354},\r\n      {\"name\": \"_\", \"size\": 264}\r\n     ]\r\n    },\r\n    {\"name\": \"Minimum\", \"size\": 843},\r\n    {\"name\": \"Not\", \"size\": 1554},\r\n    {\"name\": \"Or\", \"size\": 970},\r\n    {\"name\": \"Query\", \"size\": 13896},\r\n    {\"name\": \"Range\", \"size\": 1594},\r\n    {\"name\": \"StringUtil\", \"size\": 4130},\r\n    {\"name\": \"Sum\", \"size\": 791},\r\n    {\"name\": \"Variable\", \"size\": 1124},\r\n    {\"name\": \"Variance\", \"size\": 1876},\r\n    {\"name\": \"Xor\", \"size\": 1101}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"scale\",\r\n   \"children\": [\r\n    {\"name\": \"IScaleMap\", \"size\": 2105},\r\n    {\"name\": \"LinearScale\", \"size\": 1316},\r\n    {\"name\": \"LogScale\", \"size\": 3151},\r\n    {\"name\": \"OrdinalScale\", \"size\": 3770},\r\n    {\"name\": \"QuantileScale\", \"size\": 2435},\r\n    {\"name\": \"QuantitativeScale\", \"size\": 4839},\r\n    {\"name\": \"RootScale\", \"size\": 1756},\r\n    {\"name\": \"Scale\", \"size\": 4268},\r\n    {\"name\": \"ScaleType\", \"size\": 1821},\r\n    {\"name\": \"TimeScale\", \"size\": 5833}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"util\",\r\n   \"children\": [\r\n    {\"name\": \"Arrays\", \"size\": 8258},\r\n    {\"name\": \"Colors\", \"size\": 10001},\r\n    {\"name\": \"Dates\", \"size\": 8217},\r\n    {\"name\": \"Displays\", \"size\": 12555},\r\n    {\"name\": \"Filter\", \"size\": 2324},\r\n    {\"name\": \"Geometry\", \"size\": 10993},\r\n    {\r\n     \"name\": \"heap\",\r\n     \"children\": [\r\n      {\"name\": \"FibonacciHeap\", \"size\": 9354},\r\n      {\"name\": \"HeapNode\", \"size\": 1233}\r\n     ]\r\n    },\r\n    {\"name\": \"IEvaluable\", \"size\": 335},\r\n    {\"name\": \"IPredicate\", \"size\": 383},\r\n    {\"name\": \"IValueProxy\", \"size\": 874},\r\n    {\r\n     \"name\": \"math\",\r\n     \"children\": [\r\n      {\"name\": \"DenseMatrix\", \"size\": 3165},\r\n      {\"name\": \"IMatrix\", \"size\": 2815},\r\n      {\"name\": \"SparseMatrix\", \"size\": 3366}\r\n     ]\r\n    },\r\n    {\"name\": \"Maths\", \"size\": 17705},\r\n    {\"name\": \"Orientation\", \"size\": 1486},\r\n    {\r\n     \"name\": \"palette\",\r\n     \"children\": [\r\n      {\"name\": \"ColorPalette\", \"size\": 6367},\r\n      {\"name\": \"Palette\", \"size\": 1229},\r\n      {\"name\": \"ShapePalette\", \"size\": 2059},\r\n      {\"name\": \"SizePalette\", \"size\": 2291}\r\n     ]\r\n    },\r\n    {\"name\": \"Property\", \"size\": 5559},\r\n    {\"name\": \"Shapes\", \"size\": 19118},\r\n    {\"name\": \"Sort\", \"size\": 6887},\r\n    {\"name\": \"Stats\", \"size\": 6557},\r\n    {\"name\": \"Strings\", \"size\": 22026}\r\n   ]\r\n  },\r\n  {\r\n   \"name\": \"vis\",\r\n   \"children\": [\r\n    {\r\n     \"name\": \"axis\",\r\n     \"children\": [\r\n      {\"name\": \"Axes\", \"size\": 1302},\r\n      {\"name\": \"Axis\", \"size\": 24593},\r\n      {\"name\": \"AxisGridLine\", \"size\": 652},\r\n      {\"name\": \"AxisLabel\", \"size\": 636},\r\n      {\"name\": \"CartesianAxes\", \"size\": 6703}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"controls\",\r\n     \"children\": [\r\n      {\"name\": \"AnchorControl\", \"size\": 2138},\r\n      {\"name\": \"ClickControl\", \"size\": 3824},\r\n      {\"name\": \"Control\", \"size\": 1353},\r\n      {\"name\": \"ControlList\", \"size\": 4665},\r\n      {\"name\": \"DragControl\", \"size\": 2649},\r\n      {\"name\": \"ExpandControl\", \"size\": 2832},\r\n      {\"name\": \"HoverControl\", \"size\": 4896},\r\n      {\"name\": \"IControl\", \"size\": 763},\r\n      {\"name\": \"PanZoomControl\", \"size\": 5222},\r\n      {\"name\": \"SelectionControl\", \"size\": 7862},\r\n      {\"name\": \"TooltipControl\", \"size\": 8435}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"data\",\r\n     \"children\": [\r\n      {\"name\": \"Data\", \"size\": 20544},\r\n      {\"name\": \"DataList\", \"size\": 19788},\r\n      {\"name\": \"DataSprite\", \"size\": 10349},\r\n      {\"name\": \"EdgeSprite\", \"size\": 3301},\r\n      {\"name\": \"NodeSprite\", \"size\": 19382},\r\n      {\r\n       \"name\": \"render\",\r\n       \"children\": [\r\n        {\"name\": \"ArrowType\", \"size\": 698},\r\n        {\"name\": \"EdgeRenderer\", \"size\": 5569},\r\n        {\"name\": \"IRenderer\", \"size\": 353},\r\n        {\"name\": \"ShapeRenderer\", \"size\": 2247}\r\n       ]\r\n      },\r\n      {\"name\": \"ScaleBinding\", \"size\": 11275},\r\n      {\"name\": \"Tree\", \"size\": 7147},\r\n      {\"name\": \"TreeBuilder\", \"size\": 9930}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"events\",\r\n     \"children\": [\r\n      {\"name\": \"DataEvent\", \"size\": 2313},\r\n      {\"name\": \"SelectionEvent\", \"size\": 1880},\r\n      {\"name\": \"TooltipEvent\", \"size\": 1701},\r\n      {\"name\": \"VisualizationEvent\", \"size\": 1117}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"legend\",\r\n     \"children\": [\r\n      {\"name\": \"Legend\", \"size\": 20859},\r\n      {\"name\": \"LegendItem\", \"size\": 4614},\r\n      {\"name\": \"LegendRange\", \"size\": 10530}\r\n     ]\r\n    },\r\n    {\r\n     \"name\": \"operator\",\r\n     \"children\": [\r\n      {\r\n       \"name\": \"distortion\",\r\n       \"children\": [\r\n        {\"name\": \"BifocalDistortion\", \"size\": 4461},\r\n        {\"name\": \"Distortion\", \"size\": 6314},\r\n        {\"name\": \"FisheyeDistortion\", \"size\": 3444}\r\n       ]\r\n      },\r\n      {\r\n       \"name\": \"encoder\",\r\n       \"children\": [\r\n        {\"name\": \"ColorEncoder\", \"size\": 3179},\r\n        {\"name\": \"Encoder\", \"size\": 4060},\r\n        {\"name\": \"PropertyEncoder\", \"size\": 4138},\r\n        {\"name\": \"ShapeEncoder\", \"size\": 1690},\r\n        {\"name\": \"SizeEncoder\", \"size\": 1830}\r\n       ]\r\n      },\r\n      {\r\n       \"name\": \"filter\",\r\n       \"children\": [\r\n        {\"name\": \"FisheyeTreeFilter\", \"size\": 5219},\r\n        {\"name\": \"GraphDistanceFilter\", \"size\": 3165},\r\n        {\"name\": \"VisibilityFilter\", \"size\": 3509}\r\n       ]\r\n      },\r\n      {\"name\": \"IOperator\", \"size\": 1286},\r\n      {\r\n       \"name\": \"label\",\r\n       \"children\": [\r\n        {\"name\": \"Labeler\", \"size\": 9956},\r\n        {\"name\": \"RadialLabeler\", \"size\": 3899},\r\n        {\"name\": \"StackedAreaLabeler\", \"size\": 3202}\r\n       ]\r\n      },\r\n      {\r\n       \"name\": \"layout\",\r\n       \"children\": [\r\n        {\"name\": \"AxisLayout\", \"size\": 6725},\r\n        {\"name\": \"BundledEdgeRouter\", \"size\": 3727},\r\n        {\"name\": \"CircleLayout\", \"size\": 9317},\r\n        {\"name\": \"CirclePackingLayout\", \"size\": 12003},\r\n        {\"name\": \"DendrogramLayout\", \"size\": 4853},\r\n        {\"name\": \"ForceDirectedLayout\", \"size\": 8411},\r\n        {\"name\": \"IcicleTreeLayout\", \"size\": 4864},\r\n        {\"name\": \"IndentedTreeLayout\", \"size\": 3174},\r\n        {\"name\": \"Layout\", \"size\": 7881},\r\n        {\"name\": \"NodeLinkTreeLayout\", \"size\": 12870},\r\n        {\"name\": \"PieLayout\", \"size\": 2728},\r\n        {\"name\": \"RadialTreeLayout\", \"size\": 12348},\r\n        {\"name\": \"RandomLayout\", \"size\": 870},\r\n        {\"name\": \"StackedAreaLayout\", \"size\": 9121},\r\n        {\"name\": \"TreeMapLayout\", \"size\": 9191}\r\n       ]\r\n      },\r\n      {\"name\": \"Operator\", \"size\": 2490},\r\n      {\"name\": \"OperatorList\", \"size\": 5248},\r\n      {\"name\": \"OperatorSequence\", \"size\": 4190},\r\n      {\"name\": \"OperatorSwitch\", \"size\": 2581},\r\n      {\"name\": \"SortOperator\", \"size\": 2023}\r\n     ]\r\n    },\r\n    {\"name\": \"Visualization\", \"size\": 16540}\r\n   ]\r\n  }\r\n ]\r\n}\"\"\"",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:45:18.220",
+      "dateUpdated": "2019-08-07 11:05:56.884",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -394,7 +430,7 @@
     {
       "text": "print(s\"\"\"%html \r\n\u003cdiv id\u003d\"inline1\"\u003e\u003c/div\u003e \u003c!-- add div to draw into --\u003e\r\n\u003cscript\u003e\r\n\r\nvar diameter \u003d 700, // changed size\r\n    format \u003d d3.format(\",d\"),\r\n    color \u003d d3.scale.category20c();\r\n\r\nvar bubble \u003d d3.layout.pack()\r\n    .sort(null)\r\n    .size([diameter, diameter])\r\n    .padding(1.5);\r\n\r\nvar svg \u003d d3.select(\"#inline1\").append(\"svg\") //changed where to draw, changed to draw to my div\r\n    .attr(\"width\", diameter)\r\n    .attr(\"height\", diameter)\r\n    .attr(\"class\", \"bubble\");\r\n\r\nvar plot \u003d function(root) {\r\n\r\n  var node \u003d svg.selectAll(\".node\")\r\n      .data(bubble.nodes(classes(root))\r\n      .filter(function(d) { return !d.children; }))\r\n    .enter().append(\"g\")\r\n      .attr(\"class\", \"node\")\r\n      .attr(\"transform\", function(d) { return \"translate(\" + d.x + \",\" + d.y + \")\"; });\r\n\r\n  node.append(\"title\")\r\n      .text(function(d) { return d.className + \": \" + format(d.value); });\r\n\r\n  node.append(\"circle\")\r\n      .attr(\"r\", function(d) { return d.r; })\r\n      .style(\"fill\", function(d) { return color(d.packageName); });\r\n\r\n  node.append(\"text\")\r\n      .attr(\"dy\", \".3em\")\r\n      .style(\"text-anchor\", \"middle\")\r\n      .text(function(d) { return d.className.substring(0, d.r / 3); });\r\n}\r\n\r\n// Returns a flattened hierarchy containing all leaf nodes under the root.\r\nfunction classes(root) {\r\n  var classes \u003d [];\r\n\r\n  function recurse(name, node) {\r\n    if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });\r\n    else classes.push({packageName: name, className: node.name, value: node.size});\r\n  }\r\n\r\n  recurse(null, root);\r\n  return {children: classes};\r\n}\r\n\r\nplot(${data}) // inject json from scala\r\n\r\nd3.select(self.frameElement).style(\"height\", diameter + \"px\");\r\n\r\n\u003c/script\u003e\r\n\r\n\"\"\")",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 10:45:41.885",
+      "dateUpdated": "2019-08-07 11:05:56.884",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -425,7 +461,20 @@
     },
     {
       "user": "anonymous",
-      "config": {},
+      "dateUpdated": "2019-08-07 11:05:56.885",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
@@ -434,7 +483,7 @@
       "jobName": "paragraph_1565173871338_207233581",
       "id": "20190807-103111_802692450",
       "dateCreated": "2019-08-07 10:31:11.341",
-      "status": "READY",
+      "status": "FINISHED",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500
     }
