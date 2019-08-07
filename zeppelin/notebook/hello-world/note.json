@@ -1,9 +1,50 @@
 {
   "paragraphs": [
     {
+      "text": "%md # Hello World\nThis is just a simple example to make sure spark is up and running.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-07 17:08:44.357",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eHello World\u003c/h1\u003e\n\u003cp\u003eThis is just a simple example to make sure spark is up and running.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565197363255_139043230",
+      "id": "20190807-170243_538046684",
+      "dateCreated": "2019-08-07 17:02:43.260",
+      "dateStarted": "2019-08-07 17:08:44.545",
+      "dateFinished": "2019-08-07 17:08:44.674",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "val nums \u003d Array(1,2,3,5,6)\nval rdd \u003d sc.parallelize(nums)\n\nimport spark.implicits._\nval df \u003d rdd.toDF(\"num\")\n\ndf.show()",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:43:02.430",
+      "dateUpdated": "2019-08-07 17:08:44.737",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -27,35 +68,23 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "+---+\n|num|\n+---+\n|  1|\n|  2|\n|  3|\n|  5|\n|  6|\n+---+\n\nnums: Array[Int] \u003d Array(1, 2, 3, 5, 6)\nrdd: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[0] at parallelize at \u003cconsole\u003e:26\nimport spark.implicits._\ndf: org.apache.spark.sql.DataFrame \u003d [num: int]\n"
+            "data": "+---+\n|num|\n+---+\n|  1|\n|  2|\n|  3|\n|  5|\n|  6|\n+---+\n\nnums: Array[Int] \u003d Array(1, 2, 3, 5, 6)\nrdd: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[29] at parallelize at \u003cconsole\u003e:33\nimport spark.implicits._\ndf: org.apache.spark.sql.DataFrame \u003d [num: int]\n"
           }
         ]
-      },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d0"
-          ],
-          "interpreterSettingId": "spark"
-        }
       },
       "apps": [],
       "jobName": "paragraph_1565110416909_2110788864",
       "id": "20190806-165336_209347527",
       "dateCreated": "2019-08-06 16:53:36.910",
-      "dateStarted": "2019-08-07 16:43:02.548",
-      "dateFinished": "2019-08-07 16:44:25.461",
+      "dateStarted": "2019-08-07 17:08:44.957",
+      "dateFinished": "2019-08-07 17:09:02.237",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md # Wordcount Example\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:44:53.803",
+      "dateUpdated": "2019-08-07 17:09:02.247",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -88,15 +117,15 @@
       "jobName": "paragraph_1565194736596_-1070932379",
       "id": "20190807-161856_1415529865",
       "dateCreated": "2019-08-07 16:18:56.598",
-      "dateStarted": "2019-08-07 16:44:26.792",
-      "dateFinished": "2019-08-07 16:44:27.084",
+      "dateStarted": "2019-08-07 17:09:02.588",
+      "dateFinished": "2019-08-07 17:09:02.670",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "// load a text file for processing\nval textFile \u003d sc.textFile(\"file:///data/hello-world/big_data.txt\")\n\n// get the first line of the text file\ntextFile.first\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:52:17.147",
+      "dateUpdated": "2019-08-07 17:09:02.678",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -119,35 +148,23 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "textFile: org.apache.spark.rdd.RDD[String] \u003d file:///data/hello-world/big_data.txt MapPartitionsRDD[13] at textFile at \u003cconsole\u003e:31\nres4: String \u003d {{About|large collections of data|the band|Big Data (band)|buying and selling of personal and consumer data|Surveillance capitalism}}\n"
+            "data": "textFile: org.apache.spark.rdd.RDD[String] \u003d file:///data/hello-world/big_data.txt MapPartitionsRDD[34] at textFile at \u003cconsole\u003e:34\nres10: String \u003d {{About|large collections of data|the band|Big Data (band)|buying and selling of personal and consumer data|Surveillance capitalism}}\n"
           }
         ]
-      },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d3"
-          ],
-          "interpreterSettingId": "spark"
-        }
       },
       "apps": [],
       "jobName": "paragraph_1565110994501_727186595",
       "id": "20190806-170314_2020791767",
       "dateCreated": "2019-08-06 17:03:14.512",
-      "dateStarted": "2019-08-07 16:52:17.189",
-      "dateFinished": "2019-08-07 16:52:20.442",
+      "dateStarted": "2019-08-07 17:09:02.910",
+      "dateFinished": "2019-08-07 17:09:07.221",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "//textFile.collect.foreach(println)\n// tokenize the words in the file\nval tokenizedFileData \u003d textFile.flatMap(line\u003d\u003eline.split(\" \"))\n\nval countPrep \u003d tokenizedFileData.map(word\u003d\u003e(word, 1))\nval counts \u003d countPrep.reduceByKey((acc, nv)\u003d\u003eacc + nv)\nval sortedCounts \u003d counts.sortBy(kvPair\u003d\u003ekvPair._2, false)\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:55:15.304",
+      "dateUpdated": "2019-08-07 17:09:07.231",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -170,7 +187,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "tokenizedFileData: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[23] at flatMap at \u003cconsole\u003e:36\ncountPrep: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[24] at map at \u003cconsole\u003e:38\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[25] at reduceByKey at \u003cconsole\u003e:39\nsortedCounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[28] at sortBy at \u003cconsole\u003e:40\n"
+            "data": "tokenizedFileData: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[35] at flatMap at \u003cconsole\u003e:41\ncountPrep: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[36] at map at \u003cconsole\u003e:43\ncounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[37] at reduceByKey at \u003cconsole\u003e:44\nsortedCounts: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[40] at sortBy at \u003cconsole\u003e:45\n"
           }
         ]
       },
@@ -178,15 +195,15 @@
       "jobName": "paragraph_1565192614581_-1360881120",
       "id": "20190807-154334_184100082",
       "dateCreated": "2019-08-07 15:43:34.584",
-      "dateStarted": "2019-08-07 16:55:15.430",
-      "dateFinished": "2019-08-07 16:55:18.279",
+      "dateStarted": "2019-08-07 17:09:07.535",
+      "dateFinished": "2019-08-07 17:09:13.873",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "println(\"%table word\\tcount\")\nsortedCounts.collect.foreach(t\u003d\u003e\n    println(t._1 + \"\\t\" + t._2)\n)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:55:20.349",
+      "dateUpdated": "2019-08-07 17:09:13.875",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -264,30 +281,18 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d6"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1565194038151_1388098535",
       "id": "20190807-160718_525551953",
       "dateCreated": "2019-08-07 16:07:18.157",
-      "dateStarted": "2019-08-07 16:55:20.579",
-      "dateFinished": "2019-08-07 16:55:26.751",
+      "dateStarted": "2019-08-07 17:09:14.286",
+      "dateFinished": "2019-08-07 17:09:22.698",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "user": "anonymous",
-      "dateUpdated": "2019-08-07 16:44:48.796",
+      "dateUpdated": "2019-08-07 17:09:22.724",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -308,7 +313,7 @@
     }
   ],
   "name": "/hello/Hello World",
-  "id": "2EJ61DXGG",
+  "id": "hello-world",
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
