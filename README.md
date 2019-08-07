@@ -33,3 +33,5 @@ print(s"""%html
 	</script>
 """)
 ```
+
+The `d3.layout.cloud.js` library is taken from https://github.com/jasondavies/d3-cloud.
