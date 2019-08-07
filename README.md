@@ -3,7 +3,7 @@ This project uses Apache Spark to explore the popular New York City Current Job 
 
 [Apache Zeppelin](https://zeppelin.apache.org/) notebooks are used to work interactively with the data, please refer to the [Wiki](https://github.com/JohnnyFoulds/nyc-job-exploration/wiki) for details of how a development environment was configured for use in this project.
 
-# Zeppelin Word Cloud
+## Zeppelin Word Cloud
 It is quite useful to draw a word cloud of text data such as of the job descriptions. The [word-cloud](https://github.com/JohnnyFoulds/nyc-job-exploration/tree/master/zeppelin/notebook/word-cloud) notebook illustrated how this can be done with a limited amount of code with D3.js and two additional external JavaScipt files.
 
 ```
