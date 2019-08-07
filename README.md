@@ -3,7 +3,7 @@ This project uses Apache Spark to explore the popular New York City Current Job 
 
 [Apache Zeppelin](https://zeppelin.apache.org/) notebooks are used to work interactively with the data, please refer to the [Wiki](https://github.com/JohnnyFoulds/nyc-job-exploration/wiki) for details of how a development environment was configured for use in this project.
 
-## Notbook Previews
+## Notebook Previews
 - [Hello World](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/hello-world/note.json)
 - [Word Cloud](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/word-cloud/note.json)
 
