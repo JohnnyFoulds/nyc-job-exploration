@@ -9,12 +9,13 @@
 	</head>
 	
 	<body>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/700bbf40/zeppelin/notebook/word-cloud/d3.layout.cloud.js"></script>
 		<script src="../js/word.cloud.js"></script>
 		
 		<div id="wordCloud"></div>
-		<script>
+		<script defer>
 			var wordCollection = [
 				{text: "Hadoop", size: 100},
 				{text: "Spark", size: 50},
