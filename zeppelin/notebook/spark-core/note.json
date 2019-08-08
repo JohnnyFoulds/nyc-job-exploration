@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n# Spark Core\nThis notebook will demonstrate basic functionality of the Apache Spark Core Library.",
+      "text": "%md\nThis notebook will demonstrate basic functionality of the Apache Spark Core Library.",
       "user": "anonymous",
-      "dateUpdated": "2019-08-08 10:33:15.553",
+      "dateUpdated": "2019-08-08 10:55:10.129",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -28,7 +28,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eSpark Core\u003c/h1\u003e\n\u003cp\u003eThis notebook will demonstrate basic functionality of the Apache Spark Core Library.\u003c/p\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThis notebook will demonstrate basic functionality of the Apache Spark Core Library.\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -36,24 +36,547 @@
       "jobName": "paragraph_1565260136138_2136535808",
       "id": "20190808-102856_1685424000",
       "dateCreated": "2019-08-08 10:28:56.148",
-      "dateStarted": "2019-08-08 10:33:15.558",
-      "dateFinished": "2019-08-08 10:33:15.667",
+      "dateStarted": "2019-08-08 10:55:10.142",
+      "dateFinished": "2019-08-08 10:55:10.630",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n",
+      "text": "%md\n## Range\nThis is a example showing how a range RDD can be created.",
       "user": "anonymous",
-      "dateUpdated": "2019-08-08 10:33:15.411",
+      "dateUpdated": "2019-08-08 11:44:54.945",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRange\u003c/h2\u003e\n\u003cp\u003eThis is a example showing how a range RDD can be created.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565262013806_1449763674",
+      "id": "20190808-110013_2002128353",
+      "dateCreated": "2019-08-08 11:00:13.806",
+      "dateStarted": "2019-08-08 11:02:49.516",
+      "dateFinished": "2019-08-08 11:02:49.604",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val myRange \u003d sc.makeRDD(1 to 100)",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 10:58:03.388",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "myRange: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[5] at makeRDD at \u003cconsole\u003e:25\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565260395401_-2120009826",
+      "id": "20190808-103315_924351488",
+      "dateCreated": "2019-08-08 10:33:15.401",
+      "dateStarted": "2019-08-08 10:58:03.516",
+      "dateFinished": "2019-08-08 10:58:06.322",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "myRange.collect",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:00:33.949",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res13: Array[Int] \u003d Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565261635107_-1627418758",
+      "id": "20190808-105355_341062366",
+      "dateCreated": "2019-08-08 10:53:55.107",
+      "dateStarted": "2019-08-08 11:00:34.359",
+      "dateFinished": "2019-08-08 11:00:36.624",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sc.range(2, 100, 2).collect",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 10:59:50.426",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res12: Array[Long] \u003d Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565261783261_2074462471",
+      "id": "20190808-105623_1190876444",
+      "dateCreated": "2019-08-08 10:56:23.266",
+      "dateStarted": "2019-08-08 10:59:50.716",
+      "dateFinished": "2019-08-08 10:59:52.713",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Simple Map example",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:44:58.374",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eSimple Map example\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565263675107_-454340072",
+      "id": "20190808-112755_402753711",
+      "dateCreated": "2019-08-08 11:27:55.107",
+      "dateStarted": "2019-08-08 11:44:33.349",
+      "dateFinished": "2019-08-08 11:44:33.792",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val intList \u003d sc.makeRDD(1 to 10)\nval twiceList \u003d intList.map(item \u003d\u003e item * 2)\n\ntwiceList.collect",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:42:14.625",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "intList: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[44] at makeRDD at \u003cconsole\u003e:38\ntwiceList: org.apache.spark.rdd.RDD[Int] \u003d MapPartitionsRDD[45] at map at \u003cconsole\u003e:39\nres30: Array[Int] \u003d Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565264332913_-1181908950",
+      "id": "20190808-113852_1332702211",
+      "dateCreated": "2019-08-08 11:38:52.913",
+      "dateStarted": "2019-08-08 11:42:14.919",
+      "dateFinished": "2019-08-08 11:42:19.639",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Whole Text Files\nThis example illustrates how to load content from more than one text file.\n\nThe first example reads all the files and add the lines to a single array.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:29:43.982",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eWhole Text Files\u003c/h2\u003e\n\u003cp\u003eThis example illustrates how to load content from more than one text file.\u003c/p\u003e\n\u003cp\u003eThe first example reads all the files and add the lines to a single array.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565261962703_-1984416452",
+      "id": "20190808-105922_1113996467",
+      "dateCreated": "2019-08-08 10:59:22.705",
+      "dateStarted": "2019-08-08 11:29:44.021",
+      "dateFinished": "2019-08-08 11:29:44.672",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val textFiles \u003d sc.textFile(\"/data/hello-world/*.txt\")\ntextFiles.take(5)",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:08:50.535",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "textFiles: org.apache.spark.rdd.RDD[String] \u003d /data/hello-world/*.txt MapPartitionsRDD[19] at textFile at \u003cconsole\u003e:27\nres15: Array[String] \u003d Array({{About|large collections of data|the band|Big Data (band)|buying and selling of personal and consumer data|Surveillance capitalism}}, {{short description|Information assets characterized by such a high volume, velocity, and variety to require specific technology and analytical methods for its transformation into value}}, [[File:Hilbert InfoGrowth.png|thumb|right|400px|Growth of and digitization of global information-storage capacity\u003cref\u003e{{cite journal|url\u003d http://www.martinhilbert.net/WorldInfoCapacity.html|title\u003d The World\u0027s Technological Capacity to Store, Communicate, and Compute Information|volume\u003d 332|issue\u003d 6025|pages\u003d 60–65|journal\u003dS..."
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565262112025_2063401323",
+      "id": "20190808-110152_2119560957",
+      "dateCreated": "2019-08-08 11:01:52.025",
+      "dateStarted": "2019-08-08 11:08:50.767",
+      "dateFinished": "2019-08-08 11:08:53.186",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nThis example loads all the text files as a key value pair.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:20:15.255",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThis example loads all the text files as a key value pair.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565263180925_-516583420",
+      "id": "20190808-111940_1356635222",
+      "dateCreated": "2019-08-08 11:19:40.925",
+      "dateStarted": "2019-08-08 11:20:15.271",
+      "dateFinished": "2019-08-08 11:20:15.721",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val wholeTextFiles \u003d sc.wholeTextFiles(\"/data/hello-world/*.txt\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:47:30.019",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 258.0,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "wholeTextFiles: org.apache.spark.rdd.RDD[(String, String)] \u003d /data/hello-world/*.txt MapPartitionsRDD[47] at wholeTextFiles at \u003cconsole\u003e:35\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565262389579_-1964379318",
+      "id": "20190808-110629_300873842",
+      "dateCreated": "2019-08-08 11:06:29.579",
+      "dateStarted": "2019-08-08 11:47:30.128",
+      "dateFinished": "2019-08-08 11:47:34.376",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Tokenize Text File Contents\nThis example shows splitting up the words from the sample text files.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 11:47:01.123",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eTokenize Text File Contents\u003c/h2\u003e\n\u003cp\u003eThis example shows splitting up the words from the sample text files.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565264377940_351345842",
+      "id": "20190808-113937_1234271388",
+      "dateCreated": "2019-08-08 11:39:37.940",
+      "dateStarted": "2019-08-08 11:47:01.141",
+      "dateFinished": "2019-08-08 11:47:02.937",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// split the words across all loaded files\nval words \u003d textFiles.flatMap(line\u003d\u003eline.split(\" \"))\n//words.take(50)\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 12:21:54.335",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "words: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[74] at flatMap at \u003cconsole\u003e:40\nres57: Array[String] \u003d Array({{About|large, collections, of, data|the, band|Big, Data, (band)|buying, and, selling, of, personal, and, consumer, data|Surveillance, capitalism}}, {{short, description|Information, assets, characterized, by, such, a, high, volume,, velocity,, and, variety, to, require, specific, technology, and, analytical, methods, for, its, transformation, into, value}}, [[File:Hilbert, InfoGrowth.png|thumb|right|400px|Growth, of, and, digitization, of, global, information-storage, capacity\u003cref\u003e{{cite, journal|url\u003d, http://www.martinhilbert.net/WorldInfoCapacity.html|title\u003d)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565264821019_805472486",
+      "id": "20190808-114701_1743432076",
+      "dateCreated": "2019-08-08 11:47:01.020",
+      "dateStarted": "2019-08-08 12:16:00.761",
+      "dateFinished": "2019-08-08 12:16:03.733",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// remove stop characters and small tokens\nval cleanedWords \u003d words\n    .map(word\u003d\u003eword.replaceAll(\"[.|,|\u0027|\\\"|?|)|(|{|}]\", \"\").trim)\n    .filter(word\u003d\u003eword.length \u003e 2)\n    \n//cleanedWords.take(50)",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-08 12:22:23.775",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "cleanedWords: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[82] at filter at \u003cconsole\u003e:42\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565264957584_282735960",
+      "id": "20190808-114917_1197172271",
+      "dateCreated": "2019-08-08 11:49:17.584",
+      "dateStarted": "2019-08-08 12:22:24.018",
+      "dateFinished": "2019-08-08 12:22:26.857",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1565260395401_-2120009826",
-      "id": "20190808-103315_924351488",
-      "dateCreated": "2019-08-08 10:33:15.401",
+      "jobName": "paragraph_1565265285667_-1848879653",
+      "id": "20190808-115445_1298390680",
+      "dateCreated": "2019-08-08 11:54:45.670",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
