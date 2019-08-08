@@ -6,7 +6,7 @@ This project uses Apache Spark to explore the popular New York City Current Job 
 ## Notebook Previews
 - [Hello World](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/hello-world/note.json) - This is a basic notebook to make sure Apache Spark is working and include a simple word count example.
 - [Word Cloud](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/word-cloud/note.json) - This notebook demonstrates how do do a simple word cloud with the D3.js library.
-- [Spark Core](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/word-cloud/note.json) - Simple reference snippets for Apche Spark Core.
+- [Spark Core](https://www.zepl.com/viewer/github/JohnnyFoulds/nyc-job-exploration/blob/master/zeppelin/notebook/spark-core/note.json) - Simple reference snippets for Apche Spark Core.
 
 ## Zeppelin Word Cloud
 It is quite useful to draw a word cloud of text data such as of the job descriptions. The [word-cloud](https://github.com/JohnnyFoulds/nyc-job-exploration/tree/master/zeppelin/notebook/word-cloud) notebook illustrated how this can be done with a limited amount of code with D3.js and two additional external JavaScipt files.
