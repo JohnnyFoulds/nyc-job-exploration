@@ -11,7 +11,7 @@ This project uses Apache Spark to explore the popular New York City Current Job 
 ## Zeppelin Word Cloud
 It is quite useful to draw a word cloud of text data such as of the job descriptions. The [word-cloud](https://github.com/JohnnyFoulds/nyc-job-exploration/tree/master/zeppelin/notebook/word-cloud) notebook illustrated how this can be done with a limited amount of code with D3.js and two additional external JavaScipt files.
 
-```
+```js
 println("%html")
 println("<script>")
 println("    var wordCollection = [")
@@ -24,7 +24,7 @@ println("    ]")
 println("</script>")
 ```
 
-```
+```html
 print(s"""%html
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="https://cdn.statically.io/gh/JohnnyFoulds/nyc-job-exploration/b9cd4af7/zeppelin/notebook/word-cloud/js/d3.layout.cloud.js"></script>
