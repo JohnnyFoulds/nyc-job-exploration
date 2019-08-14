@@ -71,18 +71,6 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d117"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1565113155395_370692247",
       "id": "20190806-173915_581331095",
@@ -242,18 +230,6 @@
             "data": "res119: Long \u003d 3123\n"
           }
         ]
-      },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d118"
-          ],
-          "interpreterSettingId": "spark"
-        }
       },
       "apps": [],
       "jobName": "paragraph_1565113697161_1284780132",
@@ -423,18 +399,6 @@
           }
         ]
       },
-      "runtimeInfos": {
-        "jobUrl": {
-          "propertyName": "jobUrl",
-          "label": "SPARK JOB",
-          "tooltip": "View in Spark web UI",
-          "group": "spark",
-          "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d127"
-          ],
-          "interpreterSettingId": "spark"
-        }
-      },
       "apps": [],
       "jobName": "paragraph_1565113795006_225908613",
       "id": "20190806-174955_335176465",
@@ -568,7 +532,7 @@
     {
       "text": "%spark.sql\n\nSELECT Level, COUNT(*) AS `Job Postings`\nFROM nycData\nWHERE `Salary Frequency` \u003d \"Annual\"\nGROUP BY Level\nORDER BY Level",
       "user": "anonymous",
-      "dateUpdated": "2019-08-12 07:20:06.083",
+      "dateUpdated": "2019-08-14 08:14:18.311",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -661,12 +625,12 @@
           }
         },
         "editorSetting": {
-          "language": "scala",
+          "language": "sql",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/sql"
       },
       "settings": {
         "params": {},
@@ -823,10 +787,7 @@
   "id": "2EKEKJHUA",
   "noteParams": {},
   "noteForms": {},
-  "angularObjects": {
-    "md:shared_process": [],
-    "spark:shared_process": []
-  },
+  "angularObjects": {},
   "config": {
     "isZeppelinNotebookCronEnable": false
   },

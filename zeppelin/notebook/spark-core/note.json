@@ -282,7 +282,7 @@
     {
       "text": "%md\n## Whole Text Files\nThis example illustrates how to load content from more than one text file.\n\nThe first example reads all the files and add the lines to a single array.",
       "user": "anonymous",
-      "dateUpdated": "2019-08-08 11:29:43.982",
+      "dateUpdated": "2019-08-14 08:24:29.711",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -323,7 +323,7 @@
     {
       "text": "val textFiles \u003d sc.textFile(\"/data/hello-world/*.txt\")\ntextFiles.take(5)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-08 11:08:50.535",
+      "dateUpdated": "2019-08-14 08:26:36.800",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -346,7 +346,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "textFiles: org.apache.spark.rdd.RDD[String] \u003d /data/hello-world/*.txt MapPartitionsRDD[19] at textFile at \u003cconsole\u003e:27\nres15: Array[String] \u003d Array({{About|large collections of data|the band|Big Data (band)|buying and selling of personal and consumer data|Surveillance capitalism}}, {{short description|Information assets characterized by such a high volume, velocity, and variety to require specific technology and analytical methods for its transformation into value}}, [[File:Hilbert InfoGrowth.png|thumb|right|400px|Growth of and digitization of global information-storage capacity\u003cref\u003e{{cite journal|url\u003d http://www.martinhilbert.net/WorldInfoCapacity.html|title\u003d The World\u0027s Technological Capacity to Store, Communicate, and Compute Information|volume\u003d 332|issue\u003d 6025|pages\u003d 60–65|journal\u003dS..."
+            "data": "textFiles: org.apache.spark.rdd.RDD[String] \u003d /data/hello-world/*.txt MapPartitionsRDD[1] at textFile at \u003cconsole\u003e:25\nres1: Array[String] \u003d Array({{About|large collections of data|the band|Big Data (band)|buying and selling of personal and consumer data|Surveillance capitalism}}, {{short description|Information assets characterized by such a high volume, velocity, and variety to require specific technology and analytical methods for its transformation into value}}, [[File:Hilbert InfoGrowth.png|thumb|right|400px|Growth of and digitization of global information-storage capacity\u003cref\u003e{{cite journal|url\u003d http://www.martinhilbert.net/WorldInfoCapacity.html|title\u003d The World\u0027s Technological Capacity to Store, Communicate, and Compute Information|volume\u003d 332|issue\u003d 6025|pages\u003d 60–65|journal\u003dSci..."
           }
         ]
       },
@@ -354,8 +354,8 @@
       "jobName": "paragraph_1565262112025_2063401323",
       "id": "20190808-110152_2119560957",
       "dateCreated": "2019-08-08 11:01:52.025",
-      "dateStarted": "2019-08-08 11:08:50.767",
-      "dateFinished": "2019-08-08 11:08:53.186",
+      "dateStarted": "2019-08-14 08:26:37.033",
+      "dateFinished": "2019-08-14 08:27:36.153",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -448,9 +448,89 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\n## Simple Line Count\n\nThis example counts the number of lines containing `big data`.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-14 08:31:43.532",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eSimple Line Count\u003c/h2\u003e\n\u003cp\u003eThis example counts the number of lines containing \u003ccode\u003ebig data\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565771037401_288405371",
+      "id": "20190814-082357_1885605016",
+      "dateCreated": "2019-08-14 08:23:57.401",
+      "dateStarted": "2019-08-14 08:31:43.543",
+      "dateFinished": "2019-08-14 08:31:44.047",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val numBigData \u003d textFiles.filter(line\u003d\u003eline.toLowerCase.contains(\"big data\")).count()",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-14 08:31:21.046",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "numBigData: Long \u003d 121\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565771274059_1217636392",
+      "id": "20190814-082754_553018667",
+      "dateCreated": "2019-08-14 08:27:54.060",
+      "dateStarted": "2019-08-14 08:31:21.283",
+      "dateFinished": "2019-08-14 08:31:26.898",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n## Tokenize Text File Contents\nThis example shows splitting up the words from the sample text files.",
       "user": "anonymous",
-      "dateUpdated": "2019-08-08 11:47:01.123",
+      "dateUpdated": "2019-08-14 08:27:03.778",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
