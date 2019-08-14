@@ -489,9 +489,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "val fileNames \u003d wholeTextFiles.toDF(\"name\", \"data\")\n//fileNames.printSchema\n\nval fileNameSummary \u003d fileNames\n    .map(row\u003d\u003e(\n            row.getString(0), \n            row.getString(1)\n                .slice(0,500)\n                .replaceAll(\"\\t|\\n\", \" \")\n                .trim()\n            ) \n        )\n    .toDF(\"fileName\", \"Sample Content\")\n    \n    \n//println(fileNameSummary.count)\n//fileNameSummary.printSchema\n\nz.show(fileNameSummary)",
+      "text": "val fileNames \u003d wholeTextFiles.toDF(\"name\", \"data\")\n\n// get a new data frame containing only the first 500 characters from the files\nval fileNameSummary \u003d fileNames\n    .map(row\u003d\u003e(\n            row.getString(0), \n            row.getString(1)\n                .slice(0,500)\n                .replaceAll(\"\\t|\\n\", \" \")\n                .trim()\n            ) \n        )\n    .toDF(\"fileName\", \"Sample Content\")\n    \n// display the summary in table format\nz.show(fileNameSummary)",
       "user": "anonymous",
-      "dateUpdated": "2019-08-14 10:30:47.953",
+      "dateUpdated": "2019-08-14 10:34:11.261",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -528,6 +528,49 @@
       "dateCreated": "2019-08-14 08:57:35.524",
       "dateStarted": "2019-08-14 10:30:49.258",
       "dateFinished": "2019-08-14 10:30:56.601",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// display only the file names\nz.show(\n    fileNames.select(\"name\")\n)",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-14 10:36:46.196",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\nfile:/data/hello-world/big_data.txt\nfile:/data/hello-world/Clustered_file_system.txt\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565778927828_-972607910",
+      "id": "20190814-103527_1819891700",
+      "dateCreated": "2019-08-14 10:35:27.833",
+      "dateStarted": "2019-08-14 10:36:46.440",
+      "dateFinished": "2019-08-14 10:37:13.979",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
