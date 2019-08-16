@@ -1,0 +1,855 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Load CSV Data\n\nThis code loads the `nyc-jobs.csv` file that will be used as the primary data source.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:31:13.516",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLoad CSV Data\u003c/h1\u003e\n\u003cp\u003eThis code loads the \u003ccode\u003enyc-jobs.csv\u003c/code\u003e file that will be used as the primary data source.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565593360823_-565390958",
+      "id": "20190812-070240_1462655623",
+      "dateCreated": "2019-08-12 07:02:40.825",
+      "dateStarted": "2019-08-16 06:31:14.398",
+      "dateFinished": "2019-08-16 06:31:24.004",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val data \u003d spark.read\n    .format(\"csv\")\n    .option(\"header\", \"true\")\n    .load(\"/data/nyc-jobs.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:31:24.077",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data: org.apache.spark.sql.DataFrame \u003d [Job ID: string, Agency: string ... 26 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565113155395_370692247",
+      "id": "20190806-173915_581331095",
+      "dateCreated": "2019-08-06 17:39:15.395",
+      "dateStarted": "2019-08-16 06:31:25.279",
+      "dateFinished": "2019-08-16 06:33:30.727",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Display Schema\nTo get an overview of the data loaded from the CSV file the schema is printed.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:30.830",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eDisplay Schema\u003c/h2\u003e\n\u003cp\u003eTo get an overview of the data loaded from the CSV file the schema is printed.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565593472517_1071358623",
+      "id": "20190812-070432_663795095",
+      "dateCreated": "2019-08-12 07:04:32.518",
+      "dateStarted": "2019-08-16 06:33:34.356",
+      "dateFinished": "2019-08-16 06:33:35.680",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:35.759",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Job ID: string (nullable \u003d true)\n |-- Agency: string (nullable \u003d true)\n |-- Posting Type: string (nullable \u003d true)\n |-- # Of Positions: string (nullable \u003d true)\n |-- Business Title: string (nullable \u003d true)\n |-- Civil Service Title: string (nullable \u003d true)\n |-- Title Code No: string (nullable \u003d true)\n |-- Level: string (nullable \u003d true)\n |-- Job Category: string (nullable \u003d true)\n |-- Full-Time/Part-Time indicator: string (nullable \u003d true)\n |-- Salary Range From: string (nullable \u003d true)\n |-- Salary Range To: string (nullable \u003d true)\n |-- Salary Frequency: string (nullable \u003d true)\n |-- Work Location: string (nullable \u003d true)\n |-- Division/Work Unit: string (nullable \u003d true)\n |-- Job Description: string (nullable \u003d true)\n |-- Minimum Qual Requirements: string (nullable \u003d true)\n |-- Preferred Skills: string (nullable \u003d true)\n |-- Additional Information: string (nullable \u003d true)\n |-- To Apply: string (nullable \u003d true)\n |-- Hours/Shift: string (nullable \u003d true)\n |-- Work Location 1: string (nullable \u003d true)\n |-- Recruitment Contact: string (nullable \u003d true)\n |-- Residency Requirement: string (nullable \u003d true)\n |-- Posting Date: string (nullable \u003d true)\n |-- Post Until: string (nullable \u003d true)\n |-- Posting Updated: string (nullable \u003d true)\n |-- Process Date: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565113339212_1721951067",
+      "id": "20190806-174219_950740411",
+      "dateCreated": "2019-08-06 17:42:19.212",
+      "dateStarted": "2019-08-16 06:33:38.399",
+      "dateFinished": "2019-08-16 06:33:41.853",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Number of rows\n\nGet an idea of the size of data that will be analyzed.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:41.940",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNumber of rows\u003c/h2\u003e\n\u003cp\u003eGet an idea of the size of data that will be analyzed.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565593556406_-1723599991",
+      "id": "20190812-070556_1572700315",
+      "dateCreated": "2019-08-12 07:05:56.406",
+      "dateStarted": "2019-08-16 06:33:43.861",
+      "dateFinished": "2019-08-16 06:33:43.977",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.count()",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:44.050",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res2: Long \u003d 3123\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565113697161_1284780132",
+      "id": "20190806-174817_1820655037",
+      "dateCreated": "2019-08-06 17:48:17.166",
+      "dateStarted": "2019-08-16 06:33:45.649",
+      "dateFinished": "2019-08-16 06:33:51.864",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Sample Data\nSample and display 1% of the data to and display it in a table with the help of Zeppelin.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:51.920",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eSample Data\u003c/h2\u003e\n\u003cp\u003eSample and display 1% of the data to and display it in a table with the help of Zeppelin.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565594063275_219683244",
+      "id": "20190812-071423_1428373948",
+      "dateCreated": "2019-08-12 07:14:23.281",
+      "dateStarted": "2019-08-16 06:33:53.176",
+      "dateFinished": "2019-08-16 06:33:53.233",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val sampleFration \u003d 0.01\nval sampleData  \u003d data.sample(true, sampleFration)\n\nz.show(sampleData)",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:33:53.268",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 364.0,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Job ID": "string",
+                      "Agency": "string",
+                      "Posting Type": "string",
+                      "# Of Positions": "string",
+                      "Business Title": "string",
+                      "Civil Service Title": "string",
+                      "Title Code No": "string",
+                      "Level": "string",
+                      "Job Category": "string",
+                      "Full-Time/Part-Time indicator": "string",
+                      "Salary Range From": "string",
+                      "Salary Range To": "string",
+                      "Salary Frequency": "string",
+                      "Work Location": "string",
+                      "Division/Work Unit": "string",
+                      "Job Description": "string",
+                      "Minimum Qual Requirements": "string",
+                      "Preferred Skills": "string",
+                      "Additional Information": "string",
+                      "To Apply": "string",
+                      "Hours/Shift": "string",
+                      "Work Location 1": "string",
+                      "Recruitment Contact": "string",
+                      "Residency Requirement": "string",
+                      "Posting Date": "string",
+                      "Post Until": "string",
+                      "Posting Updated": "string",
+                      "Process Date": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Job ID",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Agency",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Job ID\tAgency\tPosting Type\t# Of Positions\tBusiness Title\tCivil Service Title\tTitle Code No\tLevel\tJob Category\tFull-Time/Part-Time indicator\tSalary Range From\tSalary Range To\tSalary Frequency\tWork Location\tDivision/Work Unit\tJob Description\tMinimum Qual Requirements\tPreferred Skills\tAdditional Information\tTo Apply\tHours/Shift\tWork Location 1\tRecruitment Contact\tResidency Requirement\tPosting Date\tPost Until\tPosting Updated\tProcess Date\n197316\tDEPT OF INFO TECH \u0026 TELECOMM\tInternal\t4\t311 Escalation Line Team Leader\tASSOCIATE CALL CENTER REPRESEN\t10271\t1\tCommunity \u0026 Business Services\tF\t43118\t49586\tAnnual\t59 Maiden Lane\t311 Operations\tThe successful candidate will serve as a 311 Escalation Line Team Leader reporting to the 311 Customer Service Center. Responsibilities will include: assist Call Center Representatives (CCRs) in 24/7 customer service operations; monitor CCR performance; identify coaching needs to ensure quality customer service; handle priority calls and escalated calls; provide support for 311 operations and customer service programs; maintain detailed documentation; prepare reports using computer programs and spreadsheet applications; maintain and update database systems; communicate updates as needed; conduct team meetings as needed; gather and validate content requests; utilize automated systems, workforce management tools, complex applications, and call center technologies to support data-driven strategies; and assist in coordination of special projects as assigned. Note special working conditions for the Associate Call Center Representative position - Some of the physical activities performed and environmental conditions experienced include: sitting for extended periods of time with headset on while monitoring two computer screens; speaking calmly and clearly in order to elicit information and provide instruction and information to continuous flow of callers; listening carefully to clearly understand information; making responsible judgments where timing is critical; and sitting within hearing distance of others working under similar conditions.\t\"1. A baccalaureate degree from an accredited college and one year of satisfactory, fulltime experience in a customer service or public relations capacity; or  2. An associate degree from an accredited college and three years of satisfactory, fulltime experience in a customer service or public relations capacity; or  3. A four-year high school diploma or its educational equivalent and four years of satisfactory, full-time experience as described in \"\"2\"\" above. Each year of satisfactory\t full-time experience working for New York City government in a customer service or public information capacity may be substituted for up to two years of this experience. College credit may be substituted for the experience in a customer service or public information capacity on the basis of 64 semester credits for each year of the experience described in \"\"2\"\" above.  To be eligible for assignment to Assignment Level II\t candidates must have\t in addition to meeting the above Qualification Requirements\t either:  a) two more years of satisfactory full-time experience in a customer service or public information capacity; or  b) One more year of full-time satisfactory experience working for New York City government in a customer service or public information capacity.  However\t all candidates for Assignment Level II must have at least one additional year of customer service or public information experience.\"\tThe preferred candidate should possess the following: 3+ years of full-time satisfactory professional experience as a Call Center Representative (CCR); recent QA average of 90 or above; overall performance evaluation rating of Good or higher; professional experience assisting or supervising work teams in a large call center environment; demonstrated knowledge of call center best practices, performance indicators, call center telephony, and application technologies; advanced written and verbal communication skills; strong leadership, collaboration, and team building skills; strong customer and quality focus; excellent planning and problem solving skills; knowledge of advanced functions of Microsoft Office programs such as Word, Excel, Access, Visio, and PowerPoint; experience using customer service technical applications and related technologies for reporting and quality assurance; excellent organization and facilitation skills; strong time management skills; and ability to handle multiple tasks simultaneously under tight deadlines in a fast paced environment.\tnull\tTo Apply For Internal Employees Only Please go to Employee Self Service (ESS), click on Recruiting Activities \u003e Careers, and search for Job ID #197316  SUBMISSION OF A RESUME IS NOT A GUARANTEE THAT YOU WILL RECEIVE AN INTERVIEW APPOINTMENTS ARE SUBJECT TO OVERSIGHT APPROVAL\tDue to the necessary duties of this position in a 24/7 operation, candidate may be required to work various shifts such as weekends and/or nights/evenings.\tnull\tnull\n285308\tDEPT OF ENVIRONMENT PROTECTION\tExternal\t2\tIT Support Technician\tCOMPUTER ASSOC (OPERATIONS)\t13621\t1\tTechnology, Data \u0026 Innovation\tF\t47692\t69493\tAnnual\t96-05 Horace Harding Expway\tWSO-Executive/Tech Mgmt Office\tThe New York City Department of Environmental Protection (DEP) protects public health and the environment by supplying clean drinking water, collecting and treating wastewater, and reducing air, noise, and hazardous materials pollution. DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees. We deliver 1.1 billion gallons of high quality drinking water per day to 8.5 million New York City residents and more than 1 million people in Upstate New York, and we collect and treat an average of 1.3 billion gallons of wastewater per day.  New York City has approximately 140,000 catch basins, 114,000 hydrants, 90,000 valves, 14 gatehouses, 3 reservoirs, 68 groundwater wells, a 100-million-gallon underground storage tank and 7,000 miles each of both sanitary sewers and water mains. The responsibility of maintaining these vast networks falls under the Department of Environmental Protectionâ€™s Bureau of Water and Sewer Operations (BWSO).  The Bureau of Water and Sewer Operations, Information Technology (IT) Support Unit is a technical team dedicated to providing the Bureau with the highest level of technical support, dependable service and timely problem resolution. Working in collaboration with the Agencyâ€™s centralized Office of Information Technology IT Service Desk; the unit is dedicated to the specific technology needs of the Bureau of Water and Sewer Operations.   Under general supervision, with latitude for independent initiative and judgment, the selected candidatesâ€™ responsibilities will include:  Providing end-user technical support for computer/IT hardware, software applications/tools and information systems for the LAN, WAN and mobile working environments;   Performs routine system health checks, functional testing, preventative maintenance and issue resolution tasks for the Bureauâ€™s main headquarters and remote sites;   Escalate complex and more operational impactful problems to IT Support II team for assistance;   Deliver, setup and configure end-user hardware (desktop, laptop, tablets, printers, smartphones, peripherals) and software;   Set up computer and audio video equipment for training, meeting and demonstration purposes;   Test and deploy application and operating system updates, upgrades and security patches on workstations, laptops, tablets and mobile handheld;   Assists with basic network issues;   Troubleshoots basic VoIP phone issues;   Perform various technical tasks as directed by the IT Support Unit Supervisor, including support of the Bureaus Continuity of Operations Plan (COOP) drills and activations;   Log and track all issues within the Bureaus ticketing system, providing periodic status updates within the database until final issue resolution;   Attends meeting as part of the IT Support team to discuss trends of inquiries, unit productivity and recommendations for continually providing excellence in IT customer support.\t\"1. A certificate from an accredited technical school (approximately 675 hours) with a specialization in computer operations, and two years of satisfactory full-time experience, acquired within the last eight years, working on large-scale mainframe computer operations or mainframe data communication networks; or  2. A baccalaureate degree from an accredited college and three years of satisfactory full-time experience, acquired within the last eight years, as described in \"\"1\"\" above; or  3. A four-year high school diploma or its educational equivalent and four years of satisfactory full-time experience\t acquired within the last eight years\t as described in \"\"1\"\" above; or  4. A satisfactory combination of education and/or experience equivalent to \"\"1\"\"\t \"\"2\"\"\t or \"\"3\"\" above. However\t all candidates must have at least two years of full-time experience\t acquired within the last eight years\t as described in \"\"1\"\" above.\"\tâ€¢\tStrong desktop support experience with computer hardware/software/peripherals, within a large-scale, complex environment. â€¢\tWorking knowledge of Local and Wide Area Networking and Wireless infrastructure. â€¢\tWorking knowledge of VoIP telephone communication systems. â€¢\tSolid technical knowledge of Windows, iOS and Android based operating systems across the LAN, WAN and mobile wireless environments. â€¢\tKnowledge of communication protocols such as TCP/IP, LDAP, HTTP, DHCP and DNS. â€¢\tExperience in the use of remote desktop access software, preferably Goverlan. â€¢\tExcellent verbal communication skills for both telephone and interpersonal contact. â€¢\tCustomer Service and team oriented, with ability to articulate to the end user community and IT Support colleagues in clear, concise understandable terms.\tAppointments are subject to OMB Approval. For additional information about DEP, visit www.nyc.gov/dep  DEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.\t\"Click the \"\"Apply Now\"\" button\"\tnull\n287169\tPOLICE DEPARTMENT\tInternal\t1\tDirector, Central Records Division\tADMINISTRATIVE MANAGER\t10025\tM3\tAdministration \u0026 Human Resources\tF\t67060\t178873\tAnnual\t1 Police Plaza, N.Y.\tSupport Svcs Bureau Civ and Ca\tUnder the executive direction of the Deputy Commissioner, Support Services Bureau, with wide latitude for the exercise of independent judgment, initiative and decision-making, the Director, Central Records Division will manage and oversee a staff of professional, technical, administrative and support personnel performing extremely important, complex and confidential work in the Identification Section, Stolen Property Inquiry Section, Criminal Records Section, the Aided Unit, and the Public Inquiry and Request Section. The Director will be responsible for ensuring the proper maintenance, control, sealing, destruction and dissemination of criminal records, aided reports, fingerprints, and all related information; overseeing and monitoring the Division\u0027s extremely confidential and sensitive records databases ensuring their integrity and strict compliance with all governmental and departmental rules, regulations and guidelines; and meeting regularly with the Deputy Commissioner, Support Services Bureau and Section Managers regarding the Division\u0027s work operations and activities. This position will formulate, modify, implement and review Division programs, policies and procedures and set short and long term goals and objectives; serve as key confidential advisor to the Deputy Commissioner, Support Services Bureau regarding all existing, modified, and newly proposed programs, policies and procedures; attend meetings and conferences with executive level Department personnel regarding Central Records Division operations; and act as liaison with other Department commands and outside agencies regarding Division work operations.\t\"1. A baccalaureate degree from an accredited college and four years of satisfactory, full-time progressively responsible clerical/administrative experience requiring independent decision-making concerning program management or planning, allocation for resources and the scheduling and assignment of work, 18 months of which must have been in an administrative, managerial, executive or supervisory capacity. The supervisory work must have been in the supervision of staff performing clerical/administrative work of more than moderate difficulty; or  2. An associate degree or 60 semester credits from an accredited college and five years of satisfactory, full-time progressively responsible experience as described in \"\"1\"\" above\t 18 months of which must have been in an administrative\t managerial\t executive or supervisory capacity. The supervisory work must have been in the supervision of staff performing clerical/administrative work of more than moderate difficulty; or  3. A four-year high school diploma or its educational equivalent and six years of satisfactory\t full-time progressively responsible experience as described in \"\"1\"\" above\t 18 months of which must have been in an administrative\t managerial\t executive or supervisory capacity. The supervisory work must have been in the supervision of staff performing clerical/administrative work of more than moderate difficulty; or  4. Education and/or experience equivalent to \"\"1\"\"\t \"\"2\"\" or \"\"3\"\" above. However\t all candidates must possess the 18 months of administrative\t managerial\t executive or supervisory experience as described in \"\"1\"\"\n288228\tDEPT OF ENVIRONMENT PROTECTION\tInternal\t1\tEngineer-In-Charge, Engineering and Metrics Unit\tCIVIL ENGINEER\t20215\t2\tEngineering, Architecture, \u0026 Planning\tF\t74990\t104182\tAnnual\t59-17 Junction Blvd Corona Ny\tSewer Analysis - T/L\tThe New York City Department of Environmental Protection (DEP) protects public health and the environment by supplying clean drinking water, collecting and treating wastewater, and reducing air, noise, and hazardous materials pollution. DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees. We deliver 1.1 billion gallons of high quality drinking water per day to 8.5 million New York City residents and more than 1 million people in Upstate New York, and we collect and treat an average of 1.3 billion gallons of wastewater per day.  New York City has approximately 140,000 catch basins, 114,000 hydrants, 90,000 valves, 14 gatehouses, 3 reservoirs, 68 groundwater wells, a 100-million-gallon underground storage tank and 7,000 miles each of both sanitary sewers and water mains. The responsibility of maintaining these vast networks falls under the Department of Environmental Protectionâ€™s Bureau of Water and Sewer Operations (BWSO).  The Engineering and Metrics Unit is a part of the CMOM Compliance Section which is involved in the continuous effort of maintaining NYC collection system infrastructure within the standards imposed by federal, state and local authorities and adhering to the strategies and procedures outlined in the EPAâ€™s Guide for Evaluating Capacity Management Operation and Maintenance (CMOM) at Collections Systems.   The selected candidate will assist the unit chief in directing a group of civil engineers and technicians involved in research, studies and investigations of the NYC sewer system with a goal to identify the system deficiencies and recommend remedial measures.  A candidate shall have extensive experience in civil engineering and possess a good knowledge and understanding of operations related to municipal wastewater systems. Preferable experience is in civil or environmental engineering with emphasis on operational aspects of sewer facilities and infrastructure.  At least 2 years of overall experience shall be verifiable experience in a supervisory capacity.   The responsibility of this position include, but not limited to: supervise engineers and technicians conducting field inspections prompted by various adverse conditions, such as: sewer backups, sewer overflow and street flooding; oversee and direct engineering studies and investigations pertaining to wide-scope special projects, as well as arrange and coordinate small scale trials for specific equipment and activities; prepare and review various reports, summarizing the above activities, including recommendations for corrective actions; participate in development, implementation and maintenance of CMOM Management Information System to capture and analyze the data collected during CMOM operations; cooperate with other bureaus within DEP and other agencies and organizations to ensure steady and uninterrupted progress of work, etc. Driving a city vehicle to the field sites will be required.\t\"(1) Four (4) years of full-time, satisfactory experience in civil engineering work; and   (2) A valid New York State Professional Engineerâ€™s License. Current New York State registration as a Professional Engineer must be maintained for the duration of your employment.    A masters degree in civil engineering from an accredited college or university, accredited by regional, national, professional or specialized agencies recognized as accrediting bodies by the U.S. Secretary of Education and by the Council for Higher Education Accreditation (CHEA) may be substituted for one year of the civil engineering experience required in â€œ1\"\" above.  Special Note:  In addition to above qualification requirements\t to be eligible for placement in Assignment Levels II and III\t individuals must have at least one year within the last three years of experience as a major contributor or a project leader on a complex project requiring additional and specific expertise in the disciplines needed to design or construct the project.\"\tCivil engineering â€“ preferably sewer maintenance and/or sewer design Supervisory experience Excellent writing skills  Database knowledge, preferably MS Access Valid Driver License is a requirement\tALL CANDIDATES MUST EITHER BE PERMANENT IN THE CIVIL SERVICE TITLE OF CIVIL ENGINEER OR MUST HAVE APPLIED FOR THE CIVIL SERVICE EXAM FOR CIVIL ENGINEER.  Appointments are subject to OMB Approval. For additional information about DEP, visit www.nyc.gov/dep  DEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.\t\"Click the \"\"Apply Now\"\" button.\"\tnull\tnull\tnull\tNew York City Residency is not required for this position\t2017-05-01T00:00:00.000\tnull\n289955\tDEPT OF ENVIRONMENT PROTECTION\tInternal\t1\tDeputy Chief of Quality Assurance\tADMINISTRATIVE PROJECT MANAGER\t83008\tM2\tEngineering, Architecture, \u0026 Planning\tF\t60435\t161497\tAnnual\t59-17 Junction Blvd Corona Ny\tSystem Operations Management\tThe New York City Department of Environmental Protection (DEP) protects public health and the environment by supplying clean drinking water, collecting and treating wastewater, and reducing air, noise, and hazardous materials pollution. DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees. We deliver 1.1 billion gallons of high quality drinking water per day to 8.5 million New York City residents and more than 1 million people in Upstate New York, and we collect and treat an average of 1.3 billion gallons of wastewater per day. The selected candidate will serve as the Deputy Chief of Quality Assurance for the Bureau of Water \u0026 Sewer Operations\u0027 (BWSO) Division of Distribution Operations. Distribution\u0027s role in the Bureau is to ensure that potable water is delivered at the appropriate pressure and volume to consumers throughout the five boroughs. Within the Agency, distribution staff works closely with Bureau Field Operations, BWS Water Quality and BEDC providing engineering direction. The Distribution Section is responsible for the initiation of capital projects needed to maintain and improve the distribution system; in that role, engineers work closely with The BWSO Capital Planning Division. Outside the Agency, Distribution staff maintains close working relationships with other NYC Agencies, MTA, Con Edison and many other outside interest s whose activities affect water supply infrastructure. Plan review, advising on changes due to field conditions during construction and coordinating trunk main shutdowns play a large role in the sections activities. Distribution is responsible for the operation, maintenance  and repair of valves and pressure regulators associated with the trunk main network and for response to large water main breaks, fires and  other emergencies. The section also  contains the Cross Connection Control and Hydraulic Flow Test Units. You will be an integral part of the Division reporting directly to the Director of Distribution Operations. The position will manage of staff of engineers ensuring quality assurance of materials that are incorporated in the Bureauâ€™s infrastructure. Essential Job Functions include: â€¢ maintains control of and ensures that the Bureau Specifications comply with current standards and operational needs.  â€¢ perform metallurgical review of pipe failures and prepares reports on the findings. â€¢ responsible for ensuring periodic inspection and maintenance of cathodic protection systems on the water infrastructure. â€¢ reviews and approves proposed cathodic protection systems. â€¢ reviews and approves mechanical systems and materials to be used in our infrastructure. â€¢ sets criteria for approval of, and approves, manufacturers of materials. â€¢ prepares highly complicated and detailed specifications. â€¢ may represent agency and testify in court cases. â€¢ may visits manufacturing plants, construction site and locations of water main breaks\t\"1. A baccalaureate degree from an accredited college in engineering, architecture, landscape architecture, business administration, or public administration, and five years of full-time satisfactory experience in the planning, administering or expediting of engineering design, and/or construction, or coordinating a very large engineering project, two years of which must have been in an administrative, managerial, executive or supervisory capacity; or  2. A four year high school diploma or its educational equivalent and nine years of experience as described in \"\"1\"\" above; two years of which must have been in an administrative\t managerial\t executive or supervisory capacity; or  3. Education and/or experience equivalent to \"\"1\"\" or \"\"2\"\" above. An accredited Master\u0027s degree in one of the disciplines described in \"\"1\"\" above\t a law degree\t or a valid New York State license as a Professional Engineer or Registered Architect or Landscape Architect may be substituted for one year of the required experience. However\t all candidates must have the two years of the administrative\t managerial\t executive or supervisory experience as described in \"\"1\"\" above.\"\tâ€¢\tBachelors Degree in Mechanical Engineering or related field. â€¢\t10 years or more in relevent engineering field. â€¢\tProfessional Engineering License â€¢\tPossess certifications from the National Association of Corrosion Engineers â€¢\tNYS Driverâ€™s License\tDEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.  All Appointments are subject to OMB Approval. For additional information about DEP, visit www.nyc.gov/dep.\t\"Click the \"\"Apply Now\"\" button\"\tnull\n315727\tDEPARTMENT OF TRANSPORTATION\tExternal\t1\tSenior Program Manager\tADMINISTRATIVE PROJECT MANAGER\t8300B\t0\tAdministration \u0026 Human Resources\tnull\t48535\t134433\tAnnual\t34-02 Queens Boulevard Long Is\tParking Adm-Exec\tThe New York City Department of Transportation seeks a seasoned project manager with a proven record of leadership, innovation, communication and technical skills in the realm of parking management and transportation policy.  Reporting to the Director, the selected candidate will be at the forefront of informing and influencing planning and policy activities as they relate to the innovative on-street curb management strategies being developed by NYCDOT and City of New York.  The incumbent will be tasked with using a data and policy driven approach to evaluating the existing curb management policies, programs and developing recommendations for optimizing the utility of the system.    Under direction, with extremely wide latitude for the exercise of independent judgment, initiative and action, the individual will be responsible for planning, coordinating and overseeing the development and progress of comprehensive studies, evaluations and reports as they relate to on-street metered environment, as well as the allocation of curb space for commercial vehicles, authorized parking and other special uses.  The ability to perform qualitative and quantitative data analysis and use this information to inform decisions, create reports and generate recommendations is critical to this position. The candidate will assist in oversight of projects from initiation to completion, as well as direct technical project management operations including project planning, budget and scope development as well as daily planning activities.  The successful candidate will also participate in the general planning and problem-solving sessions, work with key staff and stakeholders and to assist in the development and deployment of new technologies, programs and other strategies, as well as support analytical tools and procedures for improved capabilities and reporting. The candidate may also be asked to support special initiatives, projects and other duties assigned to the Unit.\t\"1. A baccalaureate degree from an accredited college in engineering, architecture, landscape architecture, business administration, or public administration, and five years of full-time satisfactory experience in the planning, administering or expediting of engineering design, and/or construction, or coordinating a very large engineering project, two years of which must have been in an administrative, managerial, executive or supervisory capacity; or 2. A four year high school diploma or its educational equivalent and nine years of experience as described in \"\"1\"\" above; two years of which must have been in an administrative\t managerial\t executive or supervisory capacity; or  3. Education and/or experience equivalent to \"\"1\"\" or \"\"2\"\" above. An accredited Master\u0027s degree in one of the disciplines described in \"\"1\"\" above\t a law degree\t or a valid New York State license as a Professional Engineer or Registered Architect or Landscape Architect may be substituted for one year of the required experience. However\t all candidates must have the two years of the administrative\t managerial\t executive or supervisory experience as described in \"\"1\"\" above.\"\tâ€¢ Demonstrates working knowledge of theory, principles and practices related to transportation planning and parking. â€¢ Experience in the development and implementation of parking policy. â€¢ Experience and proficiency in preparing and/or analyzing large datasets, financial statements, public policy documents and   using data management/advanced analytical platforms. â€¢ Ability to conduct research, synthesize results and present findings in a succinct manner. â€¢ Strong strategic thinking and verbal communication skills with a variety of groups and individuals. â€¢ Ability to work independently or as part of a team.\tResidency Requirement: NYC Residency is not required for this position.\tAll resumes are to be submitted electronically. Current City Employees please log into Employee Self Service (ESS) at https://hrb.nycaps.nycnet follow the Careers Link for  Job ID#315727. All other applicants: Please go to www.nyc.gov/careers/search and search for the Job ID#:315727. If you do not have access to a personal computer, please visit your local public library.  Most public libraries have computers available for use. No phone calls, faxes or personal inquiries permitted. Only applicants under consideration will be contacted. Appointments are subject to OMB approval. For more information about DOT, visit us at: www.nyc.gov/dotFor more information about DOT, visit us at: www.nyc.gov/dot.\t35 hours/ 9am to 5pm - Monday to Friday\n342149\tDEPT OF ENVIRONMENT PROTECTION\tExternal\t2\tBudget Analyst\tACCOUNTANT\t40510\t2\tFinance, Accounting, \u0026 Procurement\tF\t52143\t65000\tAnnual\t59-17 Junction Blvd Corona Ny\tAdministration/P S Budget\tREPOSTED The New York City Department of Environmental Protection (DEP) protects public health and the environment by supplying clean drinking water, collecting and treating wastewater, and reducing air, noise, and hazardous materials pollution. DEP is the largest combined municipal water and wastewater utility in the country, with over 5,500 employees. We deliver 1.1 billion gallons of high quality drinking water per day to 8.5 million New York City residents and more than 1 million people in Upstate New York, and we collect and treat an average of 1.3 billion gallons of wastewater per day.  The Budget Office is responsible for managing the Agencyâ€™s capital, expense, grant and miscellaneous revenue budgets; preparing budget and financial analyses and reports; and coordinating the Agencyâ€™s budget and financial matters with OMB and other oversight agencies. The Budget Office seeks to hire a Budget Analyst who under supervision, will perform difficult technical work including but not limited to collecting and analyzing data for departmental estimates, updates, Executive and Adopted Expense Budget.   The Budget Analyst will also perform the following task:  - Assist in the review and analysis of new needs and reduction exercises for the Agency.  - Prepare and process budget modifications and any other submissions requested for FMS.  - Prepare preliminary budget documents and disseminate information to the Bureaus.  - Coordinate budget exercises with bureau staff and other agency staff, as required.  - Performs related duties for Expense and other special projects as required by the Expense and Budget Directors and the Assistant Commissioner for Budget.   The selected candidate should have working knowledge of FMS, strong analytical skills, proficiency in MS Excel and the ability to collect and analyze relevant data on spreadsheets\t1. A baccalaureate degree from an accredited college or university, accredited by regional, national, professional or specialized agencies recognized as accrediting bodies by the U.S. Secretary of Education and by the Council for Higher Education Accreditation (CHEA), including or supplemented by 24 semester credits in accounting, including one course each in advanced accounting and auditing; or  2. A valid New York State Certified Public Accountant license.  To be eligible for placement in Assignment Level II individuals must have, in addition to meeting the minimum requirements, at least one year of experience as an Accountant - Assignment Level I or at least two years of satisfactory full-time professional accounting or auditing experience.\tERROR: #NAME?\tDEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach recruitment efforts. Please be sure to indicate your source of referral to this job. For more information about NYCDEP, visit us at: www.nyc.gov/dep   NOTE: This position is open to qualified persons with a disability who are eligible for the 55-a Program and also meet the education and experience requirements as listed in the job posting notice. Please indicate on your resume or cover letter that you would like to be considered for the position under the 55-a Program. This position is also open to non 55-a Program candidates who meet the education and experience requirements as listed in the job posting notice.          55A candidates are encouraged to apply.  We appreciate your interest and thank all applicants who apply, but only candidates under consideration will be contacted.  All appointments are subject to Office of Management and Budget (OMB) approval.\tClick on â€œApply Nowâ€ and submit a resume and cover letter.   Please review the Cityâ€™s Civil Service Exam requirements for full-time employees at  http://www1.nyc.gov/jobs/exams.page\t35 hours per week.\t59-17 Junction Blvd Corona NY\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\t2018-05-10T00:00:00.000\tnull\t2018-05-10T00:00:00.000\t2019-07-30T00:00:00.000\n343319\tNYC HOUSING AUTHORITY\tInternal\t1\tExecutive Project Manager\tADMINISTRATIVE PROJECT MANAGER\t83008\tM4\tEngineering, Architecture, \u0026 Planning\tF\t75338\t194395\tAnnual\tOffice for Exec Proj Manager\tProject Mgmt Dept Team 1\tPlease read this posting carefully to make certain you meet the qualification requirements before applying to this position.   Reporting to the Vice President of Project Management, the Executive Project Manager will provide leadership, management and oversight of staff responsible for executing NYCHAâ€™s capital construction projects. The selected candidate will ensure the safe delivery of quality capital projects on time and within budget; establish goals; monitor production; report progress against the agencyâ€™s annual plan; take corrective action when necessary; communicate with executive staff; make presentations and prepare reports as required.  Responsibilities include, but are not limited to the following:  1.  Direct activities and monitor performance of Senior Project Managers and their project management teams of approximately 60 staff, who execute all phases of multiple, City-wide construction projects. 2.  Oversee active construction projects to ensure they are progressing efficiently, effectively and within budget. 3.  Develop and implement schedule milestones, project controls and performance indicators for managing projects. 4.  Determine corrective action for projects identified with cost, schedule, scope, quality, safety, integrity or other issues. 5.  Review and recommend approval of contract awards, partial payments, change orders, reduction in retainage, final payments, schedule rebaselining, and contract extensions. 6.  Assist in the establishment of the Capital Projects annual plan. 7.  Review and approve reports on status of projects with key performance indicators that highlight potential problem projects. 8.  In collaboration with peers, develop and implement project and program management guidelines and initiatives. 9.  Approve Project Management Plans. 10. Instill and maintain customer-service/partnerships with internal and external stakeholders. 11. Coordinate with Design Department to ensure that Building Standards are updated based on technical field experience and lessons learned. 12. Provide key support in areas such as: planning and budgeting, data integrity, policies and procedures, human resource, logistics of equipment and vehicles, and procurement of architects/engineers, construction contractors, and construction managers. 13. Prepare and conduct presentations for Vice President, Executive Department, elected officials and community groups as required/requested.  Notes:  1.  Candidates with permanent civil service status in the titles of Administrative Engineer, Administrative Architect and Administrative Staff Analyst will be considered.  2.  Employees serving in the titles of or who meet the qualification requirements for Administrative Inspector or Administrative Construction Project Manager will also be considered.\t\"1. A baccalaureate degree from an accredited college in engineering, architecture, landscape architecture, business administration, or public administration, and five years of full-time satisfactory experience in the planning, administering or expediting of engineering design, and/or construction, or coordinating a very large engineering project, two years of which must have been in an administrative, managerial, executive or supervisory capacity; or  2. A four year high school diploma or its educational equivalent and nine years of experience as described in \"\"1\"\" above; two years of which must have been in an administrative\t managerial\t executive or supervisory capacity; or  3. Education and/or experience equivalent to \"\"1\"\" or \"\"2\"\" above. An accredited Master\u0027s degree in one of the disciplines described in \"\"1\"\" above\t a law degree\t or a valid New York State license as a Professional Engineer or Registered Architect or Landscape Architect may be substituted for one year of the required experience. However\t all candidates must have the two years of the administrative\t managerial\t executive or supervisory experience as described in \"\"1\"\" above.\"\t1.  Ten (10) plus years of experience in project management. 2.  Exceptional leadership abilities. 3.  Demonstrable track record managing successful delivery of capital projects on time and within budget. 4.  Experience mentoring others, developing individualâ€™s skills, and encouraging collaboration and cohesive teamwork. 5.  Excellent verbal and written communications skills.\t1.\tNYCHA employees applying for promotional, title or level change opportunities must have served a period of one year in their current title and level (if applicable). 2.\tCandidates may be given a skills assessment as part of the interview process.\t\"Click the \"\"Apply Now\"\" button.\"\tnull\n343462\tNYC HOUSING AUTHORITY\tExternal\t1\tProgram Manager\tCOMMUNITY COORDINATOR\t56058\t0\tPolicy, Research \u0026 Analysis\tF\t50362\t78177\tAnnual\tCP Sustainability Programs\tCP Sustainability Programs\tPlease read this posting carefully to make certain you meet the qualification requirements before applying to this position.  Background  NYCHAâ€™s mission is to increase opportunities for low- and moderate-income New Yorkers by providing safe, affordable housing and facilitating access to social and community services.  Almost 400,000 New Yorkers reside in NYCHAâ€™s 325 public housing developments around the five boroughs, and another 235,000 receive subsidized rental assistance in private homes through the NYCHA-administered Section 8 Leased Housing Program.  In 2016 NYCHA released the NextGeneration NYCHA Sustainability Agenda, the Authorityâ€™s 10-year plan to improve energy efficiency and shrink NYCHAâ€™s carbon footprint, and create healthy and comfortable homes that will withstand the challenge of climate change.  For more information, visit j.mp/green-nycha.   NYCHAâ€™s work on clean and renewable energy is anchored by its commitment to site 25MW of renewables at NYCHA by 2026, a part of the HUD Renew300 program (https://www.hudexchange.info/programs/renewable-energy/).  NYCHA began implementation toward this goal by releasing the first large-scale solar RFP in 2017 with a goal of securing third-party solar development for up to 6MW, to be implemented as community shared solar projects (http://www1.nyc.gov/site/nycha/about/press/pr-2017/solar-20171013.page).  NYCHA is also developing a parallel program targeting small-building solar to encourage direct involvement of small businesses and non-profits from NYCHA communities.  NYCHA seeks a Program Manager with a passion for sustainability to lead NYCHAâ€™s portfolio of clean, renewable, and distributed energy initiatives.  Reporting to the Director for Sustainability Programs, the Program Manager will oversee NYCHAâ€™s progress toward meeting its commitment to site 25MW of renewable energy capacity at NYCHA developments, and serve as the in-house point person on clean energy policy ranging from VDER to clean fleets.  These projects are complex technically, legally, politically and financially, and require a staff person who has both technical background, program management and relationship building skills.   Responsibilities  The Program Manager will manage one staff person and several teams of consultants.  1.Manage and develop clean and renewable energy programs (50%):  â€¢Manage the series of large-scale commercial solar projects from pipeline development and Request for Proposals, through contacts negotiations, and construction and commissioning; â€¢Develop and manage the small buildings solar program targeting direct participation of small businesses and non-profit organizations in NYCHA communities; â€¢ Manage internal and external relationships to facilitate beneficial and efficient progress on the above initiatives, ensuring timely and mutually beneficial communication between project stakeholders; â€¢Monitor relevant policy discussions and developments at the local, state, and federal levels (e.g. developments in VDER); create and track progress against project schedules, budgets, and program pipelines; â€¢Assess and identify problems accurately and in a timely manner, evaluate and recommend solutions with realistic objectives and time frames;  â€¢Monitor other (non-solar) clean, renewable, and distributed energy developments in the field, including those related to distributed storage and clean fleet, with an eye to when and how NYCHA should evaluate active participation.   2.Manage NYCHA participation in the NYC clean energy community of practice (30%):  â€¢Forge and maintain inter-agency relationships (the Mayorâ€™s Office Sustainability, Department of Citywide Administrative Services, City University of New York) and ensure NYCHAâ€™s interests are represented in city-wide program and policy development; â€¢Forge and maintain clean energy industry relationships including with utilities, industry associations, and solar developers to foster interest and support of NYCYAâ€™s clean and renewable energy programs; â€¢Represent NYCHA at external conferences, networking events, and other public forums to elevate NYCHAâ€™s profile on clean energy in the industry;  â€¢Proactively support NYCHA\u0027s Department of Communications and Intergovernmental Relations Department to promote NYCHAâ€™s progress on clean, renewable, and distributed energy in the media and among elected officials.  3.Support Sustainability Programs Departmentâ€™s role as an in-house consultancy (20%):  â€¢Provide programmatic support as directed for other initiatives of the Sustainability Programs Department, including coordinating and documenting early-stage program development for multi-hazard climate resilience.\t\"1. A baccalaureate degree from an accredited college and two years of experience in community work or community centered activities in an area related to the duties described above; or  2. High school graduation or equivalent and six years of experience in community work or community centered activities in an area related to the duties as described above; or  3. Education and/or experience which is equivalent to \"\"1\"\" or \"\"2\"\" above. However\t all candidates must have at least one year of experience as described in \"\"1\"\" above.\"\tâ€¢Excellent verbal and written communication skills. â€¢Understanding financial planning tools (budgets, pro forma cashflows). â€¢Direct experience of renewables installations at any level. â€¢Contacts in the renewable/clean energy community of practice. â€¢Exposure to environmental justice or community-based organizations. â€¢Interest and background in affordable/public housing.\t1.Candidates may be given a skills assessment as part of the interview process. 2.NYCHA employees applying for promotional, title or level change opportunities must have served a period of one year in their current title and level (if applicable).\t\"Click the \"\"Apply Now\"\" button.\"\tnull\tnull\tnull\tNYCHA has no residency requirements.\t2018-10-16T00:00:00.000\tnull\t2018-10-16T00:00:00.000\n374781\tDEPT OF HEALTH/MENTAL HYGIENE\tInternal\t1\tPolicies and Procedures Specialist\tADMINISTRATIVE STAFF ANALYST (\t1002A\t0\tHealth Policy, Research \u0026 Analysis\tF\t62862\t97873\tAnnual\t421 East 26th Street NY NY\tOCME-Admin\tTHIS POSITION IS OPEN ONLY TO CURRENT CITY EMPLOYEES SERVING AS PERMANENT ADMINISTRATIVE STAFF ANALYSTS  GRANT FUNDED   The Office of Chief Medical Examiner investigates cases of persons who die within New York City from criminal violence, by accident, by suicide, suddenly when in apparent health, when unattended by a physician, in a correctional facility or in any suspicious or unusual manner or where an application is made pursuant to law for a permit to cremate a body of a person.    We exist to provide answers in support of families, victims and community during times of profound need.  JOB DESCRIPTION The New York City Office of Chief Medical Examiner (OCME) seeks a Policies and Procedures Specialist to play a critical role in the agencyâ€™s accreditation effort.  Under the direction of the Quality Assurance Director, the Policies and Procedures Specialist will serve as the agencyâ€™s lead for the development of standard operating procedures for all units. This is a grant funded position which reflects the agencyâ€™s commitment to improving the quality of its services.  The Policies and Procedures Specialist will be responsible for a wide range of tasks, including, but not limited to, the following: â€¢\tPerform a gap analysis comparing existing agency documentation against procedures required by accreditation standards.  â€¢\tPartner with subject matter experts to collect the information necessary for the development of standard operating procedures. â€¢\tMap agency workflows and processes using Microsoft Visio. â€¢\tAnalyze workflows to identify any inconsistencies and inefficiency points. Make recommendations to enhance operational efficiency where appropriate. â€¢\tCollaborate with agency directors in the preparation and writing of policies and procedures. â€¢\tEdit final documents for substance to include scope, organization, and logic of policies and procedures. Proofread for style, grammar and spelling errors. â€¢\tUpload and maintain policies and procedures in the agencyâ€™s Qualtrax document management system. â€¢\tCreate and configure Qualtrax folders, groups, workflows, reports, and tests for agency units. â€¢\tDevelop training documentation and provide Qualtrax user training to agency managers as needed. â€¢\tOther duties as assigned.\t\"1. A master\u0027s degree from an accredited college in economics, finance, accounting, business or public administration, human resources management, management science, operations research, organizational behavior, industrial psychology, statistics, personnel administration, labor relations, psychology, sociology, human resources development, political science, urban studies or a closely related field, and two years of satisfactory full-time professional experience in one or a combination of the following: working with the budget of a large public or private concern in budget administration, accounting, economic or financial administration, or fiscal or economic research; in management or methods analysis, operations research, organizational research or program evaluation; in personnel or public administration, recruitment, position classification, personnel relations, employee benefits, staff development, employment program planning/administration, labor market research, economic planning, social services program planning/evaluation, or fiscal management; or in a related area. 18 months of this experience must have been in an executive, managerial, administrative or supervisory capacity. Supervision must have included supervising staff performing professional work in the areas described above; or  2. A baccalaureate degree from an accredited college and four years of professional experience in the areas described in \"\"1\"\" above\t including the 18 months of executive\t managerial\t administrative or supervisory experience\t as described in \"\"1\"\" above.\"\tâ€¢\tCandidate should possess excellent communication, writing, and oral presentation skills.   â€¢\tProficient in Microsoft Office applications, including but not limited to: Word, Excel, PowerPoint.  Must be willing to learn new software applications.  â€¢\tFamiliarity with National Association of Medical Examiners accreditation requirements and International Organization of Standards (ISO 17020) accreditation requirements. â€¢\tKnowledge of medical examiner office practices and procedures and death scene investigation procedures. â€¢\tDemonstrated ability to manage time, lead meetings, and complete tasks within specified deadlines.  â€¢\tDetailed oriented and ability to multitask. â€¢\tMust be self-motivated with the ability to work both independently and within a team environment. â€¢\tTwo or more writing samples demonstrating experience writing and editing standard operating procedures. â€¢\tThree business references, with immediate supervisorsâ€™ business affiliations, addresses, telephone numbers and email addresses.\tnull\tTO APPLY, PLEASE SUBMIT RESUME AND COVER LETTER TO: https://a127-jobs.nyc.gov Job ID# 374781   NO PHONE CALLS.  Please note that only candidates selected for an interview will be contacted for this position.\tnull\tnull\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\n381271\tDEPT OF ENVIRONMENT PROTECTION\tInternal\t3\tCivil Engineer II\tCIVIL ENGINEER\t20215\t2\tEngineering, Architecture, \u0026 Planning\tF\t78210\t89942\tAnnual\t96-05 Horace Harding Expway\tBlue Belt Unit\tThe NYC Department of Environmental Protection (DEP) enriches the environment and protects public health for all New Yorkers by providing 1.1 billion gallons of high quality drinking water, managing wastewater and stormwater, and reducing air, noise, and hazardous materials pollution.  DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees.  DEP\u0027s water supply system is comprised of 19 reservoirs and 3 controlled lakes throughout the systemâ€™s 2,000 square mile watershed that extends 125 miles north and west of the City.  The position will fall under jurisdiction of the Bureau of Water and Sewer Operations which is responsible for the operation and maintenance and protection of New York Cityâ€™s drinking water distribution and wastewater collection systems, the protection of adjacent waterways and natural drainage (wetlands), and the development of the Departmentâ€™s Capital Water and Sewer Infrastructure Program. The Bureau also approves and inspects water and sewer connections performed by licensed plumbers and/or authorized contractors. In addition, BWSO has overall responsibility for the approval and inspection of all public and private construction projects as they relate to the Cityâ€™s water or sewer systems.  The Drainage and Modeling group is responsible for developing and amending the Cityâ€™s drainage plan in response to significant changes in an area, such as zoning, new construction, or re-routing of sewers. The group is currently developing a citywide sewer collection system model. This effort will modernize the way in which DEP analyzes the hydraulics of the Cityâ€™s sewer collection system. The candidate(s) selected for this position will have an opportunity to help shape the new procedures used by DEP in performing hydraulic analyses, and in developing and amending drainage plans.   BWSO seeks to hire supervisory Civil Engineers to work in its Drainage and Modeling group.  The selected candidate(s) will be responsible for supervising a team of four or more staff members. The team is an interdisciplinary mix of engineers, engineering technicians, and computer programmers or GIS Analysts. The candidate(s) will be responsible to ensure that project schedules are met, (b) attend meetings with other Agencies or Bureaus as needed to coordinate on large-scale projects, and (c) facilitate the development of solutions that meet the needs of all relevant Agencies and Bureaus.   Typical tasks to be performed by the candidate(s) include the following: â€¢\tPerform and review hydraulic calculations for development of drainage plans  â€¢\tUse background information, modeling software, and other tools to simulate and analyze the hydraulics of the Cityâ€™s sewer collection system â€¢\tPerform QA/QC of the work done by junior engineers and technicians â€¢\tPrepare technical reports and presentations  â€¢\tPerforming research, investigations, and review of complex hydraulic analysis and design of proposed projects  Join our team and be part of the New York City world-renowned drinking water! DEP offers career growth opportunities and a comprehensive benefits package that includes a 401k and 457 plan; and paid holidays, sick time, and vacation.\t\"(1) Four (4) years of full-time, satisfactory experience in civil engineering work; and   (2) A valid New York State Professional Engineerâ€™s License. Current New York State registration as a Professional Engineer must be maintained for the duration of your employment.    A masters degree in civil engineering from an accredited college or university, accredited by regional, national, professional or specialized agencies recognized as accrediting bodies by the U.S. Secretary of Education and by the Council for Higher Education Accreditation (CHEA) may be substituted for one year of the civil engineering experience required in â€œ1\"\" above.  Special Note:  In addition to above qualification requirements\t to be eligible for placement in Assignment Levels II and III\t individuals must have at least one year within the last three years of experience as a major contributor or a project leader on a complex project requiring additional and specific expertise in the disciplines needed to design or construct the project.\"\tâ€¢\t5+ yearsâ€™ experience and in-depth knowledge of sewer design and hydraulic analysis.   â€¢\tThe selected candidate may be required to attend meeting and field visits that are outside the regular working place. â€¢\tA NYS Driverâ€™s license is required.\tAppointments are subject to OMB approval. For additional information about DEP, visit www.nyc.gov/dep  DEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.  NOTE: This position is open to qualified persons with a disability who are eligible for the 55-a Program and also meet the education and experience requirements as listed in the job posting notice. Please indicate on your resume or cover letter that you would like to be considered for the position under the 55-a Program. This position is also open to non 55-a Program candidates who meet the education and experience requirements as listed in the job posting notice.\t\"Click the \"\"Apply Now\"\" button.\"\tnull\tnull\tnull\tNew York City Residency is not required for this position\t2019-01-24T00:00:00.000\tnull\n381752\tDEPT OF ENVIRONMENT PROTECTION\tInternal\t1\tAssociate Public Health Sanitarian 1\tASSOCIATE PUBLIC HEALTH SANITA\t31220\t1\tHealth Public Safety, Inspections, \u0026 Enforcement\tF\t58677\t91199\tAnnual\t96-05 Horace Harding Expway\tEnvironmental Health/Safety\tThe NYC Department of Environmental Protection (DEP) enriches the environment and protects public health for all New Yorkers by providing 1.1 billion gallons of high quality drinking water, managing wastewater and stormwater, and reducing air, noise, and hazardous materials pollution.  DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees.  DEP\u0027s water supply system is comprised of 19 reservoirs and 3 controlled lakes throughout the systemâ€™s 2,000 square mile watershed that extends 125 miles north and west of the City.  The Bureau of Wastewater Treatment (BWT) is responsible for the operation and maintenance of all facilities related to the treatment of sewage within the five boroughs of the City. This includes 14 wastewater treatment plants, sludge dewatering facilities, collections facilities (pumping stations, combined sewer overflow retention facilities, regulators, tide gates, etc.), wastewater laboratories and harbor vessels.  The Bureau of Wastewater Treatmentâ€™s (BWT) Environmental, Health and Safety (EHS) directorate ensures that employees are knowledgeable of EHS regulations that affect them so that they can work in a safe and environmentally compliant operation. Working under direct supervision of the EHS South Section Chief, the Associate Public Health Sanitarian (APHS-1) is responsible for providing support and guidance concerning operationsâ€™ EHS issues to ensure workersâ€™ concerns are addressed and that the work environment remains or is put into EHS compliance. The selected candidate will be intimately involved in ensuring the purpose and job duties are met to the highest standards.   Tasks and duties include: â€¢ Ensuring assigned facility maintains environmental, health and safety (EHS) compliance, in accordance with Agency policies and guidelines, bureau and division procedures and guidance and all applicable EHS related Federal, State and local regulations, laws and codes. â€¢ Performing required Environmental, Health and Safety inspections. â€¢ Performing frequent general inspections of the facility to identify EHS non-compliant issues. â€¢ Documenting and reporting deficiencies to EHS Section Chief, Facility Manager, Plant Chief (or designee) multiple times per week, or as directed. â€¢ Immediately notifying EHS Section Chief, Facility Manager, Plant Chief or his designee of any issue which is an immediate danger to worker health and safety or environment â€“ attempt to resolve if capable and safe. â€¢ Assisting auditors during Programmatic Audits. â€¢ Assisting Bureau EHS and others in cyclical (monthly, quarterly, annual) document review. â€¢ Ensuring required EHS tasks performed by others are performed as required and documentation is prepared, maintained and reviewed on a regular basis. â€¢ Maintaining current all EHS related documentation (manuals, permits, registrations, bureau transmittals, etc.). â€¢ Providing tool box talks and training to facility workers. â€¢ Assisting Facility Manager, Plant Chief or his designee with EHS issues regarding construction activities, as directed. â€¢ Identifying hazards which may require assessments and report them to EHS Section Chief, Facility Manager and Plant Chief and staff. Assist with assessment as directed. â€¢ Maintaining confidentiality as it relates to employee records. â€¢ Preparing and submitting complete, accurate, and legible work product. â€¢ Performing Incident / Accident Investigation and entering facts in computer database. â€¢ Communicating clearly with others. â€¢ Performing any additional / special assignment assigned by EHS Director or EHS Section Chief.  IMPORTANT NOTE: Candidates selected to fill an Associate Public Health Sanitarian (APHS) position from this posting will be appointed on a provisional basis. As a provisional employee, you will be required to take and pass the next APHS civil service examination and be given a list number by the NYC Dept. of Citywide Administrative Services in order to be considered for probable permanent employment in this title. Anyone who does not take and pass this examination, or who is not reached on the established list, will be terminated as a provisional APHS.\t\"1. A baccalaureate degree from an accredited college, including or supplemented by 30 semester credits in the physical and/or biological sciences, i.e., biology, botany, chemistry, geology, physics, physiology, and zoology; of which not more than 12 credit hours may be in the applied sciences, i.e., environmental technology, sanitation technology, medical technology, public health, infection control or food service; and at least two years of satisfactory full-time experience performing inspections to assure compliance with pertinent laws, rules and regulations governing the areas of food, drugs and general environmental conditions; or  2. An associate degree from an accredited college, with 15 semester credits in the physical and/or biological sciences, of which not more than 6 credit hours may be in the applied sciences, and 4 years of satisfactory full-time experience as described in \"\"1\"\" above; or  3. Education and/or experience equivalent to \"\"1\"\" or \"\"2\"\" above.  However\t all candidates must have at least 60 semester credits from an accredited college\t including at least 15 semester credits in the physical and/or biological sciences.  Furthermore\t to assure compliance with Section 11.112 of the Compilation of the Rules and Regulations of the State of New York (NYCRR) - Title 10 (Health)\t all candidates must have at least 2 years of experience as a public health sanitarian as described in \"\"1\"\" above.\"\tâ€¢ Excellent interpersonal and team skills â€¢ Excellent oral communication skills; good written communication skills â€¢ Proficiency in Microsoft office tools specifically, Excel and Word â€¢ Strong time management and prioritizing skills â€¢ Basic understanding and knowledge in OSHA regulations and related health and safety regulations and/or federal and/or state environmental laws and regulations related to waste management, bulk storage tanks or environmental assessments and remediation. â€¢ A valid New York State Motor Vehicle Driver License â€¢ The ability to obtain 40-hour HAZWOPER certification.\tAppointments are subject to OMB approval.  For additional information about DEP, visit www.nyc.gov/dep.  DEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.  NOTE: This position is open to qualified persons with a disability who are eligible for the 55-a Program. Please indicate on your resume or cover letter that you would like to be considered under the 55-a Program. This position is also open to non 55-a Program candidates who meet the education and experience requirements as listed in the job posting notice.\t\"Click \"\"Apply Now\"\" button\"\t40 hours per week / day\tOwls Head Wastewater Treatment Plant 6700 Shore Road, Brooklyn, NY 11220\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\n383739\tDEPT OF ENVIRONMENT PROTECTION\tInternal\t1\tEngineering Technician I\tENGINEERING TECHNICIAN\t20113\t1\tPublic Safety, Inspections, \u0026 Enforcement\tF\t37796\t43465\tAnnual\t96-05 Horace Harding Expway\tDiv of Field Op/Quality Assur\tThe NYC Department of Environmental Protection (DEP) enriches the environment and protects public health for all New Yorkers by providing 1.1 billion gallons of high quality drinking water, managing wastewater and stormwater, and reducing air, noise, and hazardous materials pollution.  DEP is the largest combined municipal water and wastewater utility in the country, with nearly 6,000 employees.  DEP\u0027s water supply system is comprised of 19 reservoirs and 3 controlled lakes throughout the systemâ€™s 2,000 square mile watershed that extends 125 miles north and west of the City.  The Bureau of Water \u0026 Sewer Operations (BWSO), Division of Operations Analysis \u0026 Regulatory Compliance, Catch Basin Inspection Unit is seeking to hire an Engineering Technician. The selected candidate for this position will perform various tasks under direct supervision that include, but are not limited to:  â€¢\tConduct field inspections of catch basins on city streets and arterial highways, cross connection relay/repairs, water and sewer plug inspections, and field tests;  â€¢\tParticipate in field surveys and investigations regarding flooding and ponding issues;  â€¢\tPrepare drawings and sketches, perform mathematical calculations, and assist in estimating costs, materials and labor requirements;  â€¢\tAssist in the preparation of reports, memos, and correspondence regarding catch basin inspections;  â€¢\tMaintain office records of drawings, plans, surveys, and inspection data;  â€¢\tParticipate in inspection operations and checking/certifying the installation and performance of structures, materials, and equipment related to the cityâ€™s sewer and water main systems;  â€¢\tUtilize databases and related applications for the input and analysis of data, generation of reports, and the maintenance of detailed and accurate records;  â€¢\tOperate a motor vehicle.  Inspections are performed outdoors and in all kinds of weather, and the physical activities can include opening manhole covers with a sewer hook, taking and recording measurements, carrying a clipboard and/or a computer tablet. Street inspections are generally performed during the day, arterial highway inspections can be rotating shifts.  ***ONLY CANDIDATES WHO HAVE FILED FOR THE CIVIL SERVICE EXAM FOR ENGINEERING TECHNICIAN WILL BE CONSIDERED***\tQualification Requirements  For Assignment Levels I â€“ II  1. A four-year high school diploma or its educational equivalent approved by a stateâ€™s department of education or a recognized accrediting organization and two years of full-time satisfactory experience as an engineering technician; or     2. An Associate degree from an accredited college or technical institution with a specialization in engineering technology; or    3. A combination of education and experience which is equivalent to two years of satisfactory experience. To determine educational equivalency for experience, see â€œSpecial Noteâ€ below.    Special Note  One year of experience credit will be given for each 30 semester credits for college education leading to a degree from an accredited college in engineering technology. However, all candidates must have at least a high school diploma or its educational equivalent.    License Requirement For Certain Positions  For assignment to certain positions, the candidate must possess at the time of appointment or assignment a Motor Vehicle Driver License valid in the State of New York. This license must be maintained for the duration of employment.    Additional Qualification Requirements  For Assignment Levels III â€“ IV  To be eligible for placement in Assignment Levels III and IV, individuals must have, after meeting the requirements for Assignment Levels I and II, either  1. At least one year of satisfactory service as an Engineering Technician with the City of New York; or    2. A Baccalaureate degree in engineering technology from an accredited college; or    3. After meeting the minimum requirements described for Assignment Level I, at least two additional years of full-time satisfactory experience performing engineering technician work; or    4. A satisfactory combination of education and experience equivalent to  Additional Qualification Requirement â€œ3â€ above and in â€œSpecial Noteâ€ above.\tCandidates must have a Motor Vehicle Driver License valid in the State of New York.\tAppointments are subject to OMB approval. For additional information about DEP, visit www.nyc.gov/dep  DEP is an equal opportunity employer with a strong commitment to the diversity of our organization and workforce. Your voluntary response to the NYCAPS on-line application section for referral information will assist us tremendously in our ability to track the success of our outreach and recruitment efforts. Please be sure to indicate your source of referral to this job.  NOTE: This position is open to qualified persons with a disability who are eligible for the 55-a Program and also meet the education and experience requirements as listed in the job posting notice. Please indicate on your resume or cover letter that you would like to be considered for the position under the 55-a Program. This position is also open to non 55-a Program candidates who meet the education and experience requirements as listed in the job posting notice.\t\"Click the \"\"Apply Now\"\" button\"\tnull\tnull\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\t2019-02-13T00:00:00.000\tnull\t2019-04-02T00:00:00.000\t2019-07-30T00:00:00.000\n383961\tDEPT OF INFO TECH \u0026 TELECOMM\tExternal\t1\tiOS Mobile Application Developer\tCOMPUTER SPECIALIST (SOFTWARE)\t13632\t4\tTechnology, Data \u0026 Innovation\tF\t96020\t110423\tAnnual\t2 Metro Tech\tNYC Gov Lab \u0026 Studio\tDoITT provides for the sustained, efficient and effective delivery of IT services, infrastructure and telecommunications to enhance service delivery to New York City\u0027s residents, businesses, employees and visitors. As the City\u0027s technology leader, DoITT is responsible for maintaining the foundational IT infrastructure and systems that touch every aspect of City life from public safety to human services, from education to economic development crossing the full spectrum of governmental operations.   The successful candidate will serve as a Mobile Application Developer (iOS) reporting to the Business Solutions Delivery Division.  Responsibilities will include: â€¢\tDevelop native mobile applications and assist in the development of mobile responsive websites; â€¢\tBuild native iOS applications in Swift and/or native Android applications using Java; â€¢\tWrite native mobile applications using best techniques, design patterns, the latest platform SDK and industry standards; â€¢\tDeploy iOS applications to the iTunes App Store and Android apps to Google Play; â€¢\tParticipate in development of mobile application design; â€¢\tCollaborate with business analyst and mobile UX designer to determine detailed tasks; â€¢\tProvide required application development and support for mobile apps; â€¢\tWork with other technical leads to determine the system integration design; â€¢\tCommunicate risks and issues to project and technical management teams; â€¢\tWork with testing team to find and resolve defects; â€¢\tWork with Project Managers to help determine timelines and project tasks; â€¢\tBe part of requirements gathering process; â€¢\tWork with QA team and developers to diagnose and resolve performance related problems; â€¢\tAssist other java development teams building enterprise web applications; â€¢\tResponsible for creating and documenting systems designs and architectures; â€¢\tMentor junior developers â€¢\tPerform special projects and initiatives as assigned.\t\"(1) A baccalaureate degree from an accredited college, including or supplemented by twenty-four (24) semester credits in computer science or a related computer field and two (2) years of satisfactory full-time software experience in designing, programming, debugging, maintaining, implementing, and enhancing computer software applications, systems programming, systems analysis and design, data communication software, or database design and programming, including one year in a project leader capacity or as a major contributor on a complex project; or  (2) A four-year high school diploma or its educational equivalent and six (6) years of full-time satisfactory software experience as described in â€œ1\"\" above\t including one year in a project leader capacity or as a major contributor on a complex project; or  (3) A satisfactory combination of education and experience that is equivalent to (1) or (2) above. College education may be substituted for up to two years of the required experience in (2) above on the basis that sixty (60) semester credits from an accredited college is equated to one year of experience. A masters degree in computer science or a related computer field may be substituted for one year of the required experience in (1) or (2) above. However\t all candidates must have a four year high school diploma or its educational equivalent\t plus at least one (1) year of satisfactory full-time software experience in a project leader capacity or as a major contributor on a complex project.  NOTE: In order to have your experience accepted as Project Leader or Major Contributor experience\t you must explain in detail how your experience qualifies you as a project leader or as a major contributor. Experience in computer operations\t technical support\t quality assurance (QA)\t hardware installation\t help desk\t or as an end user will not be accepted for meeting the minimum qualification  requirements.  Special Note  To be eligible for placement in Assignment Level IV\t in addition to the Qualification Requirements stated above\t individuals must have one year of satisfactory experience in a project leader capacity or as a major contributor on a complex project in data administration\n384340\tNYC HOUSING AUTHORITY\tExternal\t1\tAnalysis and Reporting Analyst\tECONOMIST\t40910\t3\tPolicy, Research \u0026 Analysis\tF\t57691\t90056\tAnnual\tAnalysis \u0026 Reporting\tAnalysis \u0026 Reporting Dept\tPlease read this posting carefully to make certain you meet the qualification requirements before applying to this position.  Reporting to the Administrator for Analysis and Reporting, the successful candidate will perform detailed analyses and generate reports on projects performance and funding sources administered by the Capital Projects Division (CPD); utilize the information management resources to monitor projects schedules to ensure consistency, monitor construction performance metrics, and perform financial analyses for on-time obligation and expenditure of funds; and coordinate reporting on special initiatives.  Responsibilities include, but are not limited to the following:  1.  Perform analytical and financial analyses of obligations and expenditures to ensure progress in accordance with funding mandates. 2.  Maintain accurate contract warranty/guarantee information. 3.  Manage research and reporting on portfolio funding. 4.  Perform periodic reviews on project schedules and budget to identify and address issues that may adversely impact on-time performance. 5.  Perform comparative analysis on timeliness by department and project managers in delivering projects. 6.  Review portfolio data to identify anomalies and ensure timely corrections are made to ensure accurate reporting. 7.  Monitor activities of projects in special initiatives portfolio and perform analyses as required. 8.  Manage the system for the recording of frontline costs and perform analytics to determine effective usage of time against project cost. 9.  Ensure that contracts and vendors administered by CPD are accurately identified in the financial management system to be able to correctly measure vendorsâ€™ capacity and performance. 10. Generate charts and graphs that will assist in identifying impediments to workflow. 11. Perform analyses and make recommendations for corrective actions on identified issues. 12. Update information in APEX and other applications and extract data for comparative analyses to outline trends. 13. Serve as secondary liaison for development of new or modifications to current reports. 14. Coordinate activities to gather information from all NYCHA departments to update information on City funded projects for special/required tracking and reporting. 15. Develop mechanisms to generate reports for elected officials on allocation of funding and performance of projects within the elected officialsâ€™ districts. 16. Plan and attend meetings as required. 17. Perform training as needed.  *NOTE:  This position is open to qualified persons with a disability who are eligible for the 55-a Program.  Please indicate in your cover letter that you would like to be considered for the position under the 55-a Program.  For detailed information regarding the 55-a Program, please visit the link below:  http://www.nyc.gov/html/dcas/downloads/pdf/psb/100_1.pdf\t\"1. A master\u0027s degree from an accredited college or university  in economics, statistics, finance, management, business administration, public administration, public policy or related field; or    2. A baccalaureate degree from an accredited college or university, including or supplemented by 24 semester credits in one or more of the course areas of economics, statistics,  finance, management, mathematics, business administration, public administration, and public policy, 12 semester credits of which must have been in economics; and one year of satisfactory full-time experience in one or more of the  fields of finance; economic, fiscal or statistical research; policy analysis; or quantitative, business, market or financial analysis. Graduate semester credits in any of the areas described in \"\"1\"\" above may be substituted for the undergraduate  semester credits on the basis that each 3 graduate semester credits may be substituted for 6 of the required undergraduate semester credits.    Special Note  To be eligible for placement in Assignment Level II individuals must have\t in addition to meeting the minimum requirements\t at least one additional year of full-time experience listed in \"\"2\"\" above.    Special Note   To be eligible for placement in Assignment Level III individuals must have\t in addition to meeting the minimum requirements\t at least two additional years of full-time experience listed in \"\"2\"\" above.\"\t1.  Database management and reporting experience with Oracle based platforms. 2.  Knowledge of construction management and scheduling software. 3.  Proven knowledge of Microsoft Access, Excel, PowerPoint, Word, and Visio. 4.  Ability to work under stringent deadlines and handle simultaneous assignments. 5.  Knowledge of SQL and business intelligence tools. 6.  Experience with statistical data analyses software and languages as SAS, SPSS, or R. 7.  Strong analytical skills with the ability to collect, organize, analyze, and disseminate significant amounts of information with attention to detail and accuracy. 8.  Excellent written and verbal communication skills. 9.  Ability to work collaboratively with others.\t1.\tCandidates with permanent civil service status in the title of Statistician will be also be considered. 1.\tCandidates may be given a skills assessment as part of the interview process. 2.\tNYCHA employees applying for promotional, title or level change opportunities must have served a period of one year in their current title and level (if applicable).\t\"Click the \"\"Apply Now\"\" button.\"\tnull\tnull\tnull\tNYCHA has no residency requirements.\n385486\tDEPARTMENT OF CORRECTION\tExternal\t1\tIT NETWORK MANAGER\tCOMPUTER OPERATIONS MANAGER (S\t10074\tM1\tTechnology, Data \u0026 Innovation Policy, Research \u0026 Analysis\tF\t100000\t120000\tAnnual\t75-20 Astoria Blvd\tInformation Systems-Admin\tThe New York City Department of Correction (DOC) provides for the care, custody, and control of persons accused of crimes or convicted and sentenced to one year or less of jail time.  The Department manages eleven (11) inmate facilities, eight (8) of which are located on Rikers Island.  In addition, the Department operates two hospital Prison Wards (Bellevue and Elmhurst hospitals) and court holding facilities in each of NYC\u0027s five boroughs.    The DOC is looking for an IT Network Manager to oversee all aspects of our network \u0026 wireless infrastructure. The manager will oversee a team of two network engineers, a very large network consisting of Cisco switches, routers, access points, as well as firewall security, monitoring and management.  We are looking for a Manager with networking expertise and experience leading, developing, and DE Implement and run enterprise networking solutions with high reliability and availability. Duties include, but are not limited to, the following:  â€¢ Implement and run enterprise networking solutions with high reliability and availability â€¢ Introduce new networking technologies or improve existing technologies to transform existing    capabilities and services â€¢ Provide networking domain expertise to other teams â€¢ Maintain technical documents for solutions and standard operating procedures such that    services are delivered in an efficient and effective manner â€¢ Support of the  Network, IP and related security services issues, resolve complex system    and network issues and outages when needed â€¢ Act as technical project manager by preparing project plans, interacting with other departments    and directing IT resources as required â€¢ Keep all documentation (including LAN/WAN drawings and equipment lists) accurate and current â€¢ Industry watching, both direct or through a third party, to ensure the company is aware and educated    on new technologies â€¢ Actively participate in engineering and architecture solution peer reviews and solution design sessions â€¢ Vendor and 3rd Party support and critical issues â€¢ Works independently and exercises reasonable discernment with little supervision while providing    clear documentation of activities and accomplishments â€¢ Interacts closely with peers and management across all functional teams\t1. Six (6) years of progressively responsible full-time paid experience supervising or administering computer operations involving a large-scale third generation computer at least 18 months of which shall have been in a managerial capacity.  2. Education at an accredited college or university may be substituted for the general experience described above (but not for the 18 months of managerial experience described above) at the rate of one year of college for 6 months of experience up to a maximum of 4 years college for 2 years or experience. In addition a Master of Business Administration, Master of Public Administration or any other Master\u0027s Degree in Management of Administration may be substituted for an additional year of general work experience. However, all candidates must possess the 18 months of administrative or managerial experience or managerial experience described above.\tâ€¢ Excellent understanding of QA lifecycle and software lifecycle methodologies (Agile/Iterative). â€¢ Proficiency in SQL, relational databases DB2 \u0026 SQL servers is required. â€¢ Proficiency working with Java/J2EE web applications deployed on Websphere / Tomcat application    servers. â€¢ Knowledge of Javascript, HTML/CSS knowledge is a plus. â€¢ Experience with Unix command line and basic scripting is a plus. â€¢ Experience with version control systems, preferably SVN. â€¢ Strong communication, analysis, and problem solving skills. Good team player. â€¢ Selected candidate should possess 6+ years in QA testing of Java J2EE web applications,    ETL jobs. â€¢ Understanding of WLAN authentication, security and network management â€¢ Experience crafting and deploying network solutions in enterprises environments â€¢ Excellent written and verbal interpersonal skills. â€¢ Experience in deploying SNMP based monitoring solutions â€¢ Experience in medium/large corporate network rollout and support â€¢ Experience in Large scale enterprise project management â€¢ Good time management with an ability to work on a number of projects and tasks concurrently    setting own agendas and effectively prioritizing work â€¢ Ability to adapt to a fast-paced environment\tNote: Only candidates who are permanent in the Computer Operations Manager title or those who intend to take and pass the upcoming Computer Operations Manager exam (Exam # 9046 or Promotional Exam #9523) may apply. Failure to do so may result in your disqualification.  Taking and passing civil service exams are necessary to maintain employment with the City of New York. Please check the Department of Citywide Administrative Services (DCAS) website (http://www.nyc.gov/html/dcas/html/work/exam_monthly.shtml) for important exam filing information.\tFor City employees: Go to Employee Self-Service (ESS) - www.nyc.gov/ess and search for Job ID# 385486  For all other applicants: Go to https://a127-jobs.nyc.gov and search for Job ID# 385486   NOTE: This position is open to qualified persons with a disability who are eligible for the 55-a Program. Please indicate on your resume or cover letter that you would like to be considered under the 55-a Program. This position is also open to non 55-a Program candidates who meet the education and experience requirements as listed in the job posting notice.  We appreciate every applicantâ€™s interest; however, only those under consideration will be contacted. Submission of a resume is not a guarantee that you will receive an interview.\tnull\tnull\tnull\tNew York City Residency is not required for this position\t2019-03-01T00:00:00.000\tnull\t2019-07-10T00:00:00.000\t2019-07-30T00:00:00.000\n387069\tMAYORS OFFICE OF CONTRACT SVCS\tExternal\t1\tProject Manager, Mayor\u0027s Office of M/WBE\tRESEARCH PROJECTS COOR(MA)-MGR\t0527A\tM1\tFinance, Accounting, \u0026 Procurement Policy, Research \u0026 Analysis\tF\t75000\t85000\tAnnual\t253 Broadway New York Ny\tAdministration-MO\tAs an essential component of his plan to tackle income inequality across the city, Mayor de Blasio created the Mayorâ€™s Office for Minority and Women-owned Business Enterprises (M/WBE) to address the disparity between City contracts awarded to certain ethnic and gender groups and their overall representation in City contracting. The Office is responsible for oversight, policy, interagency coordination and accountability of the Cityâ€™s M/WBE Program. It will serve as a one-stop-shop for M/WBEs interested in doing business with the city and its agencies.  The job responsibilities for the Project Manager include, but are not limited to: â€¢\tDirectly reporting to the Assistant Director, provide project management support for various Mayoral commitments and other OM/WBE initiatives.  â€¢\tWork with agency partners, consultants, and other stakeholders to execute a phased development program, including identifying, planning, and executing dozens of interventions across a range of agencies.  â€¢\tWork with City agencies to develop and maintain change management plans, supported by process mapping and workflow improvement design.  â€¢\tProvide project management leadership, including developing and maintaining project plans, managing and coordinating project elements, reviewing agency and interagency work products, and ensuring efficient progress on implementation via performance metrics and indicators. â€¢\tProvide analytical assistance to team members, including quantitative and  qualitative data analysis, evaluation of best practices, and identification and assessment of performance improvement opportunities at different agencies. â€¢\tFoster a culture of transparency, accountability, collaboration and continuous learning through engagements with M/WBE agency partners. â€¢\tBuild and maintain relationships with key stakeholders, including Oversight staff, agency leadership, and other Program partners. â€¢\tContribute to the toolkit of Program resources, including by identifying and helping to develop new technologies, templates, techniques, and frameworks. â€¢\tSupport operationalizing of new legal and programmatic capabilities. â€¢\tCoordinate with OM/WBEâ€™s Compliance Officer to respond to compliance reviews and audits by addressing programmatic risks and deficiencies. â€¢\tPlan, coordinate, and/or attend workshops, conferences, and trainings.  â€¢\tPrepare analysis of agency and community feedback which may lead to modification of legislation, policies, or procedures.  â€¢\tAssist in the resolution of constituent affairs inquiries and draw inferences regarding program failures and opportunities from underlying concerns. â€¢\tMaintain accurate and comprehensive records, prepare reports, and compose correspondence sufficient to support the work.  â€¢\tAttend or run meetings and appropriately track notes and action items. â€¢\tOther project management duties as assigned.\t1. Graduation from an accredited college with a baccalaureate degree; or 2. Graduation from an accredited community college plus two years of experience with administrative, analytic, coordinative, supervisory or liaison responsibilities; or 3. A four-year high school diploma or its educational equivalent plus four years of experience as described in â€œ2â€ above; or 4. A satisfactory equivalent combination of education and experience\tPreferred Skills:  â€¢      Ability to work under pressure, manage multiple tasks simultaneously, and meet deadlines. â€¢\tExcellent ability to synthesize data, think critically, and exercise judgment. â€¢\tKeen attention to detail, flexibility and an enthusiastic work ethic; â€¢\tAbility to communicate, negotiate, and advise on matters that are highly complex and sensitive in nature. Ability to communicate effectively with persons on all levels both inside and outside the organization. â€¢\tTeam player drawing on strong interpersonal and written communication skills with experience delivering presentations to a variety of audiences; â€¢\tAbility to think creatively, embrace new approaches and/or technologies for solving complex operational problems.  â€¢\tHas an understanding of urban issues, especially New York City government and current city affairs/policies and New York Cityâ€™s agency operations. â€¢\tAbility to read and interpret legal and contractual documents, policies, and procedural manuals. Ability to analyze regulatory documents and processes. â€¢\tWorking knowledge of pertinent Federal, NY State, and New York City regulations applicable to diversity \u0026 civil rights programs. â€¢\tSensitivity in securing, distributing and maintaining confidential information. â€¢\tExperience with or interest in innovative approaches for improving government service delivery, including human-centered design, behavioral economics, customer journey mapping, Lean/SixSigma and other methods; â€¢\tProficient with MS Office, including Excel, Word, PowerPoint, and databases. â€¢\tComfortable with Visio, MS Project, or other project management software. â€¢\tProject Management Professional (PMP) or Program Management Professional (PgMP) Certification strongly encouraged.  Preferred Experience: â€¢\tMinimum 4 yearsâ€™ related project or program management work experience.  â€¢\tMinimum 2 yearsâ€™ experience leading or working in a similar role supporting diversity and civil rights compliance or project management activities. â€¢\tFive yearsâ€™ experience in a fast-paced team environment preferred.  â€¢\tExperience in performance reporting, process improvement methods, data collection or data analysis in complex operational environments. â€¢\tExperience which demonstrates a proven record of providing analytical and/or technical assistant for complex, interdisciplinary projects â€“ preferably in the diversity space â€“ involving multiple stakeholders. â€¢\tExperience mediating among groups with competing perspectives and implementing projects that improve operational efficiency.\tMayorâ€™s Office of Contract Services is an equal opportunity employer.  Mayorâ€™s Office of Contract Services recognizes the unique skills and strengths gained through military service.  Veterans and service members of the U.S. Armed Forces are strongly encouraged to apply.\tExternal Applicants, please go to www.nyc.gov/jobs and search for Job ID#: 387069 Current City Employees, please go to www.nyc.gov/ess and search for Job ID#: 387069  No Phone Calls, Faxes or Personal Inquiries permitted. Note: Only those candidates under consideration will be contacted.\tnull\tnull\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\t2019-03-20T00:00:00.000\tnull\t2019-07-17T00:00:00.000\t2019-07-30T00:00:00.000\n387447\tDEPT OF DESIGN \u0026 CONSTRUCTION\tExternal\t1\tApplication Support Specialist\tCOMPUTER SPECIALIST (SOFTWARE)\t13632\t1\tTechnology, Data \u0026 Innovation\tF\t79564\t99161\tAnnual\t30-30 Thomson Ave L I City Qns\tITS\tOnly candidates who are permanent in the Computer Specialist (Software) title or those who are reachable on the current Open-Competitive list (Exam #7005) or Promotional list (Exam #7510) may apply.  Please include a copy of your Notice of Result card or indicate if you are already permanent in the title.  Failure to do so will result in your disqualification.  The NYC Department of Design and Constructionâ€™s Information Technology Services Division seeks an Application Support Specialist to report to the Director of Help Desk/Applications Support. The Applications Support Specialist will be responsible for providing guidance and support for various applications and end-user training on custom-built and off-the-shelf computer applications to help users efficiently and effectively fulfill business objectives. Responsibilities include: troubleshoot applications and software issues for all internal business units; act as a liaison between end user and project management teams to facilitate resolution of issues; perform business analysis for IT projects and tasks, as needed, to help develop new applications and maintain existing ones; and provide end-user training and documentation for current applications, as well as testing new or modified applications.\t\"(1) A baccalaureate degree from an accredited college, including or supplemented by twenty-four (24) semester credits in computer science or a related computer field and two (2) years of satisfactory full-time software experience in designing, programming, debugging, maintaining, implementing, and enhancing computer software applications, systems programming, systems analysis and design, data communication software, or database design and programming, including one year in a project leader capacity or as a major contributor on a complex project; or  (2) A four-year high school diploma or its educational equivalent and six (6) years of full-time satisfactory software experience as described in â€œ1\"\" above\t including one year in a project leader capacity or as a major contributor on a complex project; or  (3) A satisfactory combination of education and experience that is equivalent to (1) or (2) above. College education may be substituted for up to two years of the required experience in (2) above on the basis that sixty (60) semester credits from an accredited college is equated to one year of experience. A masters degree in computer science or a related computer field may be substituted for one year of the required experience in (1) or (2) above. However\t all candidates must have a four year high school diploma or its educational equivalent\t plus at least one (1) year of satisfactory full-time software experience in a project leader capacity or as a major contributor on a complex project.  NOTE: In order to have your experience accepted as Project Leader or Major Contributor experience\t you must explain in detail how your experience qualifies you as a project leader or as a major contributor. Experience in computer operations\t technical support\t quality assurance (QA)\t hardware installation\t help desk\t or as an end user will not be accepted for meeting the minimum qualification  requirements.  Special Note  To be eligible for placement in Assignment Level IV\t in addition to the Qualification Requirements stated above\t individuals must have one year of satisfactory experience in a project leader capacity or as a major contributor on a complex project in data administration\n389737\tDEPT OF HEALTH/MENTAL HYGIENE\tInternal\t1\tPublic Health Adviser, Bureau of School Health\tPUBLIC HEALTH ADVISER (SCHOOL\t51195\t1\tHealth\tP\t20.78\t25.81\tHourly\t1601 Ave. S, Brooklyn\tSH Nursing Services \u0026 Prof Dev\t****OPEN TO PERMANENT PUBLIC HEALTH ADVISERS ONLY. YOU MUST CLEARLY STATE YOUR CIVIL SERVICE STATUS ON YOUR RESUME OR COVER LETTER. FAILURE TO DO SO WILL RESULT IN YOUR DISQUALIFICATION.   The Division of Family and Child Health (DFCH) of the New York City Department of Health and Mental Hygiene is charged with the creation and oversight of programs, policies, services, and environments that support physical and socio-emotional health, and promote primary and reproductive health services, health equity, social justice, safety and well-being for New York City families and children. The Division is comprised of the Bureau of Maternal Infant and Reproductive Health, the Bureau of Early Intervention, the Office of School Health, and the Bureau of Administration. The vision of the DFCH is that every child, woman, and family recognizes their power and is given the opportunity to reach their full health and development potential. We encourage qualified applicants with demonstrated commitment to social justice, particularly racial, gender, and LGBTQ equity to apply.   DUTIES WILL INCLUDE BUT NOT BE LIMITED TO:   Under the guidance of the Borough Nursing Director, the Public Health Advisor Level I will be responsible for the following duties: providing clerical and administrative support to supervisors, nurses, and other staff :  --Working with nursing agencies and central office staff to provide nursing coverage.   --Providing regional staffing updates and coordinate with central office.  --Maintaining accurate information in the Agency Nurse Tracking System (ANT).   --Collecting and transmitting records from the field to central office.   --Updating relevant databases and reports as needed.   --Establishing and maintaining working relationships with school personnel.  --Collaborating with central office nursing staff and participating in team development.   --Assisting with field staffing updates.   --Participating in all planning meetings within the regions.   --Assisting with special nursing events.   --Participating in agency wide activities for Emergency Preparedness.\t1. A baccalaureate degree from an accredited college or university, including or supplemented by twelve semester credits in health education or in health, social or biological sciences; or    2. A baccalaureate degree from an accredited college or university, and six months of full-time satisfactory experience in a health promotion or disease intervention/prevention program, performing one or more of the following: interviewing, conducting field investigations, assessing health risks,  making referrals, or collecting and analyzing epidemiological data; or    3. A four-year high school diploma or its educational equivalent approved by a State\u0027s Department of Education or a recognized accrediting organization and four years of full-time satisfactory experience as described in â€œ2â€ above; or    4. Education and/or experience equivalent to â€œ1,â€ â€œ2â€ or â€œ3â€ above. Undergraduate college credit can be substituted for experience on the basis of 30 semester credits from an accredited college for one year of full-time experience. However, all candidates must have a four-year high school diploma or its educational equivalent, and either twelve semester credits as described in â€œ1â€ above or six months of experience as described in â€œ2â€ above.    Additional Requirements  A. To be assigned to Assignment Level II, candidates must have, in addition to meeting the minimum qualification requirements listed above, at least one year of experience as a Public Health Adviser (School Health), Assignment Level I, or  at least one additional year of experience as described in Qualification Requirement 2 above.\tKnowledge of DOHMH and DOE personnel policies and procedures; excellent interpersonal, communication and presentation skills.\t**IMPORTANT NOTES TO ALL CANDIDATES:  Please note:  If you are called for an interview you will be required to bring to your interview copies of original documentation, such as: â€¢ A document that establishes identity for employment eligibility, such as: A Valid U.S. Passport, Permanent Resident Card/Green Card, or Driverâ€™s license.    â€¢ Proof of Education according to the education requirements of the civil service title.    â€¢ Current Resume     â€¢ Proof of Address/NYC Residency dated within the last 60 days, such as: Recent Utility Bill (i.e. Telephone, Cable, Mobile Phone)   Additional documentation may be required to evaluate your qualification as outlined in this postingâ€™s â€œMinimum Qualification Requirementsâ€ section. Examples of additional documentation may be, but not limited to: college transcript, experience verification or professional trade licenses.  If after your interview you are the selected candidate you will be contacted to schedule an on-boarding appointment.   By the time of this appointment you will be asked to produce the originals of the above documents along with your original Social Security card.   **LOAN FORGIVENESS  The federal government provides student loan forgiveness through its Public Service Loan Forgiveness Program (PSLF) to all qualifying public service employees. Working with the DOHMH qualifies you as a public service employee and you may be able to take advantage of this program while working full-time and meeting the programâ€™s other requirements.    Please visit the Public Service Loan Forgiveness Program site to view the eligibility requirements:   https://studentaid.ed.gov/sa/repay-loans/forgiveness-cancellation/public-service\tApply online with a cover letter to https://a127-jobs.nyc.gov/.  In the Job ID search bar, enter: job ID number # 3389737.   We appreciate the interest and thank all applicants who apply, but only those candidates under consideration will be contacted.   The NYC Health Department is committed to recruiting and retaining a diverse and culturally responsive workforce. We strongly encourage people of color, people with disabilities, veterans, women, and lesbian, gay, bisexual, and transgender and gender non-conforming persons to apply.  All applicants will be considered without regard to actual or perceived race, color, national origin, religion, sexual orientation, marital or parental status, disability, sex, gender identity or expression, age, prior record of arrest; or any other basis prohibited by law.\tnull\tnull\tnull\tNew York City residency is generally required within 90 days of appointment. However, City Employees in certain titles who have worked for the City for 2 continuous years may also be eligible to reside in Nassau, Suffolk, Putnam, Westchester, Rockland, or Orange County. To determine if the residency requirement applies to you, please discuss with the agency representative at the time of interview.\t2019-06-07T00:00:00.000\t2019-09-05T00:00:00.000\t2019-06-07T00:00:00.000\t2019-07-30T00:00:00.000"
+          },
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"result-alert alert-warning\" role\u003d\"alert\"\u003e\u003cbutton type\u003d\"button\" class\u003d\"close\" data-dismiss\u003d\"alert\" aria-label\u003d\"Close\"\u003e\u003cspan aria-hidden\u003d\"true\"\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e\u003cstrong\u003eOutput is truncated\u003c/strong\u003e to 102400 bytes. Learn more about \u003cstrong\u003eZEPPELIN_INTERPRETER_OUTPUT_LIMIT\u003c/strong\u003e\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565113795006_225908613",
+      "id": "20190806-174955_335176465",
+      "dateCreated": "2019-08-06 17:49:55.007",
+      "dateStarted": "2019-08-16 06:33:54.109",
+      "dateFinished": "2019-08-16 06:34:01.942",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Basic Views\nThe following is a list of basic views reated from the data to get an idea of what is being examined.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 07:03:26.348",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eBasic Views\u003c/h1\u003e\n\u003cp\u003eThe following is a list of basic views reated from the data to get an idea of what is being examined.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565938922091_1212830726",
+      "id": "20190816-070202_1700441402",
+      "dateCreated": "2019-08-16 07:02:02.091",
+      "dateStarted": "2019-08-16 07:03:26.364",
+      "dateFinished": "2019-08-16 07:03:26.484",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 07:03:29.920",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565939009916_-842090767",
+      "id": "20190816-070329_1667698075",
+      "dateCreated": "2019-08-16 07:03:29.916",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Sark SQL\nFirst a view called `nycData` is created which can be used to query the loaded data with Spark SQL.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 07:02:21.121",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eSark SQL\u003c/h1\u003e\n\u003cp\u003eFirst a view called \u003ccode\u003enycData\u003c/code\u003e is created which can be used to query the loaded data with Spark SQL.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565594446470_1648996638",
+      "id": "20190812-072046_1594244104",
+      "dateCreated": "2019-08-12 07:20:46.483",
+      "dateStarted": "2019-08-16 06:34:03.316",
+      "dateFinished": "2019-08-16 06:34:03.730",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val df \u003d data.toDF()\ndf.createOrReplaceTempView(\"nycData\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:34:03.814",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "df: org.apache.spark.sql.DataFrame \u003d [Job ID: string, Agency: string ... 26 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565114930095_1048473411",
+      "id": "20190806-180850_581238863",
+      "dateCreated": "2019-08-06 18:08:50.095",
+      "dateStarted": "2019-08-16 06:34:05.017",
+      "dateFinished": "2019-08-16 06:34:07.104",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Count Job Postings\nDo a simple query that shows the number of `Job Postings` per `Level`.",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:34:07.115",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eCount Job Postings\u003c/h2\u003e\n\u003cp\u003eDo a simple query that shows the number of \u003ccode\u003eJob Postings\u003c/code\u003e per \u003ccode\u003eLevel\u003c/code\u003e.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565594633324_-548856240",
+      "id": "20190812-072353_1634971277",
+      "dateCreated": "2019-08-12 07:23:53.324",
+      "dateStarted": "2019-08-16 06:34:08.074",
+      "dateFinished": "2019-08-16 06:34:08.124",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n\nSELECT Level, COUNT(*) AS `Job Postings`\nFROM nycData\nWHERE `Salary Frequency` \u003d \"Annual\"\nGROUP BY Level\nORDER BY Level",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:34:28.379",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "Level",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "Job Postings",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1.0,
+                      "paginationPageSize": 250.0
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "updated": false,
+                    "names": {
+                      "Level": "string",
+                      "Job Postings": "string"
+                    }
+                  },
+                  "updated": false,
+                  "initialized": false,
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  }
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Level",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Job Postings",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Level\tJob Postings\n0\t971\n1\t526\n1A\t2\n2\t536\n3\t264\n4\t42\n4A\t2\n4B\t1\nM1\t175\nM2\t158\nM3\t82\nM4\t40\nM5\t35\nM6\t13\nM7\t24\nM8\t2\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565115113009_615094629",
+      "id": "20190806-181153_680737889",
+      "dateCreated": "2019-08-06 18:11:53.009",
+      "dateStarted": "2019-08-16 06:34:09.377",
+      "dateFinished": "2019-08-16 06:34:26.664",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n\nSELECT Level, AVG(`Salary Range To`) AS `Average Max Salary`\nFROM nycData\nWHERE `Salary Frequency` \u003d \"Annual\"\nGROUP BY Level\nORDER BY Level",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:34:26.757",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Level": "string",
+                      "AverageMaxSalary": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Level",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Average Max Salary",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565113872669_-753444889",
+      "id": "20190806-175112_242925078",
+      "dateCreated": "2019-08-06 17:51:12.670",
+      "dateStarted": "2019-08-07 11:34:59.141",
+      "dateFinished": "2019-08-07 11:35:13.619",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-08-16 06:34:26.758",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565116172376_138617971",
+      "id": "20190806-182932_1316283458",
+      "dateCreated": "2019-08-06 18:29:32.380",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Basic Exploration",
+  "id": "basic-exploration",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
