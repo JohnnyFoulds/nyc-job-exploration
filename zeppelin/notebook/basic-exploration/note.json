@@ -808,7 +808,7 @@
     {
       "text": "%spark.sql\n\nSELECT Level, COUNT(*) AS `Job Postings`\nFROM nycData\nWHERE `Salary Frequency` \u003d \"Annual\"\nGROUP BY Level\nORDER BY Level",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 10:34:27.871",
+      "dateUpdated": "2019-08-16 11:55:40.519",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1075,7 +1075,7 @@
     {
       "text": "%spark.sql\nSELECT\n    bt.`Display Title`,\n    COUNT(*) AS Total\n    \nFROM nycData jb\n    LEFT OUTER JOIN businessTitles bt\n        ON jb.`Business Title` \u003d bt.`Business Title`\n\nGROUP BY\n    bt.`Display Title`\n    \nORDER BY\n    Total DESC\n    \nLIMIT\n    10",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 10:34:11.662",
+      "dateUpdated": "2019-08-16 11:55:40.844",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1212,7 +1212,7 @@
     {
       "text": "%spark.sql\nSELECT \n    round( ((`Salary Range From` + `Salary Range To`) / 2) / 10000, 0) * 10000 AS Salary,\n    COUNT(1) AS Value\n    \nFROM\n   nycData \n    \nWHERE \n    `Salary Frequency` \u003d \"Annual\"\n    \nGROUP BY\n    Salary\n    \nORDER BY\n    Salary ASC",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 10:38:39.795",
+      "dateUpdated": "2019-08-16 11:55:41.005",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1347,12 +1347,42 @@
     {
       "text": "val highestPaying \u003d data\n    .select(\"Business Title\", \"Minimum Qual Requirements\", \"Salary Range To\")\n    .filter(data(\"Salary Range To\") \u003e 140000)\n    .sort($\"Salary Range To\".desc)\n    .distinct\n    \nz.show(highestPaying)\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 11:39:22.639",
+      "dateUpdated": "2019-08-16 11:55:49.310",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
-        "results": {},
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Business Title": "string",
+                      "Minimum Qual Requirements": "string",
+                      "Salary Range To": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
