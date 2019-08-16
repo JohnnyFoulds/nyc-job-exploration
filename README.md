@@ -40,3 +40,6 @@ print(s"""%html
 ```
 
 The `d3.layout.cloud.js` library is taken from https://github.com/jasondavies/d3-cloud.
+
+## Web References
+Statistical and Mathematical Functions with DataFrames in Apache Spark - https://databricks.com/blog/2015/06/02/statistical-and-mathematical-functions-with-dataframes-in-spark.html
