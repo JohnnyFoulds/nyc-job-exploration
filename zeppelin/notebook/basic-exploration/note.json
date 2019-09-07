@@ -808,7 +808,7 @@
     {
       "text": "%spark.sql\n\nSELECT Level, COUNT(*) AS `Job Postings`\nFROM nycData\nWHERE `Salary Frequency` \u003d \"Annual\"\nGROUP BY Level\nORDER BY Level",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 11:55:40.519",
+      "dateUpdated": "2019-09-07 18:18:17.665",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1075,7 +1075,7 @@
     {
       "text": "%spark.sql\nSELECT\n    bt.`Display Title`,\n    COUNT(*) AS Total\n    \nFROM nycData jb\n    LEFT OUTER JOIN businessTitles bt\n        ON jb.`Business Title` \u003d bt.`Business Title`\n\nGROUP BY\n    bt.`Display Title`\n    \nORDER BY\n    Total DESC\n    \nLIMIT\n    10",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 11:55:40.844",
+      "dateUpdated": "2019-09-07 18:18:09.403",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1212,7 +1212,7 @@
     {
       "text": "%spark.sql\nSELECT \n    round( ((`Salary Range From` + `Salary Range To`) / 2) / 10000, 0) * 10000 AS Salary,\n    COUNT(1) AS Value\n    \nFROM\n   nycData \n    \nWHERE \n    `Salary Frequency` \u003d \"Annual\"\n    \nGROUP BY\n    Salary\n    \nORDER BY\n    Salary ASC",
       "user": "anonymous",
-      "dateUpdated": "2019-08-16 11:55:41.005",
+      "dateUpdated": "2019-09-07 18:18:11.141",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -1436,10 +1436,7 @@
   "id": "basic-exploration",
   "noteParams": {},
   "noteForms": {},
-  "angularObjects": {
-    "md:shared_process": [],
-    "spark:shared_process": []
-  },
+  "angularObjects": {},
   "config": {
     "isZeppelinNotebookCronEnable": false
   },
